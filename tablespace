@@ -1,6 +1,1 @@
-SELECT pg_size_pretty(pg_total_relation_size(pg_class_oid)) AS total_size,
-       pg_size_pretty(pg_total_relation_size(pg_class_oid) - pg_relation_size(pg_class_oid)) AS data_size,
-       pg_size_pretty(pg_relation_size(pg_class_oid)) AS index_size,
-       relname AS table_name
-FROM pg_class
-WHERE relkind = 'r';
+select pg_database.datname,pg_database_size(pg_database.datname) as size from pg_database;
