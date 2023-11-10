@@ -50,3 +50,16 @@ FROM
   JOIN pg_catalog.pg_stat_activity blocking_activity ON blocking_activity.pid = blocking_locks.pid
 WHERE
   blocked_locks.granted AND NOT blocking_locks.granted;
+
+SELECT
+  pg_stat_activity.pid AS pid,
+  pg_stat_activity.query AS query,
+  pg_locks.mode AS lock_mode,
+  pg_locks.granted AS lock_granted,
+  pg_locks.relation::regclass AS lock_relation
+FROM
+  pg_stat_activity
+  JOIN pg_locks ON pg_stat_activity.pid = pg_locks.pid
+WHERE
+  pg_locks.locktype = 'relation'
+  AND pg_locks.granted = false;
