@@ -63,3 +63,10 @@ FROM
 WHERE
   pg_locks.locktype = 'relation'
   AND pg_locks.granted = false;
+
+查看锁和等待信息
+
+select activity.pid,activity.usename,activity.wait_event_type,activity.wait_event,activity.query, 
+blocking.pid as blocking_pid, blocking.query as blocking_query 
+from pg_stat_activity as activity, pg_stat_activity as blocking
+where blocking.pid=any(pg_blocking_pids(activity.pid));
