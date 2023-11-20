@@ -189,3 +189,10 @@ $$ LANGUAGE plpgsql;
 SELECT t1.table_name FROM op_user_tables t1 except SELECT t2.table_name 
           FROM information_schema.tables t2
           WHERE table_schema = 'public' and table_type = 'BASE TABLE';
+
+SELECT pg_catalog.pg_get_userbyid(d.datdba) AS owner,
+       d.datname AS database_name,
+       pg_catalog.pg_tablespace_location(t.spcdefault) AS default_tablespace
+FROM pg_catalog.pg_database d
+JOIN pg_catalog.pg_tablespace t ON d.dattablespace = t.oid
+WHERE d.datname = 'your_database_name';
