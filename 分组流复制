@@ -1,0 +1,18 @@
+分组流复制
+synchronous_standby_names='1(node2)'
+synchronous_commit=on
+alter system set synchronous_standby_names=' 1 (node2)'; 
+select pg_reload_conf(); 
+
+vi /etc/hosts
+192.168.1.30 node1 
+192.168.1.31 node2  
+192.168.1.32 node3 
+
+node2：
+cat postgresql.auto.conf
+ primary_conninfo = 'user=replica password=123456 channel_binding=disable host=192.168.1.30 port=5432 sslmode=disable sslcompression=0 sslsni=1 ssl_min_protocol_version=TLSv1.2 gssencmode=disable krbsrvname=postgres target_session_attrs=any application_name=node2'
+
+node3：
+cat postgresql.auto.conf
+ primary_conninfo = 'user=replica password=123456 channel_binding=disable host=192.168.1.30 port=5432 sslmode=disable sslcompression=0 sslsni=1 ssl_min_protocol_version=TLSv1.2 gssencmode=disable krbsrvname=postgres target_session_attrs=any application_name=node2'
