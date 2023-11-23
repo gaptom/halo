@@ -1,0 +1,35 @@
+1.备份数据结构
+  oracle，pg
+  oracle：pg_dump -h 127.0.0.1 -p 5432 -U infodba -s -f tcoracle_table.dump infodba_test
+  pg:  pg_dump -h 127.0.0.1 -p 5432 -U infodba -s -f tcinit_table.dump tc
+2.准备PG数据库
+  2.1数据库名更名为tc_init
+     查看数据库有没有活动会话
+	 select datname,pid,usename,application_name from pg_stat_activity where datname = 'tc';
+	 
+	select pg_terminate_backend( 22939);
+	select pg_terminate_backend( 4835 );
+	select pg_terminate_backend( 47982);
+	select pg_terminate_backend( 60510);
+	select pg_terminate_backend( 16610);
+	select pg_terminate_backend( 50553);
+	select pg_terminate_backend( 15731);
+	select pg_terminate_backend( 52808);
+	select pg_terminate_backend( 57814);
+	 
+	 命令变更
+	  alter database testdb rename to test1db;
+	  查看是否成功
+	  select datname from pg_stat_database where datname='tc_init';
+	  
+  2.2创建数据库
+    CREATE DATABASE tc WITH  owner infodba  encoding 'UTF8' template template0 LC_COLLATE='C'
+  2.3删除数据库
+  2.4授权
+  grant all privileges on database tc to infodba;
+  2.5修改默认表空间
+    alter database tc set tablespace infodba_idata;
+  
+ grant CREATE ON TABLESPACE TcClusterDB_idata to TcClusterDB;
+
+3.  select pg_terminate_backend(pid) from pg_stat_activity where datname='tc'
