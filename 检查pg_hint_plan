@@ -1,0 +1,11 @@
+查看的参数 select name, setting from pg_settings where name ~ 'pg_hint_plan';
+show pg_hint_plan.enable_hint;
+show pg_hint_plan.parse_messages;
+show pg_hint_plan.enable_hint_table ;
+
+SET pg_hint_plan.debug_print TO on;
+SET pg_hint_plan.message_level TO notice;
+
+/*+Set(enable_seqscan 1)*/select 1;
+
+SELECT  DISTINCT t_02.puid FROM PWORKSPACEOBJECT t_01 , PMFG0MEPLANTBOP t_02 , PSTRUCTURE_REVISIONS t_03 , PITEMREVISION t_04 , PPSBOMVIEWREVISION t_05 , PPSOCCURRENCE t_06 , PSTRUCTURE_REVISIONS t_07 , PITEMREVISION t_08 , PPSBOMVIEWREVISION t_09 , PPSOCCURRENCE t_010 , PITEM t_011 , PMEOP t_012 , PMFG0MEPROCSTATN t_013 , PMFG0MEPROCLINE t_014 , PPSOCCURRENCE t_015 , PPSBOMVIEWREVISION t_016 , PSTRUCTURE_REVISIONS t_017 , PITEMREVISION t_018 WHERE ( ( ( ( t_02.puid = t_018.ritems_tagu ) AND ( ( t_017.pvalu_0 = t_016.puid ) AND ( ( t_016.puid = t_015.rparent_bvru ) AND ( ( t_015.rchild_itemu = t_014.puid ) AND ( ( t_014.puid = t_04.ritems_tagu ) AND ( ( t_03.pvalu_0 = t_05.puid ) AND ( ( t_05.puid = t_06.rparent_bvru ) AND ( ( t_06.rchild_itemu = t_013.puid ) AND ( ( t_013.puid = t_08.ritems_tagu ) AND ( ( t_07.pvalu_0 = t_09.puid ) AND ( ( t_09.puid = t_010.rparent_bvru ) AND ( ( t_010.rchild_itemu = t_012.puid ) AND  ( UPPER(t_011.pitem_id)  =  UPPER( $1  )  ) ) ) ) ) ) ) ) ) ) ) ) ) AND  UPPER(t_01.pobject_type)  LIKE  UPPER( $2  )  ) AND ( t_011.puid = t_012.puid AND t_07.puid = t_08.puid AND t_01.puid = t_02.puid AND t_03.puid = t_04.puid AND t_017.puid = t_018.puid ) ) 
