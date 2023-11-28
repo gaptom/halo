@@ -1,0 +1,513 @@
+/*********************
+SELECT  DISTINCT t_01.puid FROM PH6HWPARTREVISION t_01 , PITEMREVISION t_02 , PPSOCCURRENCE t_03 , PWORKSPACEOBJECT t_04 , PSTRUCTURE_REVISIONS t_05 , PH6HWPARTREVISION t_06 , PITEMREVISION t_07 , PH6HWMBAPART t_08 , PH6HWMBAPARTREVISION t_09 , PSTRUCTURE_REVISIONS t_010 , PITEMREVISION t_011 , PWORKSPACEOBJECT t_012 , PPSOCCURRENCE t_013 , PH6HWPART t_014 , PH6HWPART t_015 , PITEM t_016 , VL10N_OBJECT_NAME t_017 WHERE ( (  UPPER(t_01.ph6CategoryCode)  IN  ( UPPER( $1  ) ,  UPPER( $2  ) ,  UPPER( $3  ) ,  UPPER( $4  ) ,  UPPER( $5  ) ,  UPPER( $6  ) ,  UPPER( $7  ) ,  UPPER( $8  ) ,  UPPER( $9  ) ,  UPPER( $10   ) ,  UPPER( $11   ) ,  UPPER( $12   ) ,  UPPER( $13   ) ,  UPPER( $14   ) ,  UPPER( $15   ) ,  UPPER( $16   ) ,  UPPER( $17   ) ,  UPPER( $18   ) ,  UPPER( $19   ) ,  UPPER( $20   ) ,  UPPER( $21   ) ,  UPPER( $22   ) ,  UPPER( $23   ) ,  UPPER( $24   ) ,  UPPER( $25   ) ,  UPPER( $26   ) ,  UPPER( $27   ) ,  UPPER( $28   ) ,  UPPER( $29   ) ,  UPPER( $30   ) ,  UPPER( $31   ) ,  UPPER( $32   ) ,  UPPER( $33   ) ,  UPPER( $34   ) ,  UPPER( $35   ) ,  UPPER( $36   ) ,  UPPER( $37   ) ,  UPPER( $38   ) ,  UPPER( $39   ) ,  UPPER( $40   ) ,  UPPER( $41   ) ,  UPPER( $42   ) ,  UPPER( $43   ) ,  UPPER( $44   ) ,  UPPER( $45   ) ,  UPPER( $46   ) ,  UPPER( $47   ) ,  UPPER( $48   )  ) AND ( ( ( t_02.ritems_tagu = t_014.puid ) AND ( ( t_014.puid = t_013.rchild_itemu ) AND ( ( t_013.rparent_bvru = t_012.aoid ) AND ( ( t_012.aoid = t_010.pvalu_0 ) AND ( ( t_011.ritems_tagu = t_08.puid ) AND ( ( t_08.puid = t_03.rchild_itemu ) AND ( ( t_03.rparent_bvru = t_04.aoid ) AND ( ( t_04.aoid = t_05.pvalu_0 ) AND  ( UPPER(t_06.ph6PDMVersion)  =  UPPER( $49   )  ) ) ) ) ) ) ) ) ) AND ( ( ( t_02.ritems_tagu = t_014.puid ) AND ( ( t_014.puid = t_013.rchild_itemu ) AND ( ( t_013.rparent_bvru = t_012.aoid ) AND ( ( t_012.aoid = t_010.pvalu_0 ) AND ( ( t_011.ritems_tagu = t_08.puid ) AND ( ( t_08.puid = t_03.rchild_itemu ) AND ( ( t_03.rparent_bvru = t_04.aoid ) AND ( ( t_04.aoid = t_05.pvalu_0 ) AND ( ( t_07.ritems_tagu = t_015.puid ) AND  ( UPPER(t_016.pitem_id)  =  UPPER( $50   )  ) ) ) ) ) ) ) ) ) ) AND ( ( t_02.ritems_tagu = t_014.puid ) AND ( ( t_014.puid = t_013.rchild_itemu ) AND ( ( t_013.rparent_bvru = t_012.aoid ) AND ( ( t_012.aoid = t_010.pvalu_0 ) AND (  ( UPPER(t_017.pval_0)  =  UPPER( $51   )  ) AND ( t_017.locale IN  ($52  , $53   ) AND ( ( t_09.puid = t_017.puid ) AND t_017.status IN  ($54  , $55   ) ) ) ) ) ) ) ) ) ) ) AND ( t_09.puid = t_010.puid AND t_010.puid = t_011.puid AND t_015.puid = t_016.puid AND t_05.puid = t_06.puid AND t_06.puid = t_07.puid AND t_01.puid = t_02.puid ) ) AND (t_04.arev_category IN (48,40)) AND (t_012.arev_category IN (48,40)) "
+                              ,"parameters: $1 = '0301', $2 = '0301A', $3 = '0301B', $4 = '0301C', $5 = '0301D', $6 = '0301E', $7 = '0301F', $8 = '0301G', $9 = '0301H', $10 = '0301J', $11 = '0301K', $12 = '0301L', $13 = '0301M', $14 = '0301N', $15 = '0301P', $16 = '0301Q', $17 = '0301R', $18 = '0301S', $19 = '0301T', $20 = '0301U', $21 = '0301V', $22 = '0301W', $23 = '0308', $24 = '0310A', $25 = '0310B', $26 = '0312', $27 = '0312A', $28 = '0312B', $29 = '0312C', $30 = '0313A', $31 = '0313B', $32 = '0313C', $33 = '0313D', $34 = '0370', $35 = '0370V', $36 = '0371', $37 = '0372', $38 = '0373', $39 = '0374', $40 = '0375A', $41 = '0375B', $42 = '0375C', $43 = '0375D', $44 = '0375F', $45 = '0375H', $46 = '0379A', $47 = '0379B', $48 = '0379C',                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              $49 = 'B.2',                                                                                    $50 = 'TRIAL_03029FDY-007',                                                                                                                                                                                       $51 = '印制板',                                                                    $52 = 'NONE', $53 = 'zh_CN', $54 = 'A', $55 = 'M'
+                                 
+PH6HWPARTREVISION PITEMREVISION  PH6HWMBAPART PH6HWMBAPARTREVISION PSTRUCTURE_REVISIONS PWORKSPACEOBJECT PPSOCCURRENCE PH6HWPART PITEM VL10N_OBJECT_NAME
+ora2pg -c /data01/soft_tar/export_dir/ora2pg.conf -a 'PH6HWPARTREVISION PITEMREVISION  PH6HWMBAPART PH6HWMBAPARTREVISION PSTRUCTURE_REVISIONS PWORKSPACEOBJECT PPSOCCURRENCE PH6HWPART PITEM ' -o /data01/soft_tar/export_dir/test1/output.sql  > /data01/soft_tar/export_dir/test1/output.sql.log						  
+******************************/
+
+							  
+SELECT  DISTINCT t_01.puid FROM PH6HWPARTREVISION t_01 , PITEMREVISION t_02 , PPSOCCURRENCE t_03 , PWORKSPACEOBJECT t_04 , PSTRUCTURE_REVISIONS t_05 , PH6HWPARTREVISION t_06 , PITEMREVISION t_07 , PH6HWMBAPART t_08 , PH6HWMBAPARTREVISION t_09 , PSTRUCTURE_REVISIONS t_010 , PITEMREVISION t_011 , PWORKSPACEOBJECT t_012 , PPSOCCURRENCE t_013 , PH6HWPART t_014 , PH6HWPART t_015 , PITEM t_016 , VL10N_OBJECT_NAME t_017 WHERE ( (  UPPER(t_01.ph6CategoryCode)  IN  ( UPPER( '0301'  ) ,  UPPER( '0301A'  ) ,  UPPER( '0301B'  ) ,  UPPER( '0301C'  ) ,  UPPER( '0301D'  ) ,  UPPER( '0301E'  ) ,  UPPER( '0301F'  ) ,  UPPER( '0301G'  ) ,  UPPER( '0301H'  ) ,  UPPER( '0301J'   ) ,  UPPER( '0301L'   ) ,  UPPER( '0301L'   ) ,  UPPER( '0301M'   ) ,  UPPER( '0301N'   ) ,  UPPER( '0301P'   ) ,  UPPER( '0301Q'   ) ,  UPPER( '0301R'   ) ,  UPPER( '0301S'   ) ,  UPPER( '0301T'   ) ,  UPPER( '0301U'   ) ,  UPPER( '0301V'   ) ,  UPPER( '0301W'   ) ,  UPPER( '0308'   ) ,  UPPER( '0310A'   ) ,  UPPER( '0310B'   ) ,  UPPER( '0312'   ) ,  UPPER( '0312A'   ) ,  UPPER( '0312B'   ) ,  UPPER( '0312C'   ) ,  UPPER( '0313A'   ) ,  UPPER( '0313B'   ) ,  UPPER( '0313C'   ) ,  UPPER( '0313D'   ) ,  UPPER( '0370'   ) ,  UPPER( '0370V'   ) ,  UPPER( '0371'   ) ,  UPPER( '0372'   ) ,  UPPER( '0373'   ) ,  UPPER( '0374'   ) ,  UPPER( '0375A'   ) ,  UPPER( '0375B'   ) ,  UPPER( '0375C'   ) ,  UPPER( '0375D'   ) ,  UPPER( '0375F'   ) ,  UPPER( '0375H'   ) ,  UPPER( '0379A'   ) ,  UPPER( '0379B'   ) ,  UPPER( '0379C'   )  ) AND ( ( ( t_02.ritems_tagu = t_014.puid ) AND ( ( t_014.puid = t_013.rchild_itemu ) AND ( ( t_013.rparent_bvru = t_012.aoid ) AND ( ( t_012.aoid = t_010.pvalu_0 ) AND ( ( t_011.ritems_tagu = t_08.puid ) AND ( ( t_08.puid = t_03.rchild_itemu ) AND ( ( t_03.rparent_bvru = t_04.aoid ) AND ( ( t_04.aoid = t_05.pvalu_0 ) AND  ( UPPER(t_06.ph6PDMVersion)  =  UPPER( 'B.2'   )  ) ) ) ) ) ) ) ) ) AND ( ( ( t_02.ritems_tagu = t_014.puid ) AND ( ( t_014.puid = t_013.rchild_itemu ) AND ( ( t_013.rparent_bvru = t_012.aoid ) AND ( ( t_012.aoid = t_010.pvalu_0 ) AND ( ( t_011.ritems_tagu = t_08.puid ) AND ( ( t_08.puid = t_03.rchild_itemu ) AND ( ( t_03.rparent_bvru = t_04.aoid ) AND ( ( t_04.aoid = t_05.pvalu_0 ) AND ( ( t_07.ritems_tagu = t_015.puid ) AND  ( UPPER(t_016.pitem_id)  =  UPPER( 'TRIAL_03029FDY-007'   )  ) ) ) ) ) ) ) ) ) ) AND ( ( t_02.ritems_tagu = t_014.puid ) AND ( ( t_014.puid = t_013.rchild_itemu ) AND ( ( t_013.rparent_bvru = t_012.aoid ) AND ( ( t_012.aoid = t_010.pvalu_0 ) AND (  ( UPPER(t_017.pval_0)  =  UPPER( '印制板'   )  ) AND ( t_017.locale IN  ('NONE'  , 'zh_CN'   ) AND ( ( t_09.puid = t_017.puid ) AND t_017.status IN  ('A'  , 'M'   ) ) ) ) ) ) ) ) ) ) ) AND ( t_09.puid = t_010.puid AND t_010.puid = t_011.puid AND t_015.puid = t_016.puid AND t_05.puid = t_06.puid AND t_06.puid = t_07.puid AND t_01.puid = t_02.puid ) ) AND (t_04.arev_category IN (48,40)) AND (t_012.arev_category IN (48,40)) "
+
+oracle: Plan Hash Value  : 3856869086 
+
+----------------------------------------------------------------------------------------------------------------------------
+| Id   | Operation                                               | Name                   | Rows | Bytes | Cost | Time     |
+----------------------------------------------------------------------------------------------------------------------------
+|    0 | SELECT STATEMENT                                        |                        |    1 |   392 |   19 | 00:00:01 |
+|    1 |   HASH UNIQUE                                           |                        |    1 |   392 |   19 | 00:00:01 |
+|    2 |    NESTED LOOPS                                         |                        |    1 |   392 |   18 | 00:00:01 |
+|    3 |     NESTED LOOPS                                        |                        |    1 |   392 |   18 | 00:00:01 |
+|    4 |      NESTED LOOPS                                       |                        |    1 |   371 |   17 | 00:00:01 |
+|    5 |       NESTED LOOPS                                      |                        |    1 |   341 |   16 | 00:00:01 |
+|    6 |        NESTED LOOPS                                     |                        |    1 |   326 |   15 | 00:00:01 |
+|    7 |         NESTED LOOPS                                    |                        |    1 |   296 |   14 | 00:00:01 |
+|    8 |          NESTED LOOPS                                   |                        |    1 |   278 |   13 | 00:00:01 |
+|    9 |           NESTED LOOPS                                  |                        |    1 |   259 |   11 | 00:00:01 |
+|   10 |            NESTED LOOPS                                 |                        |    1 |   244 |   10 | 00:00:01 |
+|   11 |             NESTED LOOPS                                |                        |    1 |   214 |    9 | 00:00:01 |
+|   12 |              NESTED LOOPS                               |                        |    1 |   184 |    8 | 00:00:01 |
+|   13 |               NESTED LOOPS                              |                        |    1 |   169 |    7 | 00:00:01 |
+|   14 |                NESTED LOOPS                             |                        |    1 |   139 |    6 | 00:00:01 |
+|   15 |                 NESTED LOOPS                            |                        |    1 |   121 |    5 | 00:00:01 |
+|   16 |                  NESTED LOOPS                           |                        |    1 |    91 |    4 | 00:00:01 |
+|   17 |                   NESTED LOOPS                          |                        |    2 |   142 |    3 | 00:00:01 |
+|   18 |                    NESTED LOOPS                         |                        |    1 |    41 |    2 | 00:00:01 |
+|   19 |                     TABLE ACCESS BY INDEX ROWID BATCHED | PITEM                  |    1 |    26 |    1 | 00:00:01 |
+| * 20 |                      INDEX RANGE SCAN                   | PIPITEM_0              |    1 |       |    1 | 00:00:01 |
+| * 21 |                     INDEX UNIQUE SCAN                   | PIPH6HWPART            |    1 |    15 |    1 | 00:00:01 |
+| * 22 |                    INDEX RANGE SCAN                     | PIPITEMREVISION_4      |    2 |    60 |    1 | 00:00:01 |
+| * 23 |                   TABLE ACCESS BY INDEX ROWID           | PH6HWPARTREVISION      |    1 |    20 |    1 | 00:00:01 |
+| * 24 |                    INDEX UNIQUE SCAN                    | PIPH6HWPARTREVISION    |    1 |       |    1 | 00:00:01 |
+|   25 |                  TABLE ACCESS BY INDEX ROWID BATCHED    | PSTRUCTURE_REVISIONS   |    1 |    30 |    1 | 00:00:01 |
+| * 26 |                   INDEX RANGE SCAN                      | PIPSTRUCTURE_REVISIONS |    1 |       |    1 | 00:00:01 |
+| * 27 |                 TABLE ACCESS BY INDEX ROWID BATCHED     | PWORKSPACEOBJECT       |    1 |    18 |    1 | 00:00:01 |
+| * 28 |                  INDEX RANGE SCAN                       | PIPWORKSPACEOBJECT_0   |    1 |       |    1 | 00:00:01 |
+|   29 |                TABLE ACCESS BY INDEX ROWID BATCHED      | PPSOCCURRENCE          |    7 |   210 |    1 | 00:00:01 |
+| * 30 |                 INDEX RANGE SCAN                        | PIPPSOCCURRENCE_0      |  176 |       |    1 | 00:00:01 |
+| * 31 |               INDEX UNIQUE SCAN                         | PIPH6HWMBAPART         |    1 |    15 |    1 | 00:00:01 |
+| * 32 |              INDEX RANGE SCAN                           | PIPITEMREVISION_4      |    2 |    60 |    1 | 00:00:01 |
+|   33 |             TABLE ACCESS BY INDEX ROWID BATCHED         | PSTRUCTURE_REVISIONS   |    1 |    30 |    1 | 00:00:01 |
+| * 34 |              INDEX RANGE SCAN                           | PIPSTRUCTURE_REVISIONS |    1 |       |    1 | 00:00:01 |
+| * 35 |            INDEX UNIQUE SCAN                            | PIPH6HWMBAPARTREVISION |    1 |    15 |    1 | 00:00:01 |
+|   36 |           VIEW                                          | VL10N_OBJECT_NAME      |    1 |    19 |    2 | 00:00:01 |
+|   37 |            UNION ALL PUSHED PREDICATE                   |                        |      |       |      |          |
+| * 38 |             TABLE ACCESS BY INDEX ROWID BATCHED         | PL10N_OBJECT_NAME      |    1 |    93 |    1 | 00:00:01 |
+| * 39 |              INDEX RANGE SCAN                           | PIPL10N_OBJECT_NAME    |    1 |       |    1 | 00:00:01 |
+| * 40 |             TABLE ACCESS BY INDEX ROWID                 | PWORKSPACEOBJECT       |    1 |    46 |    1 | 00:00:01 |
+| * 41 |              INDEX UNIQUE SCAN                          | PIPWORKSPACEOBJECT     |    1 |       |    1 | 00:00:01 |
+| * 42 |          TABLE ACCESS BY INDEX ROWID BATCHED            | PWORKSPACEOBJECT       |    1 |    18 |    1 | 00:00:01 |
+| * 43 |           INDEX RANGE SCAN                              | PIPWORKSPACEOBJECT_0   |    1 |       |    1 | 00:00:01 |
+|   44 |         TABLE ACCESS BY INDEX ROWID BATCHED             | PPSOCCURRENCE          |    7 |   210 |    1 | 00:00:01 |
+| * 45 |          INDEX RANGE SCAN                               | PIPPSOCCURRENCE_0      |  176 |       |    1 | 00:00:01 |
+| * 46 |        INDEX UNIQUE SCAN                                | PIPH6HWPART            |    1 |    15 |    1 | 00:00:01 |
+| * 47 |       INDEX RANGE SCAN                                  | PIPITEMREVISION_4      |    2 |    60 |    1 | 00:00:01 |
+| * 48 |      INDEX UNIQUE SCAN                                  | PIPH6HWPARTREVISION    |    1 |       |    1 | 00:00:01 |
+| * 49 |     TABLE ACCESS BY INDEX ROWID                         | PH6HWPARTREVISION      |    1 |    21 |    1 | 00:00:01 |
+
+pg:
+   Unique  (cost=318233.86..318233.87 rows=1 width=15)
+  ->  Sort  (cost=318233.86..318233.87 rows=1 width=15)
+        Sort Key: t_01.puid
+        ->  Nested Loop  (cost=8.51..318233.85 rows=1 width=15)
+              ->  Nested Loop  (cost=8.09..318232.91 rows=1 width=45)
+                    ->  Nested Loop  (cost=7.54..318231.33 rows=1 width=45)
+                          ->  Nested Loop  (cost=6.97..318230.18 rows=1 width=15)
+                                ->  Nested Loop  (cost=6.41..16217.62 rows=1 width=60)
+                                      ->  Nested Loop  (cost=5.83..8117.55 rows=1 width=75)
+                                            ->  Nested Loop  (cost=5.26..8115.75 rows=1 width=60)
+                                                  ->  Nested Loop  (cost=4.84..8114.80 rows=1 width=45)
+                                                        ->  Nested Loop  (cost=4.41..8113.34 rows=1 width=15)
+                                                              ->  Nested Loop  (cost=3.98..8112.39 rows=1 width=45)
+                                                                    ->  Nested Loop  (cost=3.42..8111.25 rows=1 width=15)
+                                                                          ->  Nested Loop  (cost=2.85..11.18 rows=1 width=30)
+                                                                                ->  Nested Loop  (cost=2.28..9.37 rows=1 width=15)
+                                                                                      Join Filter: ((t_06.puid)::text = (t_05.puid)::text)
+                                                                                      ->  Nested Loop  (cost=1.85..7.91 rows=1 width=30)
+                                                                                            ->  Nested Loop  (cost=1.42..6.45 rows=1 width=15)
+                                                                                                  ->  Nested Loop  (cost=0.86..5.30 rows=1 width=30)
+                                                                                                        ->  Index Scan using pipitem_0 on pitem t_016  (cost=0.43..2.65 rows=1 width=15)
+                                                                                                              Index Cond: (upper((pitem_id)::text) = 'TRIAL_03029FDY-007'::text)
+                                                                                                        ->  Index Only Scan using piph6hwpart on ph6hwpart t_015  (cost=0.43..2.65 rows=1 width=15)
+                                                                                                              Index Cond: (puid = (t_016.puid)::text)
+                                                                                                  ->  Index Only Scan using pipitemrevision_4 on pitemrevision t_07  (cost=0.56..1.12 rows=3 width=30)
+                                                                                                        Index Cond: (ritems_tagu = (t_015.puid)::text)
+                                                                                            ->  Index Scan using piph6hwpartrevision on ph6hwpartrevision t_06  (cost=0.43..1.46 rows=1 width=15)
+                                                                                                  Index Cond: ((puid)::text = (t_07.puid)::text)
+                                                                                                  Filter: (upper((ph6pdmversion)::text) = 'B.2'::text)
+                                                                                      ->  Index Scan using pipstructure_revisions on pstructure_revisions t_05  (cost=0.43..1.45 rows=1 width=30)
+                                                                                            Index Cond: ((puid)::text = (t_07.puid)::text)
+                                                                                ->  Index Scan using pipworkspaceobject_0 on pworkspaceobject t_04  (cost=0.57..1.80 rows=1 width=15)
+                                                                                      Index Cond: ((aoid)::text = (t_05.pvalu_0)::text)
+                                                                                      Filter: (arev_category = ANY ('{48,40}'::bigint[]))
+                                                                          ->  Index Scan using pippsoccurrence_0 on ppsoccurrence t_03  (cost=0.57..7948.09 rows=15198 width=30)
+                                                                                Index Cond: ((rparent_bvru)::text = (t_04.aoid)::text)
+                                                                    ->  Index Only Scan using pipitemrevision_4 on pitemrevision t_011  (cost=0.56..1.11 rows=3 width=30)
+                                                                          Index Cond: (ritems_tagu = (t_03.rchild_itemu)::text)
+                                                              ->  Index Only Scan using piph6hwmbapart on ph6hwmbapart t_08  (cost=0.42..0.94 rows=1 width=15)
+                                                                    Index Cond: (puid = (t_011.ritems_tagu)::text)
+                                                        ->  Index Scan using pipstructure_revisions on pstructure_revisions t_010  (cost=0.43..1.45 rows=1 width=30)
+                                                              Index Cond: ((puid)::text = (t_011.puid)::text)
+                                                  ->  Index Only Scan using piph6hwmbapartrevision on ph6hwmbapartrevision t_09  (cost=0.42..0.95 rows=1 width=15)
+                                                        Index Cond: (puid = (t_010.puid)::text)
+                                            ->  Index Scan using pipworkspaceobject_0 on pworkspaceobject t_012  (cost=0.57..1.80 rows=1 width=15)
+                                                  Index Cond: ((aoid)::text = (t_010.pvalu_0)::text)
+                                                  Filter: (arev_category = ANY ('{48,40}'::bigint[]))
+                                      ->  Index Scan using pippsoccurrence_0 on ppsoccurrence t_013  (cost=0.57..7948.09 rows=15198 width=30)
+                                            Index Cond: ((rparent_bvru)::text = (t_012.aoid)::text)
+                                ->  Append  (cost=0.57..302012.54 rows=2 width=15)
+                                      ->  Subquery Scan on "*SELECT* 1"  (cost=0.57..302011.51 rows=1 width=15)
+                                            Filter: ((t_09.puid)::text = ("*SELECT* 1".puid)::text)
+                                            ->  Index Scan using pipworkspaceobject_2 on pworkspaceobject  (cost=0.57..298547.48 rows=277122 width=175)
+                                                  Index Cond: (upper((pobject_name)::text) = '印制板'::text)
+                                                  Filter: (vla_691_23 = 0)
+                                      ->  Index Scan using pipl10n_object_name on pl10n_object_name  (cost=0.27..1.02 rows=1 width=15)
+                                            Index Cond: ((puid)::text = (t_09.puid)::text)
+                                            Filter: ((substr((pval_0)::text, 1, 5) = ANY ('{NONE,zh_CN}'::text[])) AND (substr((pval_0)::text, 9, 1) = ANY ('{A,M}'::text[])) AND (upper(substr((pval_0)::text, 49, 128)) = '印制板'::text))
+                          ->  Index Only Scan using pipitemrevision_4 on pitemrevision t_02  (cost=0.56..1.11 rows=3 width=30)
+                                Index Cond: (ritems_tagu = (t_013.rchild_itemu)::text)
+                    ->  Index Scan using piph6hwpartrevision on ph6hwpartrevision t_01  (cost=0.55..1.58 rows=1 width=15)
+                          Index Cond: ((puid)::text = (t_02.puid)::text)
+                          Filter: (upper((ph6categorycode)::text) = ANY ('{0301,0301A,0301B,0301C,0301D,0301E,0301F,0301G,0301H,0301J,0301L,0301L,0301M,0301N,0301P,0301Q,0301R,0301S,0301T,0301U,0301V,0301W,0308,0310A,0310B,0312,0312A,0312B,0312C,0313A,0313B,0313C,0313D,0370,0370V,0371,0372,0373,0374,0375A,0375B,0375C,0375D,0375F,0375H,0379A,0379B,0379C}'::text[]))
+              ->  Index Only Scan using piph6hwpart on ph6hwpart t_014  (cost=0.43..0.95 rows=1 width=15)
+                    Index Cond: (puid = (t_02.ritems_tagu)::text)
+					
+CREATE TABLE ph6hwpartrevision (
+	puid varchar(15) NOT NULL,
+	ph6sourcesystem varchar(32),
+	ph6pdmversion varchar(64),
+	ph6componentoid varchar(512),
+	ph6componentlink varchar(1000),
+	ph6categorycode varchar(1500),
+	ph6categoryname varchar(1500),
+	ph6internalmodel varchar(1500),
+	ph6template varchar(64),
+	ph6additionalnote varchar(1500),
+	ph6itemrevision varchar(3000),
+	ph6drawingversion varchar(64),
+	ph6state varchar(600),
+	ph6productid varchar(600),
+	ph6productname varchar(4000),
+	ph6productlineid varchar(600),
+	ph6productlinename varchar(4000),
+	ph6status varchar(200),
+	ph6procdocname varchar(1500),
+	ph6procdoclink varchar(1000),
+	ph6boardthickness varchar(128),
+	ph6dielectricmaterialmodel varchar(1000),
+	ph6panelinfo varchar(1500),
+	ph6boardlength varchar(128),
+	ph6boardwidth varchar(128),
+	ph6haveplumbum varchar(32),
+	ph6package varchar(1500),
+	ph6desc varchar(2160),
+	ph6installationmodel varchar(128),
+	ph6surfacetreatment varchar(1500),
+	ph6packageinfo varchar(4000),
+	vla_1721_31 numeric(38) NOT NULL DEFAULT 0,
+	vla_1721_32 numeric(38) NOT NULL DEFAULT 0,
+	vla_1721_33 numeric(38) NOT NULL DEFAULT 0,
+	vla_1721_34 numeric(38) NOT NULL DEFAULT 0,
+	vla_1721_35 numeric(38) NOT NULL DEFAULT 0,
+	vla_1721_36 numeric(38) NOT NULL DEFAULT 0,
+	vla_1721_37 numeric(38) NOT NULL DEFAULT 0,
+	vla_1721_38 numeric(38) NOT NULL DEFAULT 0,
+	ph6weight varchar(32),
+	ph6resourcetype varchar(128),
+	ph6resourcestatus varchar(128),
+	ph6modifiedby varchar(128),
+	ph6modifiedat varchar(128),
+	ph6manufacture varchar(1024),
+	ph6ifsupporttranswithpcba varchar(32),
+	ph6dprversion varchar(128),
+	ph6dprurl varchar(512),
+	ph6dprname varchar(1500),
+	ph6createdby varchar(128),
+	ph6createdat varchar(128),
+	ph6preprocess varchar(128),
+	ph6accessoriesname varchar(128),
+	ph6drawingnumber varchar(256),
+	ph6dn_tsbn varchar(256),
+	ph6dn_model varchar(256),
+	ph6processingmethod varchar(256),
+	ph6externalname varchar(1500),
+	ph6productlinecp varchar(2000),
+	vla_1721_58 numeric(38) NOT NULL DEFAULT 0,
+	ph6bomupdstatus varchar(32),
+	ph6startdateupd timestamp(0),
+	ph6models varchar(256),
+	ph6organization varchar(128),
+	ph6pdmadditionalnote varchar(512),
+	ph6controlgranularity varchar(128)
+) ;
+CREATE UNIQUE INDEX piph6hwpartrevision ON ph6hwpartrevision (puid);
+ALTER TABLE ph6hwpartrevision ALTER COLUMN PUID SET NOT NULL;
+ALTER TABLE ph6hwpartrevision ALTER COLUMN VLA_1721_31 SET NOT NULL;
+ALTER TABLE ph6hwpartrevision ALTER COLUMN VLA_1721_32 SET NOT NULL;
+ALTER TABLE ph6hwpartrevision ALTER COLUMN VLA_1721_33 SET NOT NULL;
+ALTER TABLE ph6hwpartrevision ALTER COLUMN VLA_1721_34 SET NOT NULL;
+ALTER TABLE ph6hwpartrevision ALTER COLUMN VLA_1721_35 SET NOT NULL;
+ALTER TABLE ph6hwpartrevision ALTER COLUMN VLA_1721_36 SET NOT NULL;
+ALTER TABLE ph6hwpartrevision ALTER COLUMN VLA_1721_37 SET NOT NULL;
+ALTER TABLE ph6hwpartrevision ALTER COLUMN VLA_1721_38 SET NOT NULL;
+ALTER TABLE ph6hwpartrevision ALTER COLUMN VLA_1721_58 SET NOT NULL;
+
+
+CREATE TABLE pitemrevision (
+	puid varchar(15) NOT NULL,
+	pitem_revision_id varchar(32) NOT NULL,
+	pfnd0currentlocationcode varchar(32),
+	vla_1055_10 numeric(38) NOT NULL DEFAULT 0,
+	vla_1055_11 numeric(38) NOT NULL DEFAULT 0,
+	vla_1055_12 numeric(38) NOT NULL DEFAULT 0,
+	vla_1055_14 numeric(38) NOT NULL DEFAULT 0,
+	pfnd0reuseassembly numeric(38),
+	ritems_tagu varchar(15) NOT NULL,
+	ritems_tagc numeric(38) NOT NULL,
+	psequence_id numeric(38),
+	psequence_limit numeric(38),
+	rvariant_expression_blocku varchar(15),
+	rvariant_expression_blockc numeric(38),
+	rsequence_anchoru varchar(15),
+	rsequence_anchorc numeric(38),
+	phas_variant_module numeric(38),
+	ppsi2conveyorspeed bigint,
+	ppsi2conveyorlength bigint,
+	ppsi2capacity numeric(38),
+	ppsi2plantsimclass varchar(128),
+	ppsi2mttr bigint,
+	ppsi2availability bigint
+) ;
+CREATE UNIQUE INDEX pipitemrevision ON pitemrevision (puid);
+CREATE UNIQUE INDEX pipitemrevision_0 ON pitemrevision (ritems_tagu, pitem_revision_id, psequence_id);
+CREATE INDEX pipitemrevision_1 ON pitemrevision (rvariant_expression_blocku);
+CREATE INDEX pipitemrevision_2 ON pitemrevision (upper(pitem_revision_id));
+CREATE UNIQUE INDEX pipitemrevision_3 ON pitemrevision (puid, ritems_tagu);
+CREATE UNIQUE INDEX pipitemrevision_4 ON pitemrevision (ritems_tagu, puid);
+ALTER TABLE pitemrevision ALTER COLUMN PUID SET NOT NULL;
+ALTER TABLE pitemrevision ALTER COLUMN PITEM_REVISION_ID SET NOT NULL;
+ALTER TABLE pitemrevision ALTER COLUMN VLA_1055_10 SET NOT NULL;
+ALTER TABLE pitemrevision ALTER COLUMN VLA_1055_11 SET NOT NULL;
+ALTER TABLE pitemrevision ALTER COLUMN VLA_1055_12 SET NOT NULL;
+ALTER TABLE pitemrevision ALTER COLUMN VLA_1055_14 SET NOT NULL;
+ALTER TABLE pitemrevision ALTER COLUMN RITEMS_TAGU SET NOT NULL;
+ALTER TABLE pitemrevision ALTER COLUMN RITEMS_TAGC SET NOT NULL;
+
+
+CREATE TABLE ph6hwmbapart (
+	puid varchar(15) NOT NULL
+) ;
+CREATE UNIQUE INDEX piph6hwmbapart ON ph6hwmbapart (puid);
+ALTER TABLE ph6hwmbapart ALTER COLUMN PUID SET NOT NULL;
+
+
+CREATE TABLE ph6hwmbapartrevision (
+	puid varchar(15) NOT NULL
+) ;
+CREATE UNIQUE INDEX piph6hwmbapartrevision ON ph6hwmbapartrevision (puid);
+ALTER TABLE ph6hwmbapartrevision ALTER COLUMN PUID SET NOT NULL;
+
+
+CREATE TABLE pstructure_revisions (
+	puid varchar(15) NOT NULL,
+	pseq numeric(38) NOT NULL,
+	pvalu_0 varchar(15),
+	pvalc_0 numeric(38)
+) ;
+CREATE UNIQUE INDEX pipstructure_revisions ON pstructure_revisions (puid, pseq);
+CREATE INDEX pipstructure_revisions_0 ON pstructure_revisions (pvalu_0);
+ALTER TABLE pstructure_revisions ALTER COLUMN PUID SET NOT NULL;
+ALTER TABLE pstructure_revisions ALTER COLUMN PSEQ SET NOT NULL;
+
+
+CREATE TABLE pworkspaceobject (
+	puid varchar(15) NOT NULL,
+	pobject_name varchar(128) NOT NULL,
+	pobject_desc varchar(240),
+	pobject_type varchar(32) NOT NULL,
+	pobject_application varchar(32) NOT NULL,
+	vla_691_7 numeric(38) NOT NULL,
+	pip_classification varchar(128),
+	vla_691_10 numeric(38) NOT NULL,
+	pgov_classification varchar(128),
+	vla_691_12 numeric(38) NOT NULL,
+	pfnd0revisionid varchar(32),
+	vla_691_18 numeric(38) NOT NULL,
+	vla_691_20 numeric(38) NOT NULL,
+	rwso_threadu varchar(15),
+	rwso_threadc numeric(38),
+	prevision_limit numeric(38) NOT NULL,
+	prevision_number numeric(38) NOT NULL,
+	rowning_organizationu varchar(15),
+	rowning_organizationc numeric(38),
+	pactive_seq numeric(38),
+	rowning_projectu varchar(15),
+	rowning_projectc numeric(38),
+	pdate_released timestamp(0),
+	pfnd0inprocess numeric(38),
+	pfnd0isrevisiondiscontinued numeric(38),
+	aoid varchar(15) NOT NULL,
+	arev_category bigint NOT NULL DEFAULT 48,
+	aspace_uid varchar(15),
+	avalid_from timestamp(0) NOT NULL DEFAULT to_date('1900/01/02 00:00:00','YYYY/MM/DD HH24:MI:SS'),
+	avalid_to timestamp(0),
+	vla_691_22 numeric(38) NOT NULL DEFAULT 0,
+	vla_691_23 numeric(38) NOT NULL DEFAULT 0,
+	pawp0issuspect numeric(38),
+	vla_691_28 numeric(38) NOT NULL DEFAULT 0,
+	vla_691_27 numeric(38) NOT NULL DEFAULT 0,
+	vla_691_26 numeric(38) NOT NULL DEFAULT 0,
+	vla_691_25 numeric(38) NOT NULL DEFAULT 0
+) ;
+CREATE UNIQUE INDEX pipworkspaceobject ON pworkspaceobject (puid);
+CREATE INDEX pipworkspaceobject_0 ON pworkspaceobject (aoid);
+CREATE INDEX pipworkspaceobject_1 ON pworkspaceobject (upper(pobject_type));
+CREATE INDEX pipworkspaceobject_2 ON pworkspaceobject (upper(pobject_name));
+CREATE INDEX pipworkspaceobject_3 ON pworkspaceobject (pobject_type);
+CREATE INDEX pipworkspaceobject_4 ON pworkspaceobject (pobject_name);
+CREATE INDEX pipworkspaceobject_5 ON pworkspaceobject (rwso_threadu);
+CREATE INDEX pipworkspaceobject_6 ON pworkspaceobject (rowning_projectu);
+ALTER TABLE pworkspaceobject ALTER COLUMN PUID SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN POBJECT_NAME SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN POBJECT_TYPE SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN POBJECT_APPLICATION SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_7 SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_10 SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_12 SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_18 SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_20 SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN PREVISION_LIMIT SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN PREVISION_NUMBER SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN AOID SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN AREV_CATEGORY SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN AVALID_FROM SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_22 SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_23 SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_28 SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_27 SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_26 SET NOT NULL;
+ALTER TABLE pworkspaceobject ALTER COLUMN VLA_691_25 SET NOT NULL;
+
+
+CREATE TABLE ppsoccurrence (
+	puid varchar(15) NOT NULL,
+	pqty_value bigint NOT NULL,
+	pext_transform_rot00 bigint,
+	pext_transform_rot10 bigint,
+	pext_transform_rot20 bigint,
+	pext_transform_per0 bigint,
+	pext_transform_rot01 bigint,
+	pext_transform_rot11 bigint,
+	pext_transform_rot21 bigint,
+	pext_transform_per1 bigint,
+	pext_transform_rot02 bigint,
+	pext_transform_rot12 bigint,
+	pext_transform_rot22 bigint,
+	pext_transform_per2 bigint,
+	pext_transform_tra0 bigint,
+	pext_transform_tra1 bigint,
+	pext_transform_tra2 bigint,
+	pext_transform_invscale bigint,
+	pseq_no varchar(15),
+	vla_1100_5 numeric(38) NOT NULL DEFAULT 0,
+	vla_1100_12 numeric(38) NOT NULL DEFAULT 0,
+	vla_1100_13 numeric(38) NOT NULL DEFAULT 0,
+	vla_1100_6 numeric(38) NOT NULL DEFAULT 0,
+	vla_1100_30 numeric(38) NOT NULL DEFAULT 0,
+	poccurrence_name varchar(100),
+	pref_designator varchar(30),
+	rchild_itemu varchar(15) NOT NULL,
+	rchild_itemc numeric(38) NOT NULL,
+	ralternate_etc_refu varchar(15) NOT NULL,
+	ralternate_etc_refc numeric(38) NOT NULL,
+	rvariant_conditionu varchar(15) NOT NULL,
+	rvariant_conditionc numeric(38) NOT NULL,
+	poccurrence_type numeric(38) NOT NULL,
+	porder_no numeric(38) NOT NULL,
+	pocc_flags numeric(38) NOT NULL,
+	rchild_bvu varchar(15) NOT NULL,
+	rchild_bvc numeric(38) NOT NULL,
+	rparent_bvru varchar(15) NOT NULL,
+	rparent_bvrc numeric(38) NOT NULL,
+	ruom_tagu varchar(15),
+	ruom_tagc numeric(38),
+	rocc_typeu varchar(15),
+	rocc_typec numeric(38),
+	rocc_threadu varchar(15) NOT NULL,
+	rocc_threadc numeric(38) NOT NULL,
+	rxformu varchar(15) NOT NULL,
+	rxformc numeric(38) NOT NULL,
+	rnotes_refu varchar(15) NOT NULL,
+	rnotes_refc numeric(38) NOT NULL,
+	ph6mpndesc varchar(4000),
+	ph6enabledate timestamp(0),
+	ph6occmespecification varchar(1024),
+	ph6occusageaddress varchar(32),
+	ph6occpositiondesignator varchar(32),
+	ph6occismanualfill varchar(32),
+	ph6materialreplace varchar(256),
+	ph6auxqty varchar(32),
+	ph6ishidepartid varchar(128),
+	ph6shareprocess varchar(4000),
+	ph6resourcecategory varchar(256),
+	ph6matchedsite varchar(256),
+	vla_1100_51 numeric(38) NOT NULL DEFAULT 0
+) ;
+CREATE UNIQUE INDEX pippsoccurrence ON ppsoccurrence (puid);
+CREATE INDEX pippsoccurrence_0 ON ppsoccurrence (rparent_bvru);
+CREATE INDEX pippsoccurrence_1 ON ppsoccurrence (rchild_itemu);
+CREATE INDEX pippsoccurrence_2 ON ppsoccurrence (rocc_threadu);
+CREATE INDEX pippsoccurrence_3 ON ppsoccurrence (ralternate_etc_refu);
+CREATE INDEX pippsoccurrence_4 ON ppsoccurrence (rnotes_refu);
+CREATE INDEX pippsoccurrence_5 ON ppsoccurrence (rchild_itemu, rocc_threadu);
+CREATE INDEX pippsoccurrence_6 ON ppsoccurrence (ralternate_etc_refu, rocc_threadu);
+CREATE INDEX pippsoccurrence_7 ON ppsoccurrence (rvariant_conditionu);
+CREATE UNIQUE INDEX pippsoccurrence_8 ON ppsoccurrence (puid, rocc_threadu, rparent_bvru);
+CREATE INDEX pippsoccurrence_9 ON ppsoccurrence (rocc_threadu, rparent_bvru);
+ALTER TABLE ppsoccurrence ALTER COLUMN PUID SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN PQTY_VALUE SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN VLA_1100_5 SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN VLA_1100_12 SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN VLA_1100_13 SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN VLA_1100_6 SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN VLA_1100_30 SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RCHILD_ITEMU SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RCHILD_ITEMC SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RALTERNATE_ETC_REFU SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RALTERNATE_ETC_REFC SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RVARIANT_CONDITIONU SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RVARIANT_CONDITIONC SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN POCCURRENCE_TYPE SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN PORDER_NO SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN POCC_FLAGS SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RCHILD_BVU SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RCHILD_BVC SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RPARENT_BVRU SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RPARENT_BVRC SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN ROCC_THREADU SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN ROCC_THREADC SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RXFORMU SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RXFORMC SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RNOTES_REFU SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN RNOTES_REFC SET NOT NULL;
+ALTER TABLE ppsoccurrence ALTER COLUMN VLA_1100_51 SET NOT NULL;
+
+
+CREATE TABLE ph6hwpart (
+	puid varchar(15) NOT NULL,
+	ph6packageinfo varchar(3000),
+	ph6preprocess varchar(16),
+	vla_1718_3 numeric(38) NOT NULL DEFAULT 0
+) ;
+CREATE UNIQUE INDEX piph6hwpart ON ph6hwpart (puid);
+ALTER TABLE ph6hwpart ALTER COLUMN PUID SET NOT NULL;
+ALTER TABLE ph6hwpart ALTER COLUMN VLA_1718_3 SET NOT NULL;
+
+
+CREATE TABLE pitem (
+	puid varchar(15) NOT NULL,
+	pitem_id varchar(128) NOT NULL,
+	vla_798_2 numeric(38) NOT NULL DEFAULT 0,
+	pfnd0originallocationcode varchar(32),
+	vla_798_8 numeric(38) NOT NULL DEFAULT 0,
+	rpreferred_global_altu varchar(15),
+	rpreferred_global_altc numeric(38),
+	rconfiguration_object_tagu varchar(15) NOT NULL,
+	rconfiguration_object_tagc numeric(38) NOT NULL,
+	ruom_tagu varchar(15) NOT NULL,
+	ruom_tagc numeric(38) NOT NULL,
+	phas_variant_module numeric(38),
+	pfnd0is_monolithic numeric(38),
+	pis_vi numeric(38),
+	pis_configuration_item numeric(38)
+) ;
+CREATE UNIQUE INDEX pipitem ON pitem (puid);
+CREATE INDEX pipitem_0 ON pitem (upper(pitem_id));
+CREATE INDEX pipitem_1 ON pitem (pitem_id);
+ALTER TABLE pitem ALTER COLUMN PUID SET NOT NULL;
+ALTER TABLE pitem ALTER COLUMN PITEM_ID SET NOT NULL;
+ALTER TABLE pitem ALTER COLUMN VLA_798_2 SET NOT NULL;
+ALTER TABLE pitem ALTER COLUMN VLA_798_8 SET NOT NULL;
+ALTER TABLE pitem ALTER COLUMN RCONFIGURATION_OBJECT_TAGU SET NOT NULL;
+ALTER TABLE pitem ALTER COLUMN RCONFIGURATION_OBJECT_TAGC SET NOT NULL;
+ALTER TABLE pitem ALTER COLUMN RUOM_TAGU SET NOT NULL;
+ALTER TABLE pitem ALTER COLUMN RUOM_TAGC SET NOT NULL;
+
+
+create view VL10N_OBJECT_NAME as
+ SELECT pworkspaceobject.puid,
+    'NONE'::text AS locale,
+    'M'::text AS preference,
+    'M'::text AS status,
+    '0000'::text AS sequence_no,
+    pworkspaceobject.pobject_name::text AS pval_0
+   FROM pworkspaceobject
+  WHERE pworkspaceobject.pobject_name IS NOT NULL AND pworkspaceobject.vla_691_23 = 0
+UNION ALL
+ SELECT pl10n_object_name.puid,
+    substr(pl10n_object_name.pval_0::text, 1, 5) AS locale,
+    substr(pl10n_object_name.pval_0::text, 7, 1) AS preference,
+    substr(pl10n_object_name.pval_0::text, 9, 1) AS status,
+    substr(pl10n_object_name.pval_0::text, 11, 4) AS sequence_no,
+    substr(pl10n_object_name.pval_0::text, 49, 128) AS pval_0
+   FROM pl10n_object_name;
