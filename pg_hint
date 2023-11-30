@@ -126,3 +126,13 @@ Set(max_parallel_workers_per_gather 0)');
 调用看看：
 EXECUTE stmt1('03029AXT_PD01', 'wDW9e_iY47UIUC', '更改','更改后判断是否影响在制品','更改（BOP）', '更改（箱代码）','更改（验证失败）','（驳回）更改后判断是否影响在制品','（验证失败）更改后判断是否影响在制品','0', 'BwctCECe47UIUC','BoardDevProEng');
 
+
+show pg_hint_plan.enable_hint_table;
+show pg_hint_plan.enable_hint;
+show pg_hint_plan.debug_print;
+show pg_hint_plan.message_level ;
+show pg_hint_plan.parse_messages;
+
+set client_min_messages =notice;
+set pg_hint_plan.message_level=notice;
+set pg_hint_plan.debug_print=verbose;
