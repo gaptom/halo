@@ -1,107 +1,22 @@
-PREPARE stmt1(int, text) AS 
-  SELECT $1 AS id, $2 AS name;
+1.查看参数
+show pg_hint_plan.enable_hint_table;
+show pg_hint_plan.enable_hint;
+show pg_hint_plan.debug_print;
+show pg_hint_plan.message_level ;
+show pg_hint_plan.parse_messages;
 
-  INSERT INTO hint_plan.hints(norm_query_string, application_name, hints)
-     VALUES (
-        $$PREPARE stmt1(int, text) AS 
-  SELECT $1 AS id, $2 AS name;$$,
-         '',
-         'SeqScan(t1)');
+2.设置参数
+set client_min_messages =notice;
+set pg_hint_plan.message_level=notice;
+set pg_hint_plan.debug_print=verbose;
 
+3.写SQL语句
+PREPARE stmt3(varchar, varchar,varchar,varchar,varchar,varchar,varchar,varchar,varchar,int,varchar,varchar) AS SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( $1  )  ) AND ( t_02.rowning_useru = $2  AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( $3  ) ,  UPPER( $4  ) ,  UPPER( $5  ) ,  UPPER( $6  ) ,  UPPER( $7  ) ,  UPPER( $8  ) ,  UPPER( $9  )  ) ) ) AND ( ( t_01.pactive_seq != $10::int4   ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = $11   ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( $12   )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40)) ;
 
-         EXECUTE stmt1(1, 'John'); 
-
-
-
-postgres=# PREPARE stmt1(int, text) AS
-postgres-#   SELECT $1 AS id, $2 AS name;
-PREPARE
-Time: 1.508 ms
-postgres=# INSERT INTO hint_plan.hints(norm_query_string, application_name, hints)
-postgres-#      VALUES (
-postgres(#         $$PREPARE stmt1(int, text) AS
-postgres$#   SELECT $1 AS id, $2 AS name;$$,
-postgres(#          '',
-postgres(#          'SeqScan(t1)');
-INSERT 0 1
-Time: 4.657 ms
-postgres=# EXECUTE stmt1(1, 'John');
- id | name
-----+------
-  1 | John
-(1 row)
-
-Time: 0.386 ms
-postgres=# SET pg_hint_plan.debug_print TO on;
-SET
-Time: 0.240 ms
-postgres=# SET pg_hint_plan.message_level TO notice;
-SET
-Time: 0.050 ms
-postgres=# EXECUTE stmt1(1, 'John');
-NOTICE:  pg_hint_plan:
-used hint:
-not used hint:
-SeqScan(t1)
-duplication hint:
-error hint:
-
- id | name
-----+------
-  1 | John
-(1 row)
-
-Time: 0.272 ms
-=====================================
-hint_plan.hints
-
-SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( ? )  ) AND ( t_02.rowning_useru = ? AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( ? ) ,  UPPER( ? ) ,  UPPER( ? ) ,  UPPER( ? ) ,  UPPER( ? ) ,  UPPER( ? ) ,  UPPER( ? )  ) ) ) AND ( ( t_01.pactive_seq != ? ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = ? ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( ? )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40));
-
-SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( $1 )  ) AND ( t_02.rowning_useru = $2 AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( $3 ) ,  UPPER( $4 ) ,  UPPER( $5 ) ,  UPPER( $6 ) ,  UPPER( $7 ) ,  UPPER( $8 ) ,  UPPER( $9 )  ) ) ) AND ( ( t_01.pactive_seq != $10 ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = $11 ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( $12 )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40))
-
-+++++++++
-
-SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( $1  )  ) AND ( t_02.rowning_useru = $2  AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( $3  ) ,  UPPER( $4  ) ,  UPPER( $5  ) ,  UPPER( $6  ) ,  UPPER( $7  ) ,  UPPER( $8  ) ,  UPPER( $9  )  ) ) ) AND ( ( t_01.pactive_seq != $10::int4   ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = $11   ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( $12   )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40)) ","parameters: $1 = '03029AXT_PD01', $2 = 'wDW9e_iY47UIUC', $3 = '更改', $4 = '更改后判断是否影响在制品', $5 = '更改（BOP）', $6 = '更改（箱代码）', $7 = '更改（验证失败）', $8 = '（驳回）更改后判断是否影响在制品', $9 = '（验证失败）更改后判断是否影响在制品', $10 = '0', $11 = 'BwctCECe47UIUC', $12 = 'BoardDevProEng'
-
-
-You are now connected to database "tc" as user "infodba".
-tc=# SET pg_hint_plan.debug_print TO on;
-SET
-Time: 0.264 ms
-tc=# SET pg_hint_plan.message_level TO notice;
-SET
-Time: 0.176 ms
-tc=# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( '03027LBW3_PD01' )  ) AND ( t_02.rowning_useru = 'SxsVSLzK47UIUC' AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( '更改' ) ,  UPPER( '更改后判断是否影响在制品' ) ,  UPPER( '更改（BOP）' ) ,  UPPER( '更改（箱代码）' ) ,  UPPER( '更改（验证失败）' ) ,  UPPER( '（驳回）更改后判断是否影响在制品' ) ,  UPPER( '（验证失败）更改后判断是否影响在制品' )  ) ) ) AND ( ( t_01.pactive_seq != 0 ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = 'BwctCECe47UIUC' ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( 'BoardDevProEng' )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40));
- puid
-------
-(0 rows)
-
-Time: 11988.373 ms (00:11.988)
-tc=# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( '03027LBW3_PD01' )  ) AND ( t_02.rowning_useru = 'SxsVSLzK47UIUC' AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( '更改' ) ,  UPPER( '更改后判断是否影响在制品' ) ,  UPPER( '更改（BOP）' ) ,  UPPER( '更改（箱代码）' ) ,  UPPER( '更改（验证失败）' ) ,  UPPER( '（驳回）更改后判断是否影响在制品' ) ,  UPPER( '（验证失败）更改后判断是否影响在制品' )  ) ) ) AND ( ( t_01.pactive_seq != 0 ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = 'BwctCECe47UIUC' ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( 'BoardDevProEng' )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40));
- puid
-------
-(0 rows)
-
-Time: 13258.819 ms (00:13.259)
-tc=# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( '03027LBW3_PD01' )  ) AND ( t_02.rowning_useru = 'SxsVSLzK47UIUC' AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( '更改' ) ,  UPPER( '更改后判断是否影响在制品' ) ,  UPPER( '更改（BOP）' ) ,  UPPER( '更改（箱代码）' ) ,  UPPER( '更改（验证失败）' ) ,  UPPER( '（驳回）更改后判断是否影响在制品' ) ,  UPPER( '（验证失败）更改后判断是否影响在制品' )  ) ) ) AND ( ( t_01.pactive_seq != 0 ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = 'BwctCECe47UIUC' ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( 'BoardDevProEng' )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40));
- puid
-------
-(0 rows)
-
-Time: 3361.363 ms (00:03.361)
-tc=# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( '03027LBW3_PD01' )  ) AND ( t_02.rowning_useru = 'SxsVSLzK47UIUC' AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( '更改' ) ,  UPPER( '更改后判断是否影响在制品' ) ,  UPPER( '更改（BOP）' ) ,  UPPER( '更改（箱代码）' ) ,  UPPER( '更改（验证失败）' ) ,  UPPER( '（驳回）更改后判断是否影响在制品' ) ,  UPPER( '（验证失败）更改后判断是否影响在制品' )  ) ) ) AND ( ( t_01.pactive_seq != 0 ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = 'BwctCECe47UIUC' ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( 'BoardDevProEng' )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40));
- puid
-------
-(0 rows)
-
-Time: 307.314 ms
-tc=#
-
-------------------------------
-
+4.插入hint_plan.hints
 INSERT INTO hint_plan.hints(norm_query_string, application_name, hints)
      VALUES (
-        $$PREPARE stmt3(varchar2, varchar2,varchar2,varchar2,varchar2,varchar2,varchar2,varchar2,varchar2,int,varchar2,varchar2) AS SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( $1  )  ) AND ( t_02.rowning_useru = $2  AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( $3  ) ,  UPPER( $4  ) ,  UPPER( $5  ) ,  UPPER( $6  ) ,  UPPER( $7  ) ,  UPPER( $8  ) ,  UPPER( $9  )  ) ) ) AND ( ( t_01.pactive_seq != $10::int4   ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = $11   ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( $12   )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40)) ;$$,
+        $$PREPARE stmt3(varchar, varchar,varchar,varchar,varchar,varchar,varchar,varchar,varchar,int,varchar,varchar) AS SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( $1  )  ) AND ( t_02.rowning_useru = $2  AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( $3  ) ,  UPPER( $4  ) ,  UPPER( $5  ) ,  UPPER( $6  ) ,  UPPER( $7  ) ,  UPPER( $8  ) ,  UPPER( $9  )  ) ) ) AND ( ( t_01.pactive_seq != $10::int4   ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = $11   ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( $12   )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (?,?)) ;$$,
          '',
          'indexscan(t_04 piph6relatedbop_0_upp)
 indexscan(t_03 piph6mcnrevision )
@@ -124,15 +39,53 @@ set(enable_material off)
 Set(max_parallel_workers_per_gather 0)');
 
 调用看看：
-EXECUTE stmt1('03029AXT_PD01', 'wDW9e_iY47UIUC', '更改','更改后判断是否影响在制品','更改（BOP）', '更改（箱代码）','更改（验证失败）','（驳回）更改后判断是否影响在制品','（验证失败）更改后判断是否影响在制品','0', 'BwctCECe47UIUC','BoardDevProEng');
+EXECUTE stmt3('03029AXT_PD01', 'wDW9e_iY47UIUC', '更改','更改后判断是否影响在制品','更改（BOP）', '更改（箱代码）','更改（验证失败）','（驳回）更改后判断是否影响在制品','（验证失败）更改后判断是否影响在制品','0', 'BwctCECe47UIUC','BoardDevProEng');
+
+-----
+简单案例：
+PREPARE stmt1(int, text) AS 
+  SELECT $1 AS id, $2 AS name;
+
+  INSERT INTO hint_plan.hints(norm_query_string, application_name, hints)
+     VALUES (
+        $$PREPARE stmt1(int, text) AS 
+  SELECT $1 AS id, $2 AS name;$$,
+         '',
+         'SeqScan(t1)');
 
 
-show pg_hint_plan.enable_hint_table;
-show pg_hint_plan.enable_hint;
-show pg_hint_plan.debug_print;
-show pg_hint_plan.message_level ;
-show pg_hint_plan.parse_messages;
+         EXECUTE stmt1(1, 'John'); 
 
-set client_min_messages =notice;
-set pg_hint_plan.message_level=notice;
-set pg_hint_plan.debug_print=verbose;
+postgres=# PREPARE stmt1(int, text) AS
+postgres-#   SELECT $1 AS id, $2 AS name;
+PREPARE
+Time: 1.508 ms
+postgres=# INSERT INTO hint_plan.hints(norm_query_string, application_name, hints)
+postgres-#      VALUES (
+postgres(#         $$PREPARE stmt1(int, text) AS
+postgres$#   SELECT $1 AS id, $2 AS name;$$,
+postgres(#          '',
+postgres(#          'SeqScan(t1)');
+INSERT 0 1
+Time: 4.657 ms
+
+postgres=# SET pg_hint_plan.debug_print TO on;
+SET
+Time: 0.240 ms
+postgres=# SET pg_hint_plan.message_level TO notice;
+SET
+Time: 0.050 ms
+postgres=# EXECUTE stmt1(1, 'John');
+NOTICE:  pg_hint_plan:
+used hint:
+not used hint:
+SeqScan(t1)
+duplication hint:
+error hint:
+
+ id | name
+----+------
+  1 | John
+(1 row)
+
+Time: 0.272 ms
