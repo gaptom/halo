@@ -61,6 +61,9 @@ SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT 
 
 +++++++++
 
+SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( $1  )  ) AND ( t_02.rowning_useru = $2  AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( $3  ) ,  UPPER( $4  ) ,  UPPER( $5  ) ,  UPPER( $6  ) ,  UPPER( $7  ) ,  UPPER( $8  ) ,  UPPER( $9  )  ) ) ) AND ( ( t_01.pactive_seq != $10::int4   ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = $11   ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( $12   )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40)) ","parameters: $1 = '03029AXT_PD01', $2 = 'wDW9e_iY47UIUC', $3 = '更改', $4 = '更改后判断是否影响在制品', $5 = '更改（BOP）', $6 = '更改（箱代码）', $7 = '更改（验证失败）', $8 = '（驳回）更改后判断是否影响在制品', $9 = '（验证失败）更改后判断是否影响在制品', $10 = '0', $11 = 'BwctCECe47UIUC', $12 = 'BoardDevProEng'
+
+
 You are now connected to database "tc" as user "infodba".
 tc=# SET pg_hint_plan.debug_print TO on;
 SET
