@@ -42,6 +42,7 @@ Set(max_parallel_workers_per_gather 0)');
 EXECUTE stmt3('03029AXT_PD01', 'wDW9e_iY47UIUC', '更改','更改后判断是否影响在制品','更改（BOP）', '更改（箱代码）','更改（验证失败）','（驳回）更改后判断是否影响在制品','（验证失败）更改后判断是否影响在制品','0', 'BwctCECe47UIUC','BoardDevProEng');
 
 deallocate prepare stmt3;
+select * from hint_plan.hints where norm_query_string like 'PREPARE%'
 -----
 简单案例：
 PREPARE stmt1(int, text) AS 
