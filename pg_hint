@@ -1,0 +1,12 @@
+PREPARE stmt1(int, text) AS 
+  SELECT $1 AS id, $2 AS name;
+
+  INSERT INTO hint_plan.hints(norm_query_string, application_name, hints)
+     VALUES (
+        $$PREPARE stmt1(int, text) AS 
+  SELECT $1 AS id, $2 AS name;$$,
+         '',
+         'SeqScan(t1)');
+
+
+         EXECUTE stmt1(1, 'John'); 
