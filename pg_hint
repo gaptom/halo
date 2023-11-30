@@ -97,3 +97,32 @@ tc=# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OB
 Time: 307.314 ms
 tc=#
 
+------------------------------
+
+INSERT INTO hint_plan.hints(norm_query_string, application_name, hints)
+     VALUES (
+        $$PREPARE stmt3(varchar2, varchar2,varchar2,varchar2,varchar2,varchar2,varchar2,varchar2,varchar2,int,varchar2,varchar2) AS SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OBJECT t_02 , PH6MCNREVISION t_03 , PH6RELATEDBOP t_04 , PPROCESS_STAGE_LIST t_05 , PWORKSPACEOBJECT t_06 , PEPMTASK t_07 , PFND0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUESTOR t_012 , PPARTICIPANT t_013 , PIMANRELATION t_014 WHERE ( (  ( UPPER(t_04.pval_0)  =  UPPER( $1  )  ) AND ( t_02.rowning_useru = $2  AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( t_08.pvalu_0 = t_07.puid ) AND  UPPER(t_06.pobject_name)  IN  ( UPPER( $3  ) ,  UPPER( $4  ) ,  UPPER( $5  ) ,  UPPER( $6  ) ,  UPPER( $7  ) ,  UPPER( $8  ) ,  UPPER( $9  )  ) ) ) AND ( ( t_01.pactive_seq != $10::int4   ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation_typeu = $11   ) AND ( ( t_014.rsecondary_objectu = t_012.puid ) AND ( ( t_013.rassigneeu = t_011.puid ) AND ( ( t_011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( $12   )  ) ) ) ) ) ) ) ) ) ) AND ( t_06.puid = t_07.puid AND t_01.puid = t_02.puid AND t_02.puid = t_03.puid AND t_03.puid = t_04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_09.puid ) ) AND (t_014.arev_category IN (48,40)) ;$$,
+         '',
+         'indexscan(t_04 piph6relatedbop_0_upp)
+indexscan(t_03 piph6mcnrevision )
+indexscan(t_02 pippom_application_object)
+indexscan(t_01 pipworkspaceobject)
+indexscan(t_014 pipimanrelation_3)
+indexscan(t_012 piprequestor)
+indexscan(t_013 pipparticipant)
+indexscan(t_011 pipgroupmember)
+indexscan(t_010 piprole)
+indexscan(t_05 pipprocess_stage_list)
+indexscan(t_09 pipepmtask)
+indexscan(t_08 pipfnd0startedtasks)
+indexscan(t_07 pipepmtask)
+indexscan(t_06 pipworkspaceobject)
+Set(enable_hashjoin off)
+Set(enable_mergejoin off)
+Set(enable_memoize off)
+set(enable_material off)
+Set(max_parallel_workers_per_gather 0)');
+
+调用看看：
+EXECUTE stmt1('03029AXT_PD01', 'wDW9e_iY47UIUC', '更改','更改后判断是否影响在制品','更改（BOP）', '更改（箱代码）','更改（验证失败）','（驳回）更改后判断是否影响在制品','（验证失败）更改后判断是否影响在制品','0', 'BwctCECe47UIUC','BoardDevProEng');
+
