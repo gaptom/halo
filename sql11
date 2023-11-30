@@ -1,0 +1,99 @@
+tc=# /*+
+tc*# indexscan(t_04 piph6relatedbop_0_upp)
+tc*# indexscan(t_03 piph6mcnrevision )
+tc*# indexscan(t_02 pippom_application_object)
+tc*# indexscan(t_01 pipworkspaceobject)
+tc*# indexscan(t_014 pipimanrelation_3)
+tc*# indexscan(t_012 piprequestor)
+tc*# indexscan(t_013 pipparticipant)
+tc*# indexscan(t_011 pipgroupmember)
+tc*# indexscan(t_010 piprole)
+tc*# indexscan(t_05 pipprocess_stage_list)
+tc*# indexscan(t_09 pipepmtask)
+tc*# indexscan(t_08 pipfnd0startedtasks)
+tc*# indexscan(t_07 pipepmtask)
+tc*# indexscan(t_06 pipworkspaceobject)
+tc*# Set(enable_hashjoin off)
+tc*# Set(enable_mergejoin off)
+tc*# Set(enable_memoize off)
+tc*# set(enable_material off)
+tc*# Set(max_parallel_workers_per_gather 0)
+tc*# leading(t_04 t_03 t_02 t_01 t_014 t_012 t_013 t_011 t_010 t_05 t_09 t_08 t_
+tc*# */
+tc-# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OB0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUEST2.rowning_useru = 'SxsVSLzK47UIUC' AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( R( '更改（BOP）' ) ,  UPPER( '更改（箱代码）' ) ,  UPPER( '更改（验证失败）' ) ,eq != '0' ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( 'BoardDevPro04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_
+NOTICE:  available indexes for IndexScan(t_01): pipworkspaceobject
+NOTICE:  available indexes for IndexScan(t_02): pippom_application_object
+NOTICE:  available indexes for IndexScan(t_03): piph6mcnrevision
+NOTICE:  available indexes for IndexScan(t_04): piph6relatedbop_0_upp
+NOTICE:  available indexes for IndexScan(t_05): pipprocess_stage_list
+NOTICE:  available indexes for IndexScan(t_06): pipworkspaceobject
+NOTICE:  available indexes for IndexScan(t_07): pipepmtask
+NOTICE:  available indexes for IndexScan(t_08): pipfnd0startedtasks
+NOTICE:  available indexes for IndexScan(t_09): pipepmtask
+NOTICE:  available indexes for IndexScan(t_010): piprole
+NOTICE:  available indexes for IndexScan(t_011): pipgroupmember
+NOTICE:  available indexes for IndexScan(t_012): piprequestor
+NOTICE:  available indexes for IndexScan(t_013): pipparticipant
+NOTICE:  available indexes for IndexScan(t_014): pipimanrelation_3
+NOTICE:  pg_hint_plan:
+used hint:
+IndexScan(t_01 pipworkspaceobject)
+IndexScan(t_010 piprole)
+IndexScan(t_011 pipgroupmember)
+IndexScan(t_012 piprequestor)
+IndexScan(t_013 pipparticipant)
+IndexScan(t_014 pipimanrelation_3)
+IndexScan(t_02 pippom_application_object)
+IndexScan(t_03 piph6mcnrevision)
+IndexScan(t_04 piph6relatedbop_0_upp)
+IndexScan(t_05 pipprocess_stage_list)
+IndexScan(t_06 pipworkspaceobject)
+IndexScan(t_07 pipepmtask)
+IndexScan(t_08 pipfnd0startedtasks)
+IndexScan(t_09 pipepmtask)
+Leading(t_04 t_03 t_02 t_01 t_014 t_012 t_013 t_011 t_010 t_05 t_09 t_08 t_07 t_
+Set(enable_hashjoin off)
+Set(enable_material off)
+Set(enable_memoize off)
+Set(enable_mergejoin off)
+Set(max_parallel_workers_per_gather 0)
+not used hint:
+duplication hint:
+error hint:
+
+ puid
+------
+(0 rows)
+
+Time: 65.352 ms
+tc=# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OB0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUEST2.rowning_useru = 'SxsVSLzK47UIUC' AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( R( '更改（BOP）' ) ,  UPPER( '更改（箱代码）' ) ,  UPPER( '更改（验证失败）' ) ,eq != '0' ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( 'BoardDevPro04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_
+ puid
+------
+(0 rows)
+
+Time: 319.147 ms
+tc=# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OB0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUEST2.rowning_useru = 'SxsVSLzK47UIUC' AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( R( '更改（BOP）' ) ,  UPPER( '更改（箱代码）' ) ,  UPPER( '更改（验证失败）' ) ,eq != '0' ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( 'BoardDevPro04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_
+ puid
+------
+(0 rows)
+
+Time: 9865.729 ms (00:09.866)
+tc=# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OB0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUEST2.rowning_useru = 'SxsVSLzK47UIUC' AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( R( '更改（BOP）' ) ,  UPPER( '更改（箱代码）' ) ,  UPPER( '更改（验证失败）' ) ,eq != '0' ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( 'BoardDevPro04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_
+ puid
+------
+(0 rows)
+
+Time: 3438.475 ms (00:03.438)
+tc=# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OB0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUEST2.rowning_useru = 'SxsVSLzK47UIUC' AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( R( '更改（BOP）' ) ,  UPPER( '更改（箱代码）' ) ,  UPPER( '更改（验证失败）' ) ,eq != '0' ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( 'BoardDevPro04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_
+ puid
+------
+(0 rows)
+
+Time: 315.221 ms
+tc=# SELECT  DISTINCT t_03.puid FROM PWORKSPACEOBJECT t_01 , PPOM_APPLICATION_OB0STARTEDTASKS t_08 , PEPMTASK t_09 , PROLE t_010 , PGROUPMEMBER t_011 , PREQUEST2.rowning_useru = 'SxsVSLzK47UIUC' AND ( ( ( t_05.pvalu_0 = t_09.puid ) AND ( ( R( '更改（BOP）' ) ,  UPPER( '更改（箱代码）' ) ,  UPPER( '更改（验证失败）' ) ,eq != '0' ) AND ( ( t_03.puid = t_014.rprimary_objectu ) AND ( ( t_014.rrelation011.rroleu = t_010.puid ) AND  ( UPPER(t_010.prole_name)  =  UPPER( 'BoardDevPro04.puid AND t_04.puid = t_05.puid AND t_012.puid = t_013.puid AND t_08.puid = t_
+ puid
+------
+(0 rows)
+
+Time: 3276.169 ms (00:03.276)
+tc=#
