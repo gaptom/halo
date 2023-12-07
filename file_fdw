@@ -5,7 +5,7 @@ awk -F '"' '{printf "%s,   %s\n",$9,$10}' dsd1112.txt | sed 's/.*execute <unname
 
 create extension file_fdw;
 CREATE SERVER filefdw_server FOREIGN DATA WRAPPER file_fdw;
-CREATE FOREIGN TABLE txtfiles (id int,txt varchar(10)) SERVER filefdw_server OPTIONS (filename '/home/postgres/sql.csv', format 'csv', DELIMITER ',');
+CREATE FOREIGN TABLE txtfiles (id int,txt varchar(10)) SERVER filefdw_server OPTIONS (filename '/home/postgres/sql.csv', format 'csv', DELIMITER ';');
 select * from txtfiles;
 select distinct sql from txtfiles;
 
