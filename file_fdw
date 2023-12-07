@@ -1,3 +1,6 @@
+--8到9秒以上
+find /pgdata/pgsql/log/postgresql-2023-12-06_* -type f | xargs grep -E "duration: [8-9][0-9]{3,}|duration: [1-9][0-9]{4,}"|grep "execute <unnamed>: " >>dsd1013.txt
+
 awk -F '"' '{printf "%s,   %s\n",$9,$10}' dsd1112.txt | sed 's/.*execute <unnamed>: //g' >> sql.csv
 
 create extension file_fdw;
