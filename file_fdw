@@ -12,3 +12,17 @@ select distinct sql from txtfiles;
 select avg(id),sql from txtfiles group by sql order by 1 desc;
 
 awk -F '"' '{printf "%s\n",$10}' dsd1112.txt | sed 's/.*duration: //g' |sed 's/ ms  execute <unnamed>: /;/g' >> sql.csv
+
+=======================================================================================================
+比较hint_plan.hints
+1.从pgsit导出sql语句
+ pgsit:
+copy (select norm_query_string from hint_plan.hints) to 'home/postgres/hintplan.sql';
+2.从pguat比较刚刚导出的语句
+ pguat:
+CREATE FOREIGN TABLE hintfiles (sql varchar(4000)) SERVER filefdw_server OPTIONS (filename '/home/postgres/hintplan.sql', format 'csv', DELIMITER ';');
+select * from hintfiles;     //查看语句
+
+select norm_query_string from hint_plan.hints
+execpt
+select sql from hintfiles;
