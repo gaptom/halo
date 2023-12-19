@@ -1,0 +1,117 @@
+1.创建用户和组
+groupadd -g 1000 postgres
+useradd -u 1000 -g postgres postgres
+
+2.创建用户目录并授权
+mkdir -p /home/postgres
+chown -R postgres:postgres /home/postgres
+
+
+3.创建目录
+mkdir -p /app/install  -- 安装目录
+mkdir -p /data01/pgsql  -- 数据库目录
+
+4.解压软件
+cd /app/install
+tar -zxf postgresql-14.8.tar.gz -C /app/install
+
+
+5.安装依赖包
+yum -y install bison flex readline* zlib zlib-devel gcc* make ncurses*
+
+6.修改系统参数
+echo "修改服务器内存和信号量"
+echo "kernel.sem = 4096 4194304 32768 1024" >> /etc/sysctl.conf
+# grep Hugepagesize /proc/meminfo
+# 2048KB
+# 计算公式 vm.nr_hugepages=sharde_buffers/Hugepagesize
+-- echo "vm.nr_hugepages = 26112" >> /etc/sysctl.conf
+
+sysctl -p
+
+
+修改服务器资源限制
+echo "postgres            soft    nproc           unlimited" >> /etc/security/limits.conf
+echo "postgres            hard    nproc           unlimited" >> /etc/security/limits.conf
+echo "postgres            soft    nofile          1024000" >> /etc/security/limits.conf
+echo "postgres            hard    nofile          1024000" >> /etc/security/limits.conf
+echo "postgres            soft    stack           unlimited" >> /etc/security/limits.conf
+echo "postgres            hard    stack           unlimited" >> /etc/security/limits.conf
+echo "postgres            soft    memlock         unlimited" >> /etc/security/limits.conf
+echo "postgres            hard    memlock         unlimited" >> /etc/security/limits.conf
+echo "postgres            soft    core            unlimited" >> /etc/security/limits.conf
+echo "postgres            hard    core            unlimited" >> /etc/security/limits.conf
+
+
+7.编译包
+cd  /app/install/postgresql-14.8
+./configure --prefix=/app/postgresql --without-readline(增加这个会使用psql不能上下翻动命令)
+make && make install
+
+8.初始化数据库
+chown -R postgres:postgres /app/install
+chown -R postgres:postgres /app/pgsql
+chown -R postgres:postgres /data01/pgsql
+su - postgres
+cd /app/postgresql
+/app/postgresql/bin/initdb -D /data01/pgsql -E UTF8
+
+9.创建归档日志目录
+mkdir -p /data01/pgsql/archivedir
+
+10.修改pg_hba.conf
+echo 'host    all             all             0/0                 md5' >> /data01/pgsql/pg_hba.conf
+echo 'host    replication     replica         0/0                 md5' >> /data01/pgsql/pg_hba.conf
+
+11.配置 postgresql.conf
+if [ $(lscpu |grep '^CPU(s): ' | awk -F " " '{print $1}') == 'CPU(s):' ]
+then
+   CPU=$(lscpu |grep '^CPU(s): ' | awk -F " " '{print $2}')
+elif [ $(lscpu |grep '^CPU: ' | awk -F " " '{print $1}') == 'CPU:' ]
+then
+   CPU=$(lscpu |grep '^CPU: ' | awk -F " " '{print $2}')
+else
+   echo "没有符合的条件"
+fi
+
+MEM_S=$(free -m|grep '^Mem:' | awk -F " " '{print expr $2/1024*0.4}' | cut -d '.' -f1)GB
+MEM_E=$(free -m|grep '^Mem:' | awk -F " " '{print $2/1024*0.5}' | cut -d '.' -f1)GB
+
+sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/" /data01/pgsql/postgresql.conf
+sed -i "s/#port = 1921/port = 1921/" /data01/pgsql/postgresql.conf
+sed -i "s/max_connections = 100/max_connections = 1000/" /data01/pgsql/postgresql.conf
+# 开启大页，这个项也要开启
+-- sed -i "s/#huge_pages = try/huge_pages = on/" /data01/pgsql/postgresql.conf     
+sed -i "s/shared_buffers = 128MB/shared_buffers = $MEM_S/" /data01/pgsql/postgresql.conf
+sed -i "s/#work_mem = 4MB/work_mem = 16MB/" /data01/pgsql/postgresql.conf
+sed -i "s/#wal_buffers = -1/wal_buffers = 16MB/" /data01/pgsql/postgresql.conf
+sed -i "s/#checkpoint_completion_target = 0.9/checkpoint_completion_target = 0.9/" /data01/pgsql/postgresql.conf
+sed -i "s/max_wal_size = 1GB/max_wal_size = 8GB/" /data01/pgsql/postgresql.conf
+sed -i "s/min_wal_size = 80MB/min_wal_size = 2GB/" /data01/pgsql/postgresql.conf
+sed -i "s/#archive_mode = off/archive_mode = on/" /data01/pgsql/postgresql.conf
+sed -i "s/#archive_command = ''/archive_command = 'test ! -f \/data\/pgsql\/archivedir\/%f \&\& cp %p \/data\/pgsql\/archivedir\/%f'/" /data01/pgsql/postgresql.conf
+sed -i "s/#default_statistics_target = 100/default_statistics_target = 100/" /data01/pgsql/postgresql.conf
+sed -i "s/#log_destination = 'stderr'/log_destination = 'csvlog'/" /data01/pgsql/postgresql.conf
+sed -i "s/#logging_collector = off/logging_collector = on/" /data01/pgsql/postgresql.conf
+sed -i "s/#effective_cache_size = 4GB/effective_cache_size = $MEM_E/" /data01/pgsql/postgresql.conf
+sed -i "s/#random_page_cost = 4.0/random_page_cost = 1.1/" /data01/pgsql/postgresql.conf
+sed -i "s/#maintenance_io_concurrency = 10/maintenance_io_concurrency = 200/" /data01/pgsql/postgresql.conf
+sed -i "s/#max_worker_processes = 8/max_worker_processes = $CPU/" /data01/pgsql/postgresql.conf
+sed -i "s/#max_parallel_workers_per_gather = 2/max_parallel_workers_per_gather = 4/" /data01/pgsql/postgresql.conf
+sed -i "s/#max_parallel_maintenance_workers = 2/max_parallel_maintenance_workers = 4/" /data01/pgsql/postgresql.conf
+sed -i "s/#max_parallel_workers = 8/max_parallel_workers = $CPU/" /data01/pgsql/postgresql.conf
+sed -i "s/#wal_log_hints = off/wal_log_hints = on/" /data01/pgsql/postgresql.conf
+sed -i "s/#restore_command = ''/restore_command = 'cp \/data\/pgsql\/archivedir\/%f %p'/" /data01/pgsql/postgresql.conf
+
+
+12.启动数据库
+/app/postgresql/bin/pg_ctl start -D /data01/pgsql
+
+13.连接数据库--建库建用户
+psql -c "CREATE DATABASE bopdrill;
+CREATE USER dbadmin SUPERUSER PASSWORD 'Siemens@Tcm@2023';
+CREATE USER infodba SUPERUSER PASSWORD 'Siemens@Tcm123';
+CREATE USER replica PASSWORD '123456' REPLICATION;
+CREATE USER pgrewind SUPERUSER PASSWORD '123456';
+"
+psql -d bopdrill  -c "CREATE SCHEME infodb;" 
