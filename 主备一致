@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# 主数据库连接信息
+PRIMARY_DB="host=192.168.40.150 dbname=postgres user=infodba password=infodba"
+
+# 备数据库连接信息
+STANDBY_DB="host=192.168.40.151 dbname=postgres user=infodba password=infodba"
+
+
+
+# 获取所有公共模式下的表
+TABLES=$(psql "$PRIMARY_DB" -t -c "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'")
+
+# 函数：获取表的主键列名
+get_primary_key() {
+    local table=$1
+    psql "$PRIMARY_DB" -t -c "SELECT a.attname
+FROM   pg_index i
+JOIN   pg_attribute a ON a.attrelid = i.indrelid
+                     AND a.attnum = ANY(i.indkey)
+WHERE  i.indrelid = '$table'::regclass
+AND    i.indisprimary;"
+}
+
+# 函数：对单个表进行校验
+verify_table() {
+    local table=$1
+    echo "Verifying table: $table"
+
+    # 获取主键列名
+    local primary_key=$(get_primary_key $table)
+
+    # 如果没有找到主键，可以选择跳过或使用其他逻辑
+    if [[ -z "$primary_key" ]]; then
+      #  echo "No primary key found for table $table, skipping..."
+        return
+    fi
+
+    # 在主库上执行的查询
+    PRIMARY_CHECKSUM=$(psql "$PRIMARY_DB" -t -c "SELECT md5(string_agg(record::text, '' order by $primary_key)) FROM $table as record;")
+    
+    # 在备库上执行的查询
+    STANDBY_CHECKSUM=$(psql "$STANDBY_DB" -t -c "SELECT md5(string_agg(record::text, '' order by $primary_key)) FROM $table as record;")
+
+    # 比较结果
+    if [[ "$PRIMARY_CHECKSUM" != "$STANDBY_CHECKSUM" ]]; then
+        echo "Discrepancy found in table $table"
+        echo "Primary Checksum: $PRIMARY_CHECKSUM"
+        echo "Standby Checksum: $STANDBY_CHECKSUM"
+    else
+        echo "Table $table is consistent."
+    fi
+}
+
+# 对所有表进行校验
+for table in $TABLES; do
+    verify_table $table
+done
+
