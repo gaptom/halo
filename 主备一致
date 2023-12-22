@@ -1,3 +1,8 @@
+## 主备库一致性脚本
+
+## 脚本
+
+```shell
 #!/bin/bash
 
 # 主数据库连接信息
@@ -56,4 +61,110 @@ verify_table() {
 for table in $TABLES; do
     verify_table $table
 done
+
+
+```
+
+## 脚本解释
+
+该 SQL 命令是一种通过计算数据摘要（或哈希值）来校验表内容的方法。这个特定的命令做了以下几件事：
+
+1. **`string_agg(record::text, '' order by $primary_key)`:** 
+   - `string_agg` 是 PostgreSQL 中的一个聚合函数，它用于将多个值连接成一个字符串。
+   - `record::text` 将每一行（别名为 `record`）转换为文本格式。这意味着每一行的所有列值都将被转换成文本并串联在一起。
+   - `order by $primary_key` 确保在进行字符串聚合之前，行是按照主键列排序的。这是确保结果一致性的重要步骤，因为不同的排序会产生不同的字符串。
+   - 所有这些都是在子查询中完成的，子查询被别名为 `record`。
+
+2. **`md5(...)`:**
+   - `md5` 函数计算给定输入的 MD5 哈希。在这种情况下，它是用来计算上述字符串聚合的结果的 MD5 哈希。
+   - MD5 哈希是一个128位的散列值，通常以32字符的十六进制数字表示。它对输入非常敏感，即使是微小的更改，也会在 MD5 值中产生很大的不同。
+
+3. **整体意义:**
+   - 该命令为表中的所有数据生成一个唯一的摘要或指纹。如果两个数据库中相同名称的表生成了相同的 MD5 值，你可以非常有信心地说这两个表在内容上是一致的。任何数据上的差异，无论多小，都会导致不同的 MD5 值。
+
+4. **使用场景:**
+   - 这种方法通常用于校验两个数据库之间的数据一致性，特别是在主备复制设置中。通过在主库和备库上执行相同的查询并比较结果，可以有效地校验数据是否一致。
+
+### 优点:
+
+- **效率**: 相比逐行逐列地比较数据，这种方法通常更快，因为它仅生成并比较了一个小的 MD5 值。
+- **简洁**: 它提供了一种快速确定两个大型数据集是否完全相同的方法。
+
+### 缺点:
+
+- **非特异性**: 如果检测到不一致（即 MD5 值不匹配），这个方法不会告诉你具体的差异在哪里。
+- **MD5 的局限性**: 虽然非常罕见，但理论上不同的输入可以产生相同的 MD5 值（即碰撞）。对于极其关键的应用，可能需要考虑更强大的哈希函数，如 SHA-256。
+
+在使用此方法时，确保表的每一行都有唯一的标识符，并且每次计算的顺序都相同（这就是为什么要按主键排序）。此外，任何对表结构的更改（如添加或删除列）都会影响 MD5 计算，即使数据内容保持不变。
+
+
+
+```shell
+# 主数据库连接信息
+PRIMARY_DB="host=192.168.40.150 dbname=postgres user=infodba password=infodba"
+
+# 备数据库连接信息
+STANDBY_DB="host=192.168.40.151 dbname=postgres user=infodba password=infodba"
+
+
+
+# 获取所有公共模式下的表
+TABLES=$(psql "$PRIMARY_DB" -t -c "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'")
+
+# 函数：获取表的主键列名
+get_primary_key() {
+    local table=$1
+    psql "$PRIMARY_DB" -t -c "SELECT a.attname
+FROM   pg_index i
+JOIN   pg_attribute a ON a.attrelid = i.indrelid
+                     AND a.attnum = ANY(i.indkey)
+WHERE  i.indrelid = '$table'::regclass
+AND    i.indisprimary;"
+}
+
+# 函数：对单个表进行校验
+verify_table() {
+    local table=$1
+
+    # 获取主键列名
+    local primary_key=$(get_primary_key $table)
+
+    # 如果没有找到主键，可以选择跳过
+    if [[ -z "$primary_key" ]]; then
+      #  echo "No primary key found for table $table, skipping..."
+        return
+    fi
+
+    # 仅在找到主键的情况下增加总表计数
+    total_tables=$((total_tables+1))
+
+    # 在主库上执行的查询
+    PRIMARY_CHECKSUM=$(psql "$PRIMARY_DB" -t -c "SELECT md5(string_agg(record::text, '' order by $primary_key)) FROM $table as record;")
+    
+    # 在备库上执行的查询
+    STANDBY_CHECKSUM=$(psql "$STANDBY_DB" -t -c "SELECT md5(string_agg(record::text, '' order by $primary_key)) FROM $table as record;")
+
+    # 比较结果
+    if [[ "$PRIMARY_CHECKSUM" != "$STANDBY_CHECKSUM" ]]; then
+        echo "Checksum discrepancy found in table $table"
+        echo "Primary Checksum: $PRIMARY_CHECKSUM"
+        echo "Standby Checksum: $STANDBY_CHECKSUM"
+        failed_checks=$((failed_checks+1))
+    else
+        echo "Checksum for table $table is consistent."
+        passed_checks=$((passed_checks+1))
+    fi
+}
+
+# 对所有表进行校验
+for table in $TABLES; do
+    verify_table $table
+done
+
+# 显示总结统计
+echo "Total tables checked: $total_tables"
+echo "Passed checks: $passed_checks"
+echo "Failed checks: $failed_checks"
+
+```
 
