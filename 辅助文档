@@ -7,6 +7,9 @@
      查看数据库有没有活动会话
 	 select datname,pid,usename,application_name from pg_stat_activity where datname = 'tc';
 	 
+	 select 'select pg_terminate_backend(' || pid || ');'  as sql from pg_stat_activity where datname = 'tc';
+	 
+	 
 	select pg_terminate_backend( 22939);
 	select pg_terminate_backend( 4835 );
 	select pg_terminate_backend( 47982);
@@ -33,3 +36,77 @@
  grant CREATE ON TABLESPACE TcClusterDB_idata to TcClusterDB;
 
 3.  select pg_terminate_backend(pid) from pg_stat_activity where datname='tc'
+
+4.truncate 整个库的schema表
+CREATE OR REPLACE PROCEDURE TRUNCATE_ALL_TABLES()
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    cursor_sql RECORD;
+BEGIN
+    FOR cursor_sql IN
+        SELECT table_name FROM information_schema.tables 
+        WHERE table_schema = 'public' AND table_type = 'BASE TABLE'
+    LOOP
+        EXECUTE 'TRUNCATE TABLE ' || quote_ident(cursor_sql.table_name) || ' CASCADE;';
+    END LOOP;
+EXCEPTION WHEN OTHERS THEN
+    -- 错误处理代码
+    RAISE NOTICE '一个错误发生在 %', SQLERRM;
+END;
+$$;
+
+CALL TRUNCATE_ALL_TABLES();
+
+
+
+
+-----------------
+CREATE OR REPLACE FUNCTION truncate_tables(schemaname1 IN VARCHAR) RETURNS void AS $$
+DECLARE
+    statements CURSOR FOR
+        SELECT schemaname, tablename FROM pg_tables
+        WHERE   schemaname = schemaname1;
+BEGIN
+    FOR stmt IN statements LOOP
+	begin
+        EXECUTE 'TRUNCATE TABLE ' || quote_ident(stmt.schemaname) || '.' || quote_ident(stmt.tablename) || ' CASCADE;';
+    EXCEPTION when others then 
+	   null;
+	 end;
+    
+    END LOOP;
+END;
+$$ LANGUAGE plpgsql;
+
+select truncate_tables('tc');
+
+-------------------
+CREATE OR REPLACE FUNCTION fn_triggerall(DoEnable boolean) RETURNS integer AS 
+$BODY$
+DECLARE
+mytables RECORD;
+BEGIN
+  --FOR mytables IN SELECT relname FROM pg_class WHERE relhastriggers is true AND NOT relname LIKE 'pg_%'
+  FOR mytables IN 
+    SELECT n.nspname AS schema_name, c.relname AS table_name FROM pg_trigger t JOIN pg_class c ON t.tgrelid = c.oid JOIN pg_namespace n ON c.relnamespace = n.oid WHERE n.nspname = 'public' AND c.relkind = 'r'
+  LOOP
+    begin
+    IF DoEnable THEN
+      EXECUTE 'ALTER TABLE ' || mytables.schema_name || '.' || mytables.table_name || ' ENABLE TRIGGER ALL';
+    ELSE
+      EXECUTE 'ALTER TABLE ' || mytables.schema_name || '.' || mytables.table_name || ' DISABLE TRIGGER ALL';
+    END IF;  
+    exception when others then
+     null;
+    end;
+  END LOOP;
+
+  RETURN 1;
+
+END;
+$BODY$
+LANGUAGE 'plpgsql' VOLATILE;
+
+select fn_triggerall(false);
+select fn_triggerall(true);
