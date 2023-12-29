@@ -16,3 +16,10 @@ echo "清除前40天归档日志"
 echo 'del starting'
 find $LOG_PATH -type f -mtime +40 - name '000*'|xargs -i rm -rf {} >> $LOG/dellog.log
 echo 'del stoping' 
+
+
+from_collapse_limit=20;
+join_collapse_limit=20;
+geqo_threshold=20;
+maintenance_io_concurrency = 300
+track_activity_query_size = 4096
