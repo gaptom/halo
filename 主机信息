@@ -1,0 +1,2 @@
+jdbc:postgresql://7.185.175.65:5432
+TCMplus：(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=dgrdsscan1.huawei.com)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=dgrdsscan3.huawei.com)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=TCMplus_srv)))
