@@ -1,10 +1,30 @@
 SELECT relname AS TABLE_NAME,
 pg_size_pretty(pg_relation_size(schemaname||'.'||relname)) AS table_size,
-
-
 n_dead_tup,
 n_live_tup,
 (n_dead_tup * 100 / (n_live_tup + n_dead_tup))AS
 dead_tup_ratio
 FROM pg_stat_user_tables
 WHERE n_dead_tup<>0 LIMIT 10;
+
+
+CREATE OR REPLACE FUNCTION cleanup_inflated_tables()
+RETURNS void
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    table_row RECORD;
+BEGIN
+    -- 获取需要清理的膨胀表的信息
+    FOR table_row IN
+        SELECT relname AS TABLE_NAME
+FROM pg_stat_user_tables
+WHERE n_dead_tup<>0 order by (n_dead_tup * 100 / (n_live_tup + n_dead_tup)) LIMIT 10;
+    LOOP
+        -- 执行VACUUM FULL命令清理膨胀的表
+        EXECUTE 'VACUUM FULL ' || table_row.table_name;
+
+        -- 可以在这里添加其他后续操作，例如记录日志或发送通知
+    END LOOP;
+END;
+$$;
