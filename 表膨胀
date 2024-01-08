@@ -5,7 +5,7 @@ n_live_tup,
 (n_dead_tup * 100 / (n_live_tup + n_dead_tup))AS
 dead_tup_ratio
 FROM pg_stat_user_tables
-WHERE n_dead_tup<>0 LIMIT 10;
+WHERE n_dead_tup<>0 order by dead_tup_ratio desc LIMIT 10;
 
 
 CREATE OR REPLACE FUNCTION cleanup_inflated_tables()
@@ -19,7 +19,7 @@ BEGIN
     FOR table_row IN
         SELECT relname AS TABLE_NAME
 FROM pg_stat_user_tables
-WHERE n_dead_tup<>0 order by (n_dead_tup * 100 / (n_live_tup + n_dead_tup)) LIMIT 10;
+WHERE n_dead_tup<>0 order by (n_dead_tup * 100 / (n_live_tup + n_dead_tup)) desc LIMIT 10;
     LOOP
         -- 执行VACUUM FULL命令清理膨胀的表
         EXECUTE 'VACUUM FULL ' || table_row.table_name;
