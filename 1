@@ -33,3 +33,5 @@ NR_HP=`expr $(($SHMEM_SIZE / $HP_SIZE + 1))`
 echo "修改服务器大页"
 echo "vm.nr_hugepages=$NR_HP" >> /etc/sysctl.conf
 sysctl -p
+
+\b[1-9].[0-9]{2,} secs|[1-9][0-9]{1,}.[0-9]{2,} secs|0.[1-9][0-9]{1,} secs\b
