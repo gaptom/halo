@@ -23,3 +23,13 @@ join_collapse_limit=20;
 geqo_threshold=20;
 maintenance_io_concurrency = 300
 track_activity_query_size = 4096
+
+
+ echo "配置大页"
+HP_SIZE=`grep Hugepagesize /proc/meminfo |awk '{print $2}'`
+SHMEM_SIZE=`su - halo -c "psql -qxc \"select ceiling(sum(allocated_size)/1024) as SHMEM_SIZE from pg_shmem_allocations\" " |grep shmem_size|awk '{print $3}'`
+NR_HP=`expr $(($SHMEM_SIZE / $HP_SIZE + 1))`
+
+echo "修改服务器大页"
+echo "vm.nr_hugepages=$NR_HP" >> /etc/sysctl.conf
+sysctl -p
