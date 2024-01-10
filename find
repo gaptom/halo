@@ -1,0 +1,1 @@
+find /pgdata/pgsql/log/postgresql-2023-12-06_* -type f | xargs grep -E "duration: [1-9][0-9]{3,}|duration: [1-9][0-9]{4,}"|grep "execute <unnamed>: " >>dsd1013.txt
