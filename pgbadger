@@ -42,3 +42,4 @@ sed -i "/log_disconnections/c\log_disconnections = on" $PGDATA/postgresql.conf
 sed -i "/log_duration/c\log_duration = on" $PGDATA/postgresql.conf
 sed -i "/log_lock_waits/c\log_lock_waits = on" $PGDATA/postgresql.conf
 sed -i "/log_destination/c\log_destination =csvlog" $PGDATA/postgresql.conf
+sed -i "/log_line_prefix/c\log_line_prefix = '%t [%p]: [%l-1] user=%u,db=%d,app=%a,client=%h '" $PGDATA/postgresql.conf
