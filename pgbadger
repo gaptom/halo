@@ -1,0 +1,44 @@
+logging_collector = on
+log_filename = 'postgresql-%w.log'
+log_file_mode = 0640
+log_truncate_on_rotation = on
+log_rotation_age = 1d
+log_min_duration_statement = 0
+log_checkpoints = on
+log_connections = on
+log_disconnections = on
+log_duration = on
+log_lock_waits = on
+log_line_prefix = '%t [%p]: [%l-1] user=%u,db=%d '
+log_destination =stderr
+---------------------------------------------
+查询参数：
+select name,setting from pg_settings where name in ('logging_collector', 'log_filename', 'log_file_mode', 'log_truncate_on_rotation', 'log_rotation_age', 'log_min_duration_statement', 'log_checkpoints', 'log_connections', 'log_disconnections', 'log_duration', 'log_lock_waits', 'log_line_prefix', 'log_destination');
+
+--------------------------------------------------------------------
+修改参数：
+logging_collector = on
+log_filename = 'postgresql-%w.log'
+log_file_mode = 0640
+log_truncate_on_rotation = on
+log_rotation_age = 1d
+log_min_duration_statement = 0
+log_checkpoints = on
+log_connections = on
+log_disconnections = on
+log_duration = on
+log_lock_waits = on
+log_line_prefix = '%t [%p]: [%l-1] user=%u,db=%d '
+log_destination =stderr
+
+sed -i "/logging_collector/c\logging_collector = on" $PGDATA/postgresql.conf
+sed -i "/log_filename/c\log_filename = 'postgresql-%Y-%m-%d_%H%M%S.log'" $PGDATA/postgresql.conf
+sed -i "/log_truncate_on_rotation/c\log_truncate_on_rotation = off" $PGDATA/postgresql.conf
+sed -i "/log_truncate_on_rotation/c\log_rotation_age = 1d" $PGDATA/postgresqlconf
+sed -i "/log_min_duration_statement/c\log_min_duration_statement = 1s" $PGDATA/postgresql.conf
+sed -i "/log_checkpoints/c\log_checkpoints = on" $PGDATA/postgresql.conf
+sed -i "/log_connections/c\log_connections = on" $PGDATA/postgresql.conf
+sed -i "/log_disconnections/c\log_disconnections = on" $PGDATA/postgresql.conf
+sed -i "/log_duration/c\log_duration = on" $PGDATA/postgresql.conf
+sed -i "/log_lock_waits/c\log_lock_waits = on" $PGDATA/postgresql.conf
+sed -i "/log_destination/c\log_destination =csvlog" $PGDATA/postgresql.conf
