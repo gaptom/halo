@@ -56,3 +56,8 @@ sed -i "/log_duration/c\log_duration = off" $PGDATA/postgresql.conf
 sed -i "/log_lock_waits/c\log_lock_waits = off" $PGDATA/postgresql.conf
 sed -i "/log_destination/c\log_destination =csvlog" $PGDATA/postgresql.conf
 sed -i "/log_line_prefix/c\log_line_prefix = '%m [%p]'" $PGDATA/postgresql.conf
+
+
+CHECKSUMS1   authors/id/I/IS/ISHIGAKI
+CHECKSUMS2   authors/id/E/EX/EXODIST
+CHECKSUMS3   authors/id/H/HM/HMBRAND
