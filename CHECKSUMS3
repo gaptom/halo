@@ -1,0 +1,922 @@
+0&&<<''; # this PGP-signed message is also valid perl
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+# CHECKSUMS file written on Tue Jan  2 18:52:50 2024 GMT by CPAN::Checksums (v2.13)
+$cksum = {
+  'App-SpeedTest-0.27.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '9ff5a8b3fa9708180f94373b34c5f963',
+    'mtime' => '2020-12-23',
+    'sha256' => '01a86d02354bb534b515da6787eb0b47256cc05101a82469c66d43ff04edd5dd',
+    'size' => 2101
+  },
+  'App-SpeedTest-0.27.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'beade12bd6bc4c778247e8b777652f1f',
+    'md5-ungz' => 'a4a1ea911e56a6288a0a0d519686c0b9',
+    'mtime' => '2020-12-23',
+    'sha256' => '0ea010ba2dd0a985acd4603c645c0c532246ec31cfadfa3f0a8028c4a00f1b98',
+    'sha256-ungz' => '29481d0b0e51e0944a5373ad48b4608b3e50ae104b689876e7376e5b6d301f39',
+    'size' => 21245
+  },
+  'App-SpeedTest-0.28.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '3b848f15cd55588e04d5bcd86c1b50a9',
+    'mtime' => '2022-01-01',
+    'sha256' => '4b5259aa9c7941c0fd52360baf9415d81102294173654356665172956769b7ca',
+    'size' => 2101
+  },
+  'App-SpeedTest-0.28.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '37d101d0fbfb6bbcbe192762511ab574',
+    'md5-ungz' => 'f0480f693c0596b3b9ba5ddde7dda009',
+    'mtime' => '2022-01-01',
+    'sha256' => 'eb20a70ef1b1f7611231367eba364824a7ce6c480616660a1938c4a073e54efd',
+    'sha256-ungz' => '76e335612cf40616c3bc90b32b26be293408a156e60003e39a3a4acdd3750bf3',
+    'size' => 25695
+  },
+  'App-SpeedTest-0.29.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '87b397799e8414ed621d9fef07f0c745',
+    'mtime' => '2023-12-20',
+    'sha256' => 'd8e3bc7a4d17b9ab0b454a2f55641e1734fda0bce49ccd60182b65a802035009',
+    'size' => 2312
+  },
+  'App-SpeedTest-0.29.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '7a03983519c0bbe96c1c5278602fb522',
+    'md5-ungz' => 'b462bf7712b22b9fa7b3ce7a98bae8e2',
+    'mtime' => '2023-12-20',
+    'sha256' => 'f8955eaa4cbf903f1abf19be4c97a3ecf96cfe651c8330be6563f438fc49d9bd',
+    'sha256-ungz' => 'a3874f771d6c1af2d83b54cf7be5afe176c0716b3ca60e4d99af9d44227cdd99',
+    'size' => 26400
+  },
+  'App-ccdiff-0.31.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '1c645ece10cb5122004444d6f51647d5',
+    'mtime' => '2022-01-01',
+    'sha256' => '98c9eaff038996998737e4425e6401cccf45c0a088a2b66b5b0b70f8e059803b',
+    'size' => 1774
+  },
+  'App-ccdiff-0.31.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '2bbc2f5c88657ff9e50a30ab456986e1',
+    'md5-ungz' => '77612ea8ad8cde695f3c6e47055d46bc',
+    'mtime' => '2022-01-01',
+    'sha256' => '7aa687cfa5561fcb90f461097407443690cdb54e7c5a2668e930306f4fdd2920',
+    'sha256-ungz' => '9fbb791286c23ab8ae4e9b1ac98ece82ccfb5a58176e2da5611c15421dd49a3d',
+    'size' => 33687
+  },
+  'App-ccdiff-0.32.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '1763a7d51425420f2d6e6344d35448a8',
+    'mtime' => '2023-01-05',
+    'sha256' => '35a1624d8cccbc83332ae61cb85d49ee8810a01671ecb3ee20e2076ca59b0adb',
+    'size' => 1774
+  },
+  'App-ccdiff-0.32.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '75c8ba6ac8362db171c2962267345dee',
+    'md5-ungz' => 'd70735561bf4f668de9f590f7100a424',
+    'mtime' => '2023-01-05',
+    'sha256' => 'a20fe5c58e121050d55b60b1bbcabd6493f6fdce3c8905e6c700c2a1ba60e64a',
+    'sha256-ungz' => '8f2a47b6d94aa5bf9a6d9b6978073d73aaac47d311482e2d7337500e69f4c8fe',
+    'size' => 34327
+  },
+  'App-ccdiff-0.33.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'd579b44ba09b2540f322e5bfd57860a0',
+    'mtime' => '2023-11-07',
+    'sha256' => 'b31b867281041cf1ad0ba49a1109ef3997fb309c7712d49b6b2624507596f308',
+    'size' => 2094
+  },
+  'App-ccdiff-0.33.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'bcb66fa0ee5af7ce91f3ec44114ac4a3',
+    'md5-ungz' => 'e332b55fa088d73942b6abf5799a2ccc',
+    'mtime' => '2023-11-07',
+    'sha256' => 'bfa335a53453398514f592e674d078198a0b00c426ff4538ef4dbaf2fba44f1f',
+    'sha256-ungz' => 'f7e4b77fdf26fa7b02dd21df22863321f85392f5c796a94875e1c8e7ff23054c',
+    'size' => 35783
+  },
+  'App-geoip-0.16.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '9e455ad372010923cbef9cfb44d9d68b',
+    'mtime' => '2022-01-01',
+    'sha256' => '7d18c8f90b916d8aa7439cedfe22c2dc88e8738b3b047b547f564167af1e36c3',
+    'size' => 2254
+  },
+  'App-geoip-0.16.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '2b5ce6f4c55cbcd3e33882d9dd9b41c1',
+    'md5-ungz' => 'c779bae0692658240c85e543abe2359c',
+    'mtime' => '2022-01-01',
+    'sha256' => '3281f6ea5ddf1fa84d7e5434cab916aa52b1b363d34f68b70f4d0f95cb0a8bab',
+    'sha256-ungz' => '74d24c811fe57c7182fcc13de4b4dd4b7a662760adcd7ca9b16ba8be8bb39dd0',
+    'size' => 29835
+  },
+  'App-geoip-0.17.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'cdfd8dda85f77822bc99506ac10d9843',
+    'mtime' => '2023-01-06',
+    'sha256' => '375efdeed5cd615576f0ecb7c55cb5d0b6e95923a977263b67cb44917a4654ac',
+    'size' => 2254
+  },
+  'App-geoip-0.17.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '96c1393e921052d84a34ef3bcb4a82b9',
+    'md5-ungz' => 'd05d5fb2a05960d500d5dffd3fb46ef2',
+    'mtime' => '2023-01-06',
+    'sha256' => '08c30a778ecef9601d26f0b491593b0b8d852fab8dfc415b90d2d81e6e95a5a5',
+    'sha256-ungz' => '802f108f1bc1da81823275bbfcfa50ec7d5c67cc858836fa3c28dc768c9bb3f7',
+    'size' => 29776
+  },
+  'App-tkiv-0.132.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '442488b7d2866eaf6259127b02c4d6f2',
+    'mtime' => '2022-01-01',
+    'sha256' => '1067f5becb22ed67b3881e52967b6c82b070327e2aea5c1cf71c8fb5f157f8ff',
+    'size' => 2814
+  },
+  'App-tkiv-0.132.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '07f3939fe034e61e8ffabe4dfdfbe8c4',
+    'md5-ungz' => '6c50b1c503237bbb1b54da832ab94d44',
+    'mtime' => '2022-01-01',
+    'sha256' => '03b8f5393fef4e887ade7fde04940d47a7a555066b2520e460d00f6cb75304d9',
+    'sha256-ungz' => 'df04f5df010786065b25f503895135ba2c4485ac8f5a69e049823c4aa5d85719',
+    'size' => 23839
+  },
+  'App-tkiv-0.133.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '75d93b6fa5b91627b5f93999ad9b7b88',
+    'mtime' => '2023-01-06',
+    'sha256' => '5e77748a5af2898cee220f3dba44654eb75b15d0b46f4772e1f22d1d59c407cc',
+    'size' => 2814
+  },
+  'App-tkiv-0.133.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '935e92aa788bd1916138ec01bb2be6c9',
+    'md5-ungz' => 'ac622053b170e0dc7b6f0c449e4de962',
+    'mtime' => '2023-01-06',
+    'sha256' => '46e35967628f2e41c6df0377a0aa866e5ca01319c86169d87d1b8015e1581d75',
+    'sha256-ungz' => 'fdfdcc0bee2ad70c3c4dcfea56802a102ccad8cc841745feff6cb96415bf5944',
+    'size' => 27405
+  },
+  'Config-Perl-V-0.35.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '7ccc32af9f1655d7cfcfdd6e27100e16',
+    'mtime' => '2023-01-06',
+    'sha256' => 'e48817ef19ffa6bdcabf600bc3150e9fce9b2a86ff8415e8486cc7f270369940',
+    'size' => 1420
+  },
+  'Config-Perl-V-0.35.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '6e2d9491d0f905aacf6f5549ae40b9e9',
+    'md5-ungz' => 'c6b9d3a1b833a4452c32984bae91f5a3',
+    'mtime' => '2023-01-06',
+    'sha256' => '2b6c957822c064564bcb5c16a8284b722ce90a227f1efb952a9f9d0136649a6e',
+    'sha256-ungz' => 'b392f3067b3af9d91b7578e65983da7acba84057f5029e98ddd7dfca11be667e',
+    'size' => 25078
+  },
+  'Config-Perl-V-0.36.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '403578e6d442122a121670ad58483eeb',
+    'mtime' => '2023-03-01',
+    'sha256' => 'd2a538e3f1bae0d5be33daa4ef6faa88b43d0fa134381a6b4882ee9fd32d6445',
+    'size' => 1420
+  },
+  'Config-Perl-V-0.36.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '28cb3bbaf11e3ef95529e8b78297c874',
+    'md5-ungz' => 'de65cd655134357d96ea8c90f81e6015',
+    'mtime' => '2023-03-01',
+    'sha256' => '4a39c56e0e69d3b1811cf8db4736c53888b12c08bd2480e0a3ef3fcca2ff1e6f',
+    'sha256-ungz' => 'faf5c02e46043655ff8ba0021136493fb849c5917d0fc5bcd92e3b8448858e5f',
+    'size' => 25652
+  },
+  'DBD-CSV-0.59.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'a7cecd6aa625b329965163ddc703104e',
+    'mtime' => '2022-01-01',
+    'sha256' => '71bfb4f365f02c27d34184f53c014adcc0e3925491ef66a672af64f05c2a7390',
+    'size' => 1999
+  },
+  'DBD-CSV-0.59.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '0142b6f3a1f8c4ddb13b9a2a004cd9e9',
+    'md5-ungz' => 'a9dfc058b8e1698664e663e4a748178c',
+    'mtime' => '2022-01-01',
+    'sha256' => '2a5fadd1d50c18ea023560d39c2cc660ae2a65fa99d9b8244edca7d2dcce9dc0',
+    'sha256-ungz' => '55a5f19ad6e6d84d981ca979eb39f7fbc83b90c0c03105092a8130cb1bc67d3f',
+    'size' => 42854
+  },
+  'DBD-CSV-0.60.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '7bce22173717c9b0e8dfd378f9d918e4',
+    'mtime' => '2023-01-06',
+    'sha256' => 'a8b8d3b789dba420ab5f2147dca48c241f131d33cad3df31fce656ad3aa0fbe7',
+    'size' => 1999
+  },
+  'DBD-CSV-0.60.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'bd3e3adc710d67b34ad4501791d4c49d',
+    'md5-ungz' => '45987402e06bc69fdb4d7d394f2d981e',
+    'mtime' => '2023-01-06',
+    'sha256' => '018b83a30f799979bc8c3c3044c8b1c8001cdf60bdc3e746848818195254b4e7',
+    'sha256-ungz' => '4a0a3d335c5a444113806aa03b995e8e8a169fa8a1be5048adb472145bad2da8',
+    'size' => 43039
+  },
+  'DBD-Unify-0.92.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '5b3337ab2d69358c300debdf5510be62',
+    'mtime' => '2022-01-01',
+    'sha256' => '014ee0441cf5d426e19b794006e691b6c03272f67006aaf159648cb53727ccd8',
+    'size' => 2048
+  },
+  'DBD-Unify-0.92.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'a5926be042ba5ef5d76b12a8a38c4be4',
+    'md5-ungz' => '0bf83068f73f3bef2fa05b033decbb7b',
+    'mtime' => '2022-01-01',
+    'sha256' => '0aee21563de4d241b8f4d2863d3b23e9accac1d2978a87544a22f95fd5a1182b',
+    'sha256-ungz' => '7466010fa943e9692c9a71382dfc43805ef41a8f2d463c34e33eeed3eda42e5b',
+    'size' => 188438
+  },
+  'DBD-Unify-0.93.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '3b88cb84396e8e718be18a4a6b911eee',
+    'mtime' => '2023-01-06',
+    'sha256' => '1c68bf4473c825921715f368335808863d0e5fe3aaaf1e628ec8155b994377b1',
+    'size' => 2048
+  },
+  'DBD-Unify-0.93.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'a150cd2a37a20682a6636e614ae1dd36',
+    'md5-ungz' => '38380d28cdf32d3a3fc3b90a2816e902',
+    'mtime' => '2023-01-06',
+    'sha256' => '55a781543fbfccaaf60b1618b977dfbe12f268f8105579e3c068584c69ba8e03',
+    'sha256-ungz' => 'f58c4dbde0e092d56a914cbdaa20e7b64c48731d5e3760420f4a827ed34fa814',
+    'size' => 191977
+  },
+  'Data-Peek-0.51.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '431fc36b32f7d5e47997cd89088b440d',
+    'mtime' => '2022-01-01',
+    'sha256' => 'f3d78d621771a4aff54196b1238cef70a7046b1d58e9d0c842088ab10e778a9f',
+    'size' => 1676
+  },
+  'Data-Peek-0.51.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'e112fda9832e841b642e2873afd00cd9',
+    'md5-ungz' => '85bb7cd1d06fb8cdb767f43fbb119095',
+    'mtime' => '2022-01-01',
+    'sha256' => '1c5052369e8a41ebdb9cb9735833d29584b8b6ae7220011acd804bad7f06f913',
+    'sha256-ungz' => '64155df1424718f4c882bb892fcdfb0f4223037fb68a623c4daec2e4cfecbf68',
+    'size' => 137592
+  },
+  'Data-Peek-0.52.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'a01106184b8c6b88e4161994fbdb4291',
+    'mtime' => '2023-01-03',
+    'sha256' => 'adbc4cb4c770bd2e452062605b6fd8ebfb2df7bba14bf09e7efe6dd6d3c02243',
+    'size' => 1676
+  },
+  'Data-Peek-0.52.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '31e55aa11704f3d08d73624d77fb1ac3',
+    'md5-ungz' => '301da661948b8e2202bb1c226d703a30',
+    'mtime' => '2023-01-03',
+    'sha256' => '6b78ae513c068bd1ed629d08531283c12a9888f61e96ffbdf166d6ab51e277d0',
+    'sha256-ungz' => '5bb36086cc96b046d49afdd97b1d9d1390771ca35e32f54b7f7bdc61afc3391c',
+    'size' => 141059
+  },
+  'GSM-Gnokii-0.09.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'bfb45e56cca31cee0b862efb53e11c21',
+    'mtime' => '2013-09-16',
+    'sha256' => '9747c708a081ad8085e36b6636e86f9d109a392334da9d444c54433c4a400c2f',
+    'size' => 1617
+  },
+  'GSM-Gnokii-0.09.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '08a0ac2ea41bcc786a198347ebb25b97',
+    'md5-ungz' => 'b3d926047e6071b3760f1cd3792da202',
+    'mtime' => '2013-09-16',
+    'sha256' => '10635410653af4adc789ea68369f663b77fa4ec857f0090b39c19395b4008bb7',
+    'sha256-ungz' => 'c9bdeed4582c1e73129a28808dd6dccb55829dd679176be833458f259f548e5f',
+    'size' => 81976
+  },
+  'Net-CVE-0.005.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '09e564dd0dae8b4c7952e4713afb5e4d',
+    'mtime' => '2023-06-05',
+    'sha256' => '1d569c0a178c7ec4dc87669f9953351e1b661322e071f88552d7780ba82c0911',
+    'size' => 1989
+  },
+  'Net-CVE-0.005.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '8f08e1e747a72b68be10e60782934116',
+    'md5-ungz' => '63c71782638f3aafbd54d9e8427deefb',
+    'mtime' => '2023-06-05',
+    'sha256' => 'ff8818b5bb31016f74996dbae0143d5eab9bd1ced50ca8e3f808dec057ffb377',
+    'sha256-ungz' => '5c7e4fd9650c2ce098057ab6fb616482edb6349cb1a030a732f3e5fdf69583fb',
+    'size' => 12067
+  },
+  'Net-CVE-0.006.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'd8427b3abb612b08c6d276af06f949b6',
+    'mtime' => '2023-06-06',
+    'sha256' => '3db0e50ff51fd557a59d66705815a526b8b9f2b54c18a5107d2f590108b5b5bd',
+    'size' => 1989
+  },
+  'Net-CVE-0.006.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '5968546dee05fdcb07d68d95c721f570',
+    'md5-ungz' => '4f5f46adce61f0842ea66d230eaf00aa',
+    'mtime' => '2023-06-06',
+    'sha256' => '02e7b2ec3e72083dca5bf63a251563f209da0f83131197deb695dfb263101506',
+    'sha256-ungz' => '075e16105bf9eda187984d5f2e830a365d21e9cf3aee71171ced63af35209074',
+    'size' => 11976
+  },
+  'Net-CVE-0.007.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '39cb92731bc561ce3164550ad4fe55d2',
+    'mtime' => '2023-10-17',
+    'sha256' => 'd4f7caf51caa7ee5f931c4e5f1f2d317e1a578747fd4b39259d318456ef93bc4',
+    'size' => 2019
+  },
+  'Net-CVE-0.007.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'e14c1130bc2f78666692486274739c42',
+    'md5-ungz' => '5624243f223d20e7bccdcfa341465a32',
+    'mtime' => '2023-10-17',
+    'sha256' => 'd46497ed65a10752c4f33f57d0b57db9b446f7475e4ffca7566cd770f55b668c',
+    'sha256-ungz' => '0fe6dcb55cfe44562945e9c46c5fc9afbb9d5ad103fdd288dcf1b464acfaf1f2',
+    'size' => 13154
+  },
+  'Perl6' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'isdir' => 1
+  },
+  'PerlIO-via-xz-0.05.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '5bea7ceacab3eb6c45a37db94528c5f5',
+    'mtime' => '2023-01-06',
+    'sha256' => '65186d562deff4efc027d12be551270062353943596b8b56cdd3e3fc53fa0513',
+    'size' => 1720
+  },
+  'PerlIO-via-xz-0.05.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '96c74409ebfcfd2c7a234d3118d9d194',
+    'md5-ungz' => 'e06fa910d8aba713239d2f93fe79dd76',
+    'mtime' => '2023-01-06',
+    'sha256' => '54da05c7ef3fc1448f3e21b5e1db9ab13a39b48a7403caa470933795d968e371',
+    'sha256-ungz' => '219589a076a73c3c87699c9daa838233ab25ec035159511ecdfc8c446d58cf31',
+    'size' => 13464
+  },
+  'PerlIO-via-xz-0.06.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'd9db75fc221a29fcbf6a6d633bdae776',
+    'mtime' => '2023-06-05',
+    'sha256' => '907b3bc9497a40e0f4936e69115fc6beda8bc0fd58669753a0685ae20d8e043f',
+    'size' => 1886
+  },
+  'PerlIO-via-xz-0.06.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '7f8e922760b60ba666d112168944e3fc',
+    'md5-ungz' => '4a086f2bb3ea69bb364105486941e47e',
+    'mtime' => '2023-06-05',
+    'sha256' => '6089ebb27536948443cc8e9845c7267f3a50da980480272af559c6d50e78a60f',
+    'sha256-ungz' => '96b7424a863a2d30b7e314b2bd19543ab10d7e585272c780de0f02122c5b3214',
+    'size' => 13857
+  },
+  'Proc-ProcessTable-0.45.patch' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '076c6266269a6b6f1fe49b0cf3db80a5',
+    'mtime' => '2010-11-25',
+    'sha256' => '3d6b3e742bed76cbe87a6c9dceacf16f604676f9b4fdcb6fe5314c19bcf7ed5c',
+    'size' => 221070
+  },
+  'Release-Checklist-0.16.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '28c7cdcf852e34be5ad29f14b12f2ed7',
+    'mtime' => '2023-01-03',
+    'sha256' => '941a3ab6de079d14cd6712992939a4985bab87d27ab2d6647311aec99e471b48',
+    'size' => 2811
+  },
+  'Release-Checklist-0.16.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '5dc18f7238c5f28d0e91682af88f9755',
+    'md5-ungz' => '18be8bbe7033b6f2f59f42367d5118db',
+    'mtime' => '2023-01-03',
+    'sha256' => '31ab4bcd108db9aa0e0eb5bdbd316677b40a53a5b83c98149227269f32a63f7d',
+    'sha256-ungz' => '6f21c4466ed7813ad50050e5a04a4bcf669af7b30e9cb1ca1b6b009a541d01be',
+    'size' => 49191
+  },
+  'Release-Checklist-0.17.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'c3ca13a98d0db2b554e7d89910eb0711',
+    'mtime' => '2023-04-29',
+    'sha256' => '8c4694b2623596e18028f49fa0136c9eb988ce8020411d4a64eff615121302fc',
+    'size' => 2811
+  },
+  'Release-Checklist-0.17.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'c8155d2a572ca9fc6a0805f57b8dbe3b',
+    'md5-ungz' => 'f0edae305f2611c88eb8ad304d5b3e27',
+    'mtime' => '2023-04-29',
+    'sha256' => '45e1a05851984871ce30d35a1c53be1d06b5bab4164601c4dd926951aeeae49c',
+    'sha256-ungz' => '94a743906dbb853bc1cbc24920fe39d7caa76be8aa63a1f2667ca7366618f8e7',
+    'size' => 55802
+  },
+  'Spreadsheet-Read-0.85.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'b49728ad72686744581ec45312742fc9',
+    'md5-ungz' => 'e9634154426d451169b6910a6bc4109d',
+    'mtime' => '2023-01-04',
+    'sha256' => 'e01ca0941070f104df44ccb5e13bc2af75d3b6ff16c0c70c35e86caedf6ea848',
+    'sha256-ungz' => 'fc214070b1437056fd0f9e8b95d16e695e17dc6e2576a8a4c83472d6ef8362cc',
+    'size' => 251738
+  },
+  'Spreadsheet-Read-0.86.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '42e27dea2f83ec14b1dceb24f506ee31',
+    'mtime' => '2023-02-07',
+    'sha256' => 'c57731f86a6011919cf90ccd7b71b37fe8b67df61e5ab08ee1cbfc5fb65e7c16',
+    'size' => 4708
+  },
+  'Spreadsheet-Read-0.86.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'dd35dabf7c2fe2773e694e1bc4f49046',
+    'md5-ungz' => '0d9fff3e484944424f4d57c5ed55c70d',
+    'mtime' => '2023-02-07',
+    'sha256' => '87c601222d3d72227b04f3e0c84c60cf80c325caffe1fccf3789e010d32628eb',
+    'sha256-ungz' => 'fa314e057fa343ff0b1473ad984ebb9b16e10a5f652bba4b15313ac2d2bf939f',
+    'size' => 260374
+  },
+  'Spreadsheet-Read-0.87.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'af824190b38f0ff4f0a433d5030d34ee',
+    'mtime' => '2023-02-22',
+    'sha256' => '36defeb5910fb83872090896056233d53f3d6c8114ec4521460177a504502e15',
+    'size' => 4708
+  },
+  'Spreadsheet-Read-0.87.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '784b7894ab3021d73fb71b8272b9f87f',
+    'md5-ungz' => 'ebd83fd8cd42e0ee1932aedaa7445ebe',
+    'mtime' => '2023-02-22',
+    'sha256' => '963c0d075235bc4a320fbad7e62d9e47d5ca147edee3662855fa3042613ff4af',
+    'sha256-ungz' => 'd6b8a6ca61759b4b4eec61148cd014cc124081ba4506e0adc2230ae88b329b34',
+    'size' => 271514
+  },
+  'Spreadsheet-Read-0.88.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '79c0f79ddaea8001415d0295fe31830e',
+    'mtime' => '2023-11-07',
+    'sha256' => 'e6804895387e35cb35c96bc6e8dce93617f5e69bbed8ca57afb3485772394cea',
+    'size' => 4943
+  },
+  'Spreadsheet-Read-0.88.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '427029210866ebc10c75f0301f6a9119',
+    'md5-ungz' => '526f4f70fe4b033ffb112585480772f5',
+    'mtime' => '2023-11-07',
+    'sha256' => 'e73b14824ad1ae9c4380e6ba2bccf099611736df433f04edd7f13e6e682553d5',
+    'sha256-ungz' => '0e3af6f8ac9785da643eac8f897a0723ad77df92aeec59dad6f1e39a33d7b8fb',
+    'size' => 269393
+  },
+  'Spreadsheet-Read-0.89.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '57eda4d3cfe5de010f22c01ccdad9f0b',
+    'mtime' => '2024-01-02',
+    'sha256' => '8a9977eab4ce46d44f4b25b2cd3b1a5f400c75682db27913a76f953c4d0aae6f',
+    'size' => 4848
+  },
+  'Spreadsheet-Read-0.89.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '01011050641ff0f6d8a7f91252d5ec44',
+    'md5-ungz' => '4c621a104e07ca37011bd58e952e96e9',
+    'mtime' => '2024-01-02',
+    'sha256' => 'a66d2cc565b248c3710343db25960cdbe0ae93e0470657c0c2ddd785a18d9d44',
+    'sha256-ungz' => 'f73412b5ef4b6397dba7dede8084d19d34694e3b0e0ba11df30190c533832b13',
+    'size' => 274347
+  },
+  'System-Info-0.062.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'd8742b9f8c9d66a4109a3353a5784c9d',
+    'mtime' => '2022-01-01',
+    'sha256' => 'ccf01196704c6440da39a48dd83d8b861aa7e2371638e3b728a927604718dc5f',
+    'size' => 3132
+  },
+  'System-Info-0.062.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '38ab78996122d9fb4d1d5e47e021ab39',
+    'md5-ungz' => 'e4615c1aeb0f10b0113655545f9680e0',
+    'mtime' => '2022-01-01',
+    'sha256' => '76869026e839e8e984d7e64d79ea06367cec8a709e49129f578f3d83176ad113',
+    'sha256-ungz' => 'abf0dd529dedba90d38b457235b7d32b793ab76532ad138063964238860cf8c2',
+    'size' => 52781
+  },
+  'System-Info-0.063.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '25eed50635917b36a931d8a28f5dda01',
+    'mtime' => '2023-01-06',
+    'sha256' => 'b93d4d09bd86cee7d8689e9c720a7e3d9ea09f779797e1a011b61b5a5ffb2281',
+    'size' => 3132
+  },
+  'System-Info-0.063.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'f72ee0b9bd6b0180ed2fbefc35037301',
+    'md5-ungz' => '7b5bfbd0dbb15bc06afd4f11483116be',
+    'mtime' => '2023-01-06',
+    'sha256' => '23de7a3dc89ddf7e145a39ec152fb79ae7f47f11e772ddbab6f9af36343aa4d8',
+    'sha256-ungz' => '213b1f63f8c5f55635d6fe520ba921cd41cec377fc319a5c1547947b910542ff',
+    'size' => 55731
+  },
+  'System-Info-0.064.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'd37d2b542a91d5831511cad2ce0e0618',
+    'mtime' => '2023-07-31',
+    'sha256' => '210d7f92fb0b1c631c3e7c8f3205b3922e6b6700a8d8959758128ede287456b0',
+    'size' => 3185
+  },
+  'System-Info-0.064.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '5ccda9b0177316a4dba6bcf1f2bab087',
+    'md5-ungz' => '37535abe37b141ead10a7892e7ab718b',
+    'mtime' => '2023-07-31',
+    'sha256' => '8a484588e84d1bb8b070a03ecea8b5d1f9d122d6bf1a115f3d272f596432ce89',
+    'sha256-ungz' => '999c7cd3caff7816d54ca4d772304f66b611eafec672b9c4a81a457b87ed8ee3',
+    'size' => 57421
+  },
+  'Test-CVE-0.03.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '162fe25802dc7d11f4721135edbc6cff',
+    'mtime' => '2023-11-27',
+    'sha256' => '4c5199b73c7fcc26f18035eede6350fde56a883b679d56812aa5109d06890bb1',
+    'size' => 1267
+  },
+  'Test-CVE-0.03.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'a2b40d6bde94333df6f6e7802a1b0cec',
+    'md5-ungz' => '5ad17e7187aec7795c809ce1a785c4ce',
+    'mtime' => '2023-11-27',
+    'sha256' => '3518cff75d2801cafcd17c0314b8e6327b098d1aeb4e6a3f25bd9dfc3f9f419d',
+    'sha256-ungz' => '011100f7c7b1f322d5bae3723d6c8f4e6feb8fe12da8ab7ed8aa51aef01975aa',
+    'size' => 10854
+  },
+  'Text-CSV-0.007.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'd4af492ec1e1e8b0629b696d945e7b1f',
+    'md5-ungz' => '1f1084728aec3f1c348f4ba1b5786954',
+    'mtime' => '2017-05-13',
+    'sha256' => 'a50ba950c8bfd007d2c7927374518ea30aceca962c7170893a258f5cc1825c63',
+    'sha256-ungz' => '9b9701c14bc90840a3418eff573eea687fc96b4f386d510d7553aec751c8f5de',
+    'size' => 65636
+  },
+  'Text-CSV_XS-1.49.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '74d47e2776da3a231ca6b05e517b8449',
+    'mtime' => '2023-01-03',
+    'sha256' => 'cf1a715d62db65edcf79523ddbfb9e1a4233bb343723348b70800bd3ece5277f',
+    'size' => 1630
+  },
+  'Text-CSV_XS-1.49.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '479d31e37a1282966d3bd47506fb2dcd',
+    'md5-ungz' => '94a7e0041a4fee7b82d4c5146ec551f8',
+    'mtime' => '2023-01-03',
+    'sha256' => '796dd0b57d37aabc9246f980ec358a2005341c791cf9f21ea7f0e0fbcf250e67',
+    'sha256-ungz' => '5ca2977e09efd630a285ab6785d653d83d50dce93e6fe33822780c1c30770303',
+    'size' => 271084
+  },
+  'Text-CSV_XS-1.50.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '7e7deeeac6bf392409fe15610dcf4a2e',
+    'mtime' => '2023-03-01',
+    'sha256' => '53b1ed0ab0ab88d755ee469732568ddd8bbcfd31d7c466df7dbb4bc71033af14',
+    'size' => 1630
+  },
+  'Text-CSV_XS-1.50.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'ac2a8f752445737ebeaff7314607f2a0',
+    'md5-ungz' => 'b85140264fd4d16660fb794e1cb73fd0',
+    'mtime' => '2023-03-01',
+    'sha256' => '85b5e1bed7e11dc0413d4e920cee25d980de47376c0048029041cf461eac96b1',
+    'sha256-ungz' => '2e898e756fa6a2ac7a335bc7d2227c1b3632591af3887a172d93ce6dc133ae40',
+    'size' => 266660
+  },
+  'Text-CSV_XS-1.51.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '4bde94f402f2634263d1014dd743d78d',
+    'mtime' => '2023-08-07',
+    'sha256' => 'e5c459d28e188bee3b12ad1b00f3fb993fd3fe071e0205109f952de9bf7ec100',
+    'size' => 1643
+  },
+  'Text-CSV_XS-1.51.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'da151be3259b7d95e1a3573cab26dae2',
+    'md5-ungz' => '8eb415a6897f3e8215d1ba0397383ef1',
+    'mtime' => '2023-08-07',
+    'sha256' => 'b1831d4d5f90ec6ad7f111a2e4bc5ca6dce7d17d7e57f17ace42b0f3ca140372',
+    'sha256-ungz' => 'd6c6ef1a71eddab5ad9fbeb676fc525f98ccf90789c9b8f499f9531ae2d7cf43',
+    'size' => 271716
+  },
+  'Text-CSV_XS-1.52.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '919d763a9ba3975de0212f0852a35475',
+    'mtime' => '2023-09-21',
+    'sha256' => 'feaedeecb00a34c1b6bd3fb283faab2c7828231f34cc30d3e093cbc1b002634c',
+    'size' => 1643
+  },
+  'Text-CSV_XS-1.52.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '944b188a93d7a7a75ecf1da3ff731bd8',
+    'md5-ungz' => '1497f4c7972d7c108afa189b18a21f65',
+    'mtime' => '2023-09-21',
+    'sha256' => 'e415aa705badf84b359dc4c0f0c982f1bf708481daa14756f3136e7c89c0e41d',
+    'sha256-ungz' => 'd7dfbf33ce9c74804dfdff240d69df6a51a2ba90a941466b793aa5939007493f',
+    'size' => 271359
+  },
+  'Text-CSV_XS-1.53.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'e78a1bdb7e189b43056d07d420a93141',
+    'mtime' => '2023-11-23',
+    'sha256' => 'fac74aaca1c9b31ff982201dcf17550db4b6b3dff3c0648e6f214862b0f0d45f',
+    'size' => 1711
+  },
+  'Text-CSV_XS-1.53.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'd6af5f1aec99e5a5392ae3175de9a7ae',
+    'md5-ungz' => 'b9d9b93efa8a571a24c00f061a30b8cd',
+    'mtime' => '2023-11-23',
+    'sha256' => 'ba3231610fc755a69e14eb4a3c6d8cce46cc4fd32853777a6c9ce485a8878b42',
+    'sha256-ungz' => '29a0ccf8cb524c21e8b43471f235e61066f25471c40de85e90533fadb7298207',
+    'size' => 273211
+  },
+  'Text-OutputFilter-0.24.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '22a86a7d31206b7dd416ae67f6ecbf4d',
+    'mtime' => '2022-01-01',
+    'sha256' => '5e8839e6e63e8b79f2b0092178af741b22978e70861169e5d63df1fb9555b486',
+    'size' => 1411
+  },
+  'Text-OutputFilter-0.24.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '84e94f5ef73a172b18b64e0b6a5024b8',
+    'md5-ungz' => '59ab71bd3cee79fbfff5775dbbe0ac25',
+    'mtime' => '2022-01-01',
+    'sha256' => '9cc105098218e3918396e89b6b174d4710aa6c4411a5506e292c409952c4883d',
+    'sha256-ungz' => 'bdf771bc9e2415cb478be528d3af86bd54288d90b4ad0e998339becb3ad70648',
+    'size' => 7758
+  },
+  'Text-OutputFilter-0.25.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '545a8e5a27d6f13ffa88fc00ad6aad17',
+    'mtime' => '2023-01-06',
+    'sha256' => '972652daa6b7a945f06967287d567eb0ccde297db1c3de8e939360e6d12ddddb',
+    'size' => 1411
+  },
+  'Text-OutputFilter-0.25.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'e94297dca3707ae93178f49cb83cc1f7',
+    'md5-ungz' => '5cc1afaa97db2efa936a9bfbc40deb76',
+    'mtime' => '2023-01-06',
+    'sha256' => '540550f250479d4810eb7c6f7d69ab1ea1f1eda6bda5a746769710e507ffc669',
+    'sha256-ungz' => '9a91540a239ef3b43a70dd6fc1c266667fac832f0cca5688183a1ee1d1a0ca6a',
+    'size' => 7759
+  },
+  'Tie-Hash-DBD-0.23.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'eb8fe24d2c1596903d2c4073f0812509',
+    'mtime' => '2021-05-18',
+    'sha256' => '70891a3a563a299399abc1b44e7bbcb59c1d8130ed57cb61259b8229ecfa0d73',
+    'size' => 1778
+  },
+  'Tie-Hash-DBD-0.23.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '59f723d45f71eca45c3252ef7d7afa22',
+    'md5-ungz' => '8c36c2e3e8e8f5f2a017698090483d76',
+    'mtime' => '2021-05-18',
+    'sha256' => '5de16f4dba58bf5ca2f41d4a8483ae382336b1c298776036ef7fe6c9d3049489',
+    'sha256-ungz' => 'b2f3af75689b51ea822c5901834056770ec866e25ac4367d0444df0e225c6ac9',
+    'size' => 20819
+  },
+  'Tie-Hash-DBD-0.24.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '164186288f0fadc55171c098ebf64640',
+    'mtime' => '2023-01-06',
+    'sha256' => 'cde98506ad7f21fcc0233e545b24e8735db4ba4b312bb6e9126f912b1432e7fb',
+    'size' => 1778
+  },
+  'Tie-Hash-DBD-0.24.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '85c33cc59525ba5a18887da8a71885ab',
+    'md5-ungz' => 'bb1652397e0ea3358da0901c4f6a4b51',
+    'mtime' => '2023-01-06',
+    'sha256' => '3ce9511495395ff226f86f1a6aad3a17cd3b79be480fad158146c52dcc9e0c65',
+    'sha256-ungz' => 'c7489be315a98f7be4e0aeebf8f510b0f0a7c2a8ef538ab038511cd71b70b2ad',
+    'size' => 21197
+  },
+  'Tk-Clock-0.43.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '3b0b78b9187cf80c03e2802b35571cbc',
+    'mtime' => '2022-01-01',
+    'sha256' => '9e3edf203686bf4d1baebb6b31e56ae00581e29a34cf38f8d03940e4ea6208c0',
+    'size' => 1665
+  },
+  'Tk-Clock-0.43.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '9254a1ea49432a9ad6aa05d69b93b844',
+    'md5-ungz' => '5baf5b640e0fc9fa6a3f4d9c13c67446',
+    'mtime' => '2022-01-01',
+    'sha256' => '713fc418fcea8eebf081aca7550d5205940977f1c42563597e0198a43850a05b',
+    'sha256-ungz' => 'e31fff59f9e98a4a86f2fe982cfb4ec90c5ee6f40d3a6b7cff2f5de3c4e2188c',
+    'size' => 317883
+  },
+  'Tk-Clock-0.44.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '7e462b108a50d3a2ccf59f1c1f418a05',
+    'mtime' => '2023-01-06',
+    'sha256' => '18049102c84cb84820d02b22415dff126e089b347ae2f988945d4b72dbf3d98f',
+    'size' => 1665
+  },
+  'Tk-Clock-0.44.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '7f7b0055ffd6680b652383fb36615896',
+    'md5-ungz' => '4855cb37003a770949716b2ded2f61f9',
+    'mtime' => '2023-01-06',
+    'sha256' => '73dc6af316841aa69bc35daf3f9cfc3b6ddd32f157f228905af631e259295e3b',
+    'sha256-ungz' => '90de946d74959d32825825919829483e6d1af6c6aa6ea91392c3e2a2c07d17f9',
+    'size' => 318749
+  },
+  'VCS-SCCS-0.27.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'd71a87c45bf38efa9771bf6e57f7dc55',
+    'mtime' => '2020-12-23',
+    'sha256' => 'f52467f966b2a3c3a335e648faf2cfb30cb6599b672d03abaef8d9c814721a55',
+    'size' => 1419
+  },
+  'VCS-SCCS-0.27.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '3e5ca6a11deb03ab6861e2fef78c96c2',
+    'md5-ungz' => '4b78a628c3fb07fa9e8161eb31eaffe5',
+    'mtime' => '2020-12-23',
+    'sha256' => '85a84b22d4e3619d1258009de727d9a0b9be6bc4a36c30b923cf67fd9d647614',
+    'sha256-ungz' => '34a1580a6b55f1bc5f052a088c448629945f56ba2a6f7e5e0c7830f070eeea29',
+    'size' => 300802
+  },
+  'VCS-SCCS-0.28.meta' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '9981a5490c846e04a59e0d99bb09a9ea',
+    'mtime' => '2023-01-06',
+    'sha256' => '8115b11365d5a8257db914fd94efe9bad2618fee7cf18e3bcf6d66fea737dda2',
+    'size' => 1419
+  },
+  'VCS-SCCS-0.28.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '3e2df0f5819421576d67d03b80fac4d9',
+    'md5-ungz' => '6155282735c15e51a7c8b529e46b52a8',
+    'mtime' => '2023-01-06',
+    'sha256' => '7819910d390a6464e16ef970411efddac7034e33a8b01e6ee131ed8762554f62',
+    'sha256-ungz' => '47b5ea1327cd208f53313426a3d35ec696bdc69cd99d974df614f18816765a43',
+    'size' => 298777
+  },
+  'auto-mute-20050429.pl' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '2ee485f03a7c61f4551372be96a9ca48',
+    'mtime' => '2005-05-18',
+    'sha256' => '0b3a662fc91b5923d5cf7a70621d04c22cadcf1e802c10859f85bd43d31745c1',
+    'size' => 4226
+  },
+  'cshmen-3.50_01.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '73070fb0d02cd6cf980ff1ee5570c28f',
+    'md5-ungz' => '5a1823ce53e481973a190e552aaaf2c5',
+    'mtime' => '2006-07-14',
+    'sha256' => 'f3552338bf86aab9982f3360cb3b84a858b47b6866310f999a5be03f7a267df1',
+    'sha256-ungz' => 'dee92355ab2e143f577e3ed0618f98b94e8b07037a50c70a4fe958c0fd2ccbf4',
+    'size' => 33861
+  },
+  'dor-5.8.1.diff' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '13709581c1201ef22036dc4d00600954',
+    'mtime' => '2003-09-25',
+    'sha256' => '0431a109d0196203c3aa67cd9fb990820cf3a98ac558cb48072094681fe9fd1f',
+    'size' => 380389
+  },
+  'dor-5.8.2.diff' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'dab5601a5a61a0bb7f3d9fa4022dbd65',
+    'mtime' => '2003-11-06',
+    'sha256' => '13ed675f37dda94fed7e772ed234ec5ff9913278685112657cce96f3cf4be466',
+    'size' => 381487
+  },
+  'dor-5.8.3a.diff' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'cb39fcd1bcceb00f6e219b61c8e54de8',
+    'mtime' => '2004-01-24',
+    'sha256' => '21d7bd5b5604ff4b645f428aee25b1dbee25b1bff65299e7a8a2550a6b16b647',
+    'size' => 527269
+  },
+  'dor-5.8.4.diff' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'c2ace7ee9914c7032a5339ead76c851a',
+    'mtime' => '2004-04-22',
+    'sha256' => 'ec47c9f0ff7703aac5a42059301297557d608cbd2a9424f1ba08dc1039620165',
+    'size' => 528061
+  },
+  'dor-5.8.5.diff' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '7f09be35bc7e988a669fcc20c79163cf',
+    'mtime' => '2004-07-19',
+    'sha256' => '55f2d4b5d79df07e3afd245db6fec12fe63c2f56f812a8c163b8ca2f2e92364d',
+    'size' => 528061
+  },
+  'dor-5.8.6.diff' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'c4d8ec1b9df39949963cf60c2a3e02d6',
+    'mtime' => '2004-11-28',
+    'sha256' => '6124af0affdbf04018f286c1a04d2f0cdc7a86f9e82021f256cd573c20d9ab11',
+    'size' => 527883
+  },
+  'dor-5.8.7.diff' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'c1889e517c5c8682a364cc10b8f50be7',
+    'mtime' => '2005-05-30',
+    'sha256' => '2f616326f5cd66748de43a901b27a7cc2d2abed5087e22edb0e1eb5ba4666ca8',
+    'size' => 369597
+  },
+  'dor-5.8.8.diff' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '28c5dd29c7d29ec78552a0bb86961514',
+    'mtime' => '2006-02-01',
+    'sha256' => '13ef584068df6cb37039b0f3b904bf46088173bd845c28e920e02cb136e97a7d',
+    'size' => 370528
+  },
+  'dor-5.8.9.diff' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'ff8a0f7800118d0ffb3c57c4ed108f6c',
+    'mtime' => '2008-12-15',
+    'sha256' => '903e1faaba393232d8a5a6157847dcdd95a3cf4822c452ae51bc91067d237ca5',
+    'size' => 368635
+  },
+  'perl-meta-3.5-20.tgz' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'b4aa5fe2eb88eb2c50064c063301a627',
+    'md5-ungz' => 'bbd71fa788350b8ac25e6b1cc6abe1cc',
+    'mtime' => '2008-03-21',
+    'sha256' => '0fb2bf70c6b7cce9dab30131fe76f76e8dda91fdd50b06714d3e70921d95ddf5',
+    'sha256-ungz' => 'c43170727448756f2d4e42ca7f41db2631f52b0e4def1f6e37286a646caeaf07',
+    'size' => 454829
+  },
+  'perlman' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => 'f02003367d9913da59a3057043a03892',
+    'mtime' => '1998-09-09',
+    'sha256' => '450df94e1d2a90c3985980f69de0a7ba7d7965d1af10b737050e65d294c27afc',
+    'size' => 17533
+  },
+  'uchar-20060928' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '2b51e1398f78d7e61279d926bc470e95',
+    'mtime' => '2006-09-28',
+    'sha256' => '5cc08028b8907f2866163de0a26edda65f9f9f417c49812be63b8b4d83109199',
+    'size' => 4564
+  },
+  'xtop' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '006b653c5a6c22df4f747dca8af166a3',
+    'mtime' => '1999-03-15',
+    'sha256' => '05f352a551c3bb863858811b0c7d28d32fec0bec2fafa3a5855c81a8bb716727',
+    'size' => 3847
+  },
+  'xwekker-0.010' => {
+    'cpan_path' => 'H/HM/HMBRAND',
+    'md5' => '4c5bd13f82c6fc6aab275b34c31937c5',
+    'mtime' => '2007-09-03',
+    'sha256' => '8009f00500e330cdeef39a3bd40d86d4174a7f863ebb179e2158eab622fc912a',
+    'size' => 11329
+  }
+};
+__END__
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.14 (GNU/Linux)
+
+iQIcBAEBAgAGBQJllFuCAAoJEHdXYSWpBfG6j4sP/0zuNnrWdD/DCuZh5vxZOcKY
+NUZFKrZFza/OAkExjK+rSl56k2b8WbWQHCgDZdcBY2+A5y3mnZIQoh9tAwno7QYq
+UA/W3t+wWdSbxZCvoHR/TfWncmlZ2iIbJwATywfVtRH24gvP0gSPcNENl7WG6yTp
+9KcAsuR71KJLlkQG9cIVHQa4yrDmuJAT8mxm9HDqZ0zHEgyE6RCJVOSFj+7uzxQ1
+QZ9DrLAeulDV+oUrRTAHUhDDjXqv6+l5FnChClW/KvqOofprSmU4wq7tVprg9dXn
+AkHXryZsXUnpsBt1xzkHEgcKNcc1pb62NJzCXX0cM+AnSg53/fhdQi7rvNHr1raJ
+Nhmr3VsmSD/Rh4BVu9YPHd545xbyGSy01EMlKnRxy+0F76n+/gQOx6Jyr6EY08lL
+9JGx054BlZAXHppRU0qq3Cz/wNkmij1buYw9PEfpJGIoIqjndCBWxh62R2e9g+Zj
+pMbpdNdTJie8HZVhWacuUXV0ohf0oL5oxTiBs37DvnN57CrDW6BzYF081gTtR2fS
+Ea3LJ5GmgQimRy+kd2oLcgFAYHYKIWFQZV6RkYpRLm7QnMTKgTM8VIyRLoRqjPdx
+hfr2E6OOHRLSpfj6EqoqPW14e4hJ4KOfsxhRubv7Lm98FXbJUgLIwF6gwlEi0Szp
+g4Ddd09MNqlW+5s6jDs9
+=h6hW
+-----END PGP SIGNATURE-----

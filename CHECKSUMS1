@@ -1,0 +1,2945 @@
+0&&<<''; # this PGP-signed message is also valid perl
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+# CHECKSUMS file written on Sat Dec  2 12:52:56 2023 GMT by CPAN::Checksums (v2.13)
+$cksum = {
+  'Acme-CPANAuthors-0.26.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a0c8d926c1f9962e9bc7fb519c42c12f',
+    'mtime' => '2015-12-09',
+    'sha256' => 'd4b5e6e0e90b17c9ca86f3b55506d774d8a1a1459d879e5b106e60e2bc70da65',
+    'size' => 1528
+  },
+  'Acme-CPANAuthors-0.26.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '6c5ff177b64276d262c62c52a58ebea3',
+    'md5-ungz' => '2a790d74aa488c2e56388eb0e1eebd10',
+    'mtime' => '2015-12-09',
+    'sha256' => '920eebc9bcd49152414c2dbb3f302c74018c91d335a0e69685e2d3740da0a55e',
+    'sha256-ungz' => '467debe7ff28367ecfae964876136cdd656e1f589583d340f9a0a420a6489bee',
+    'size' => 15967
+  },
+  'Acme-CPANAuthors-CodeRepos-0.080522.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9a846a3dba351313ad52d0c6b2aa4dc2',
+    'mtime' => '2008-05-21',
+    'sha256' => 'd8bf3e68f7cee450f420a6c24f3dac626b2d610b0e535c6f80f369e2edca0451',
+    'size' => 570
+  },
+  'Acme-CPANAuthors-CodeRepos-0.080522.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5f4c7801fc0c347f219c596912b97c34',
+    'md5-ungz' => '8e3baf11675cd4552c643f2f6c0c187f',
+    'mtime' => '2008-05-21',
+    'sha256' => 'f760dcd241282fee7a8a69bab1059b38e3ec91658cb6cfdfc278135280122166',
+    'sha256-ungz' => '337001b6faacc9f149e8568b5623bc0b7223b5e8be1066d3e06dfa6ffd7fead9',
+    'size' => 3086
+  },
+  'Acme-CPANAuthors-Japanese-0.190126.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ef8a6848216c5cea41c9afe2920780ac',
+    'mtime' => '2019-01-25',
+    'sha256' => '0c33bcdb42dc6d842bfd768a9765c15b3824b5748d916fbeab3f4fca41c90a87',
+    'size' => 1242
+  },
+  'Acme-CPANAuthors-Japanese-0.190126.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '44f10b31723fd5ce2968eeee8f48d288',
+    'md5-ungz' => '463643c5872790b22c7001efd2214447',
+    'mtime' => '2019-01-25',
+    'sha256' => '46e8bfbd0b5da8a4b56537ebefb3cc61326fd2f3cfcbadfd0b4b8f435d919e7b',
+    'sha256-ungz' => '40eb39a020dae314ab70481ff06a867ebddfbfb04a3392253bfb9e0caaaa947c',
+    'size' => 15424
+  },
+  'Acme-CPANAuthors-Japanese-0.190426.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8311aaeb1e4dfea89013dd9c3ef58cbc',
+    'mtime' => '2019-04-25',
+    'sha256' => '3a9b54b8e98e326d5b01a73a425dc08f7e2e40e7e4502cc29257340692fe3ef5',
+    'size' => 1242
+  },
+  'Acme-CPANAuthors-Japanese-0.190426.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '043648545c4080e360293fd6e77ecd36',
+    'md5-ungz' => 'f58dfc9dea102d5e6fba7f447bf2267d',
+    'mtime' => '2019-04-25',
+    'sha256' => '2758f228619c25d5076d5539d8030cb5941968bba0605f5985a172334f8b316d',
+    'sha256-ungz' => '55f91072241b907242f68ad2af652d8b02c0fc0bfa3943772d7cd296659eb444',
+    'size' => 15508
+  },
+  'Acme-CPANAuthors-Japanese-0.220625.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '675296c66b75d9fcb0bc2f6e37739117',
+    'mtime' => '2022-06-25',
+    'sha256' => '7362bd51b858d4cfc32552055fd87838ab3a349ea24e79e15b274912b494656c',
+    'size' => 1242
+  },
+  'Acme-CPANAuthors-Japanese-0.220625.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e7280fb4ee34ed0b499f93c14abce0a3',
+    'md5-ungz' => 'a03e06ca2d7aabeed84384e5a6b26d03',
+    'mtime' => '2022-06-25',
+    'sha256' => 'bd51f1b98e4a59f4de907cc66ea79fa8eb6abd901ab29973eb5638aa601c0670',
+    'sha256-ungz' => 'f832cb4dd344de29fa6ffd44240e5b721a41b367abd8f4132198c5b0d3bd8a23',
+    'size' => 15933
+  },
+  'App-CPANTS-Lint-0.05.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '446ab8db8cb2b30d3ae4b5f89eac3ba1',
+    'mtime' => '2014-12-23',
+    'sha256' => '997fa962a6e90e6629a2419266204c2e6f78db0449e7251bcb76343a22d10821',
+    'size' => 1277
+  },
+  'App-CPANTS-Lint-0.05.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1f41352ec2fedaa07a27212ca95d92b3',
+    'md5-ungz' => 'd283c4669937b6beefe99365a73e92da',
+    'mtime' => '2014-12-23',
+    'sha256' => 'c28907b95447205cce23991b51d5fa52b9b9f9a85682647a3e649452e404498e',
+    'sha256-ungz' => '9e9c052ff4147bdf2249ee958e929969879b610c84955ed1a4b1d49788f89538',
+    'size' => 14212
+  },
+  'Archive-Any-Lite-0.10.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9b34fd588c3caa2479a27e7a691db6b0',
+    'mtime' => '2014-08-09',
+    'sha256' => '32e22a83de5d5be1f7c2ae868860d7eb2faa43f5333a0e742d5d7ac57a5eb61e',
+    'size' => 1278
+  },
+  'Archive-Any-Lite-0.10.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'bff1deb8eea3d5786afd8b2276bbe350',
+    'md5-ungz' => '8f92ae46fe72ffb43354fe2d06973b3f',
+    'mtime' => '2014-08-09',
+    'sha256' => 'b97fd4b61c8ff4a0d1dd2be50799fa1430add0bb55c1d35598874cd6974d68c5',
+    'sha256-ungz' => '6e947dd3336180b84ea678da278c7dd240797b2f0b99198660a6e522eb1631d2',
+    'size' => 28966
+  },
+  'Archive-Any-Lite-0.11.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '983d179807fe02f118cd4d0e23fcfd97',
+    'mtime' => '2016-04-29',
+    'sha256' => '1583d8ca1e3582ca8a1985523ebab1700cbf49874c867049d0aed22c03178407',
+    'size' => 1278
+  },
+  'Archive-Any-Lite-0.11.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '3ab3ff949b6d5899a3a7fdc750e08907',
+    'md5-ungz' => '6e6dacc88f85d1a5fd397705e181f13c',
+    'mtime' => '2016-04-29',
+    'sha256' => '15c188253993a4b66e5599f0789b1326f0a66c092bdbfac9313706d41c285170',
+    'sha256-ungz' => '7e44e10dcdedef9a01e6d9c866b54f8c4dff6fcda4acb3c880f9a713b9fa846f',
+    'size' => 28998
+  },
+  'Archive-Any-Plugin-Bzip2-0.01.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '171cda70e60f223efaf28ed7dbe5cac4',
+    'mtime' => '2012-06-16',
+    'sha256' => '7ef2258b97457ba671db16808cc83bc564f12e3b6f5fdca2694e4366281d0d64',
+    'size' => 1008
+  },
+  'Archive-Any-Plugin-Bzip2-0.01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '59b8ba9a90e889e118ef1d963582e414',
+    'md5-ungz' => '3ac4d90c12bf93fa7abed7aa0750b51a',
+    'mtime' => '2012-06-16',
+    'sha256' => 'aa1e2ee989322d8fd7a8e7dcef0c7f5adae057c232bb5f35249aaa493bcc1809',
+    'sha256-ungz' => 'cf721252684f8e375829b815d310de0ce412001adcfcaa547758b51588167053',
+    'size' => 3643
+  },
+  'CGI-Carp-DebugScreen-0.16.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e74e1a0002ab3b484ab4b39a67d7a1bf',
+    'mtime' => '2009-07-28',
+    'sha256' => '767e6a57c3d9fd88c7f59237ce01162d85f7933ee47e28a0cf11701b090a2c5b',
+    'size' => 624
+  },
+  'CGI-Carp-DebugScreen-0.16.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5bf77a6e49635bf0935c6f6ed9982799',
+    'md5-ungz' => '52ad0f353fa05b507fe6431df874246b',
+    'mtime' => '2009-07-28',
+    'sha256' => 'db37cd948b76b4e07b7ff4730fb23631e9dccd286c258a0870ac9f24a266ab61',
+    'sha256-ungz' => '25bffb5384ce569b324ab534ecac91dd5fd71bec924630f675627e79c75d8809',
+    'size' => 11848
+  },
+  'CLI-Dispatch-0.19.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8727ddf4ecea7233b6869ad14832ec14',
+    'mtime' => '2014-03-30',
+    'sha256' => 'f109cb71ea83d49c1966201a8fd9c5b2606243c3178a87437b6ce0d247be5ec2',
+    'size' => 1329
+  },
+  'CLI-Dispatch-0.19.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'b149fac9de4521d3649f650ed2517b96',
+    'md5-ungz' => '1b98a6e580197279418c9bd63432652b',
+    'mtime' => '2014-03-30',
+    'sha256' => '14229c54931aa5db5c71551de67045e5a1cc14f67d734b34604ee2a4020a5dd3',
+    'sha256-ungz' => 'c10f091ddb0614da9e5bff2a1b2a00c22e57f19f605b94b025ea94a404a01973',
+    'size' => 14288
+  },
+  'CLI-Dispatch-0.20.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9d2537bac078500480b5146365a1f4fd',
+    'mtime' => '2016-02-16',
+    'sha256' => '0d00b6f5750143be77b86e5238c758e66b372a9785261e15189019296f7e5842',
+    'size' => 1329
+  },
+  'CLI-Dispatch-0.20.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '454dac9ab76ef8143b15f24c749cdc3c',
+    'md5-ungz' => '2651121e1f327ce435927925ee8720ad',
+    'mtime' => '2016-02-16',
+    'sha256' => 'e70b70c1cec773aad28be15d132a3721b5934a0bbac5331c62ae1df8357ab549',
+    'sha256-ungz' => 'd578f8e46eabdb6b6d46c53a2480f07d3c032364d0754c5619afc85436c10b7f',
+    'size' => 14335
+  },
+  'CLI-Dispatch-0.21.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1e33931916ce3f0663ea0f0b67a4828e',
+    'mtime' => '2016-06-25',
+    'sha256' => '74385d3cd3b3e1f8ffe98b1070924d1d363557cfeb54a5da8bd7383eceeb53b5',
+    'size' => 1426
+  },
+  'CLI-Dispatch-0.21.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2162e9d121c7c041c84ed19143fce2fd',
+    'md5-ungz' => 'b9dfb372e3e713d71ac47c75a3a0dc64',
+    'mtime' => '2016-06-25',
+    'sha256' => '01ca3e7b763b7730384a3d5c115fe1d1ee17385ee152fe5ed29e54e015e377af',
+    'sha256-ungz' => '28d458c3e9f74c7d04a1cfbeab8cc9d4b28b04ace92809fcc31872856cba94cb',
+    'size' => 16497
+  },
+  'CPAN-Search-Lite-0.77.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '86c7a762087eb96c76201d3b53aecaf0',
+    'mtime' => '2010-12-03',
+    'sha256' => '1f553d212005cd1b215c5a46d38eb8580c23ce1e3551ca73da5b7648934c9200',
+    'size' => 3510
+  },
+  'CPAN-Search-Lite-0.77.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c7bc49a41413905383ecdb3c93322578',
+    'md5-ungz' => '2ae91b3b45da040efe79340879263121',
+    'mtime' => '2011-01-06',
+    'sha256' => '84570e61bf52757c9a2401b599f66b20ea3b140664763f5ed87cf8d9b2aba565',
+    'sha256-ungz' => '3cac05963925c122ead496e76729ca048423cf0d0d46b14535f004ee239080dc',
+    'size' => 639308
+  },
+  'CPAN-Search-Lite-0.78.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '86db579a5488066f3100da77d8e22fdb',
+    'mtime' => '2011-01-08',
+    'sha256' => '41d7348a9475a1c20457e67e627b3204fa889d0462abbd45efbef250562a5053',
+    'size' => 1175
+  },
+  'CPAN-Search-Lite-0.78.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '99170ec6715bf5f2417346b4a6dcbf04',
+    'md5-ungz' => '38afdf59049b9c878fc2f39e12273862',
+    'mtime' => '2011-01-08',
+    'sha256' => '6d5c4897dc79ef575d9312c8261dbaaa8c5a65d8652ae8b9b6d9ec0aa1e4a6d9',
+    'sha256-ungz' => 'b92d04309f749fa04633f33879d96c5fdca36d0ae3388eae41e4baf1f5dbe818',
+    'size' => 638886
+  },
+  'CSS-LESS-Filter-0.04.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '078c60640807853ae0f002fb28f3bcda',
+    'mtime' => '2012-12-10',
+    'sha256' => '6eb64c5b250185b9b9fb192ecb42c229037799eaa894e9080ad521c4360aad08',
+    'size' => 1138
+  },
+  'CSS-LESS-Filter-0.04.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '607d97b822b590f583669e0faab8af5e',
+    'md5-ungz' => '0c194536e71b48db7e5b43bdfde2ba70',
+    'mtime' => '2012-12-10',
+    'sha256' => 'bc3785e8511925abe578e2d834064d31431bcd098e540c402c1a9b333cbb95dc',
+    'sha256-ungz' => '8f5013e8417f07cfde27811b0ca84571c8af72c77dcc5613dfac2e5dfe00a546',
+    'size' => 6801
+  },
+  'Catalyst-Authentication-Store-Jifty-DBI-0.03.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '27b7c49ab5a4d34f4bddcb61987e1010',
+    'mtime' => '2009-11-08',
+    'sha256' => 'd969dd2e215b266d8029d2bb1a80ccb97a70ee7623114e46539e801ae5e18788',
+    'size' => 822
+  },
+  'Catalyst-Authentication-Store-Jifty-DBI-0.03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '724bfcca4196fd263f4a6ae07e01248b',
+    'md5-ungz' => '6de12bb5d27bc3750157a725f9372fc4',
+    'mtime' => '2009-11-08',
+    'sha256' => 'b0ff806e4188de7ef5670733462f6f5697040b51054bc8595dd36498457f7427',
+    'sha256-ungz' => '3c1172e775f2fefc54074b188340a8e896c360c5e31bd6974d99b09c6fb61008',
+    'size' => 7765
+  },
+  'Catalyst-Model-Jifty-DBI-0.06.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '83da1db2683449f33192774c7a1f4b30',
+    'mtime' => '2009-04-28',
+    'sha256' => 'b96e9835559c412ce72ea55d6423db3d17e69fbb00bc3d12790dedcd464c34e5',
+    'size' => 880
+  },
+  'Catalyst-Model-Jifty-DBI-0.06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '491b7a373e344993611d4e02196f65b5',
+    'md5-ungz' => 'd8546242d635e32e6886b093802f1a72',
+    'mtime' => '2009-04-28',
+    'sha256' => '0ba91a8b28ee3c862891c9a9a30f526a83c52431b91e97b22005a48065c972b7',
+    'sha256-ungz' => '8993a8001f8382717aa7f10cfe48ef2cc469fb2a664b516c3fcc4b0faef8b495',
+    'size' => 11605
+  },
+  'Catalyst-Plugin-Session-Store-Jifty-DBI-0.03.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'b5fe415e4fcbc3e92f39f6c83894b2b8',
+    'mtime' => '2009-10-17',
+    'sha256' => '3fa8009c99f5ce1db4faac582bf37e68288026265e1c9516db95c01d92514359',
+    'size' => 847
+  },
+  'Catalyst-Plugin-Session-Store-Jifty-DBI-0.03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f814920c876254fb76addbaaca186f6d',
+    'md5-ungz' => 'e749c44cb7aaa544d227c5b5b22b08e6',
+    'mtime' => '2009-10-17',
+    'sha256' => '8b255e2398fac3ecca26a1853e828b66a83e6594722b92c6ce65b003ac4e0e0c',
+    'sha256-ungz' => '6688fc5cc91e69f5b9747f2d9c846d25fbae3dfb1f73d56b80fa9012ee8a3aa9',
+    'size' => 5095
+  },
+  'DBD-SQLite-1.60.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4593f0d038dd937c80ecf950725e7cb6',
+    'mtime' => '2018-12-01',
+    'sha256' => '9cfe70aacfb859c3ff2d65bb18345546af83badb518c63f6c395a0aff1f36359',
+    'size' => 1498
+  },
+  'DBD-SQLite-1.60.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '19d8927d2b5b31150be969d0e7860401',
+    'md5-ungz' => '923a86618084f40fab7655adb39facf7',
+    'mtime' => '2018-12-01',
+    'sha256' => '280b2e30e2d9fcd284febda656b80530c70b38cfcbf3132c94257f1e1d303fc3',
+    'sha256-ungz' => '3818df703e8a96871e4384202734e6db50f9d0f04cdc824335f4c4bd5c4d9d47',
+    'size' => 2366390
+  },
+  'DBD-SQLite-1.62.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c089b399d552b9d973da0808d17e6010',
+    'mtime' => '2018-12-28',
+    'sha256' => 'aa843b17397dfbdfe2a92a9c2f730ffdd6c92a785072120cbe15ddc9d88945f3',
+    'size' => 1486
+  },
+  'DBD-SQLite-1.62.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f2e11a2bea6bd864404c0363d7eddaf8',
+    'md5-ungz' => 'c0be8661c9eb4c534b236b35089e96b5',
+    'mtime' => '2018-12-28',
+    'sha256' => 'bd82ef322a9e5469a7a62d845c32fad1188b76ccb49a88520cec768343cce85c',
+    'sha256-ungz' => 'a1a37fe0de83638cbb6ec83a73fe6490327f3234ed739142254dea2de8190ad0',
+    'size' => 2386097
+  },
+  'DBD-SQLite-1.64.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'fd1e673c0b1f717edfa48501c6cff861',
+    'mtime' => '2019-08-12',
+    'sha256' => '5d69fbf1f0db9078184db3ee38b44f046418d12f1c1b776c17b0819bb8a65d3a',
+    'size' => 1486
+  },
+  'DBD-SQLite-1.64.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '10796495b52927eb2e1df34c86924027',
+    'md5-ungz' => 'd70302edb96e1061ae7e305b3766dea8',
+    'mtime' => '2019-08-12',
+    'sha256' => 'f4ae8f7b50842305566aadd90f7bfd12a9e32b6c603a9b1c1529e73eb82aff01',
+    'sha256-ungz' => '608e275c345b36cdcb23659931e7e4e06f800b2b19e922822f72f406a5884ae0',
+    'size' => 2416842
+  },
+  'DBD-SQLite-1.65_01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8c67b4b238b2de78c068e8e86be4fc2a',
+    'md5-ungz' => '60d727e7615e329f3dfaa102fd080e4d',
+    'mtime' => '2020-01-18',
+    'sha256' => 'df32414d2fef9b406954ce2c48b194c9d8047fc2f56e8721655fca1291d83ef6',
+    'sha256-ungz' => '73ad12d3257e57fce5152b674fef6f7e1d7fc1db9a2693455d3f8bf600a289f0',
+    'size' => 2431644
+  },
+  'DBD-SQLite-1.65_02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '19026940cab7306e70cca9437b2fd794',
+    'md5-ungz' => '0313c6d2c2ef9977d7f066af51380643',
+    'mtime' => '2020-02-08',
+    'sha256' => 'f4139bebc246943f7b5504b03996b8d367e788410c55f7b03238889244d56da0',
+    'sha256-ungz' => 'aaea1b4a66a63ebcfd796685bffb9d644e650fe376dd5de25aa1d21c38fb0f55',
+    'size' => 2468844
+  },
+  'DBD-SQLite-1.65_03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c11494531b299aa92fb855ecaf128e37',
+    'md5-ungz' => '4055ca56d180a078b3188b4c67bbfe73',
+    'mtime' => '2020-07-26',
+    'sha256' => '697731ae1f763dc9a618fb915f130158170d160aba236159e48469c3175899c3',
+    'sha256-ungz' => 'f3e8a80b541a799142aee72962434f31fcef695cccda9bff23ee80d246d5cd61',
+    'size' => 2483432
+  },
+  'DBD-SQLite-1.66.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '618207ebf8aebba580c26604a10b0d7c',
+    'mtime' => '2020-08-30',
+    'sha256' => 'b5fd845c33f3dd8524e60390effb25efabbb005bbcc958f6d2e9316f2091f744',
+    'size' => 1486
+  },
+  'DBD-SQLite-1.66.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '38581209de5c981f0e79840c8937fa16',
+    'md5-ungz' => '739cf263a4a872d073c1fbc7d18f04c0',
+    'mtime' => '2020-08-30',
+    'sha256' => '89e75dff9f66c273e0e459d51f151f88960eb7d82e2821e6902f18688ba592fe',
+    'sha256-ungz' => '07c61d8bc15da94f6e02400543aa46d9a396937c8c4c79e01a35ca59317622fe',
+    'size' => 2483436
+  },
+  'DBD-SQLite-1.67_01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '37a1b71c5163dce167d662a24fb7cdf7',
+    'md5-ungz' => '22017271ce08c355963e4f6ac0c4e63a',
+    'mtime' => '2020-11-24',
+    'sha256' => 'e8e7928410d153c57f1bf8b664c0e61f3653e29b080ed924cbdde535db45b037',
+    'sha256-ungz' => '86ca2329cae72891649dc0f09901071dff9e7df555e2e281a46bc84a815b2341',
+    'size' => 2485694
+  },
+  'DBD-SQLite-1.67_02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '0e88c4b3a3410a1ba25d02433e9c8a49',
+    'md5-ungz' => 'bdfeed6006736e4fa4ab5363fa8c70ee',
+    'mtime' => '2020-12-05',
+    'sha256' => 'f1a423eef8915b1c2541f62a82d55d2fe60cc9091a8902f6cb59113e0266b261',
+    'sha256-ungz' => '9e5297e2207391654ba31439957a32692d0e7caf0deb252d1b2e03a50780a5e5',
+    'size' => 2497903
+  },
+  'DBD-SQLite-1.67_03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '3e7eccb8562491c9b3a35580548aca71',
+    'md5-ungz' => '7c02474dcf47e669cd71371450ad8946',
+    'mtime' => '2021-03-30',
+    'sha256' => 'dcdf0a3632bbf8cb754f81d2622a99e6bed1623cf8b692375b46c80585705b1b',
+    'sha256-ungz' => 'd82667410779e629efdcb05e3859b390bf879981c7f5b99c40af66be7f3144ad',
+    'size' => 2521875
+  },
+  'DBD-SQLite-1.67_04.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '615b64abccc577aa3277eb38eda5865d',
+    'md5-ungz' => '8cff2fa7605c69ec5a5440e729bd95e5',
+    'mtime' => '2021-05-30',
+    'sha256' => '6e00392abfe20ddde7a3c3fdd00c60533aea7b2b29957d097957e0585fde2431',
+    'sha256-ungz' => 'a22a0c315764d33229834459638a70be78dc41aa7b2dd29196d01ffaeb00b9e1',
+    'size' => 2525158
+  },
+  'DBD-SQLite-1.67_05.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c5837f4bf0e60ce5bc967d43c54f8ab2',
+    'md5-ungz' => 'e5577bf586688594778b299d57f88bfd',
+    'mtime' => '2021-06-12',
+    'sha256' => '872546743ce96aa26059c4050738d4d2767fea2e1509aa399532dfa193856510',
+    'sha256-ungz' => '62313d7a3046dda8d813675775261e629073474d91ce2d66d421e05cd9e848e6',
+    'size' => 2525365
+  },
+  'DBD-SQLite-1.67_06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '596df0bef65be6cb7f3d4fc63e2c7eaa',
+    'md5-ungz' => 'd4c21f1a2c66d1c809ea0474f437ceed',
+    'mtime' => '2021-06-14',
+    'sha256' => '900e0e2896b4f0fd4a459421600eb9558b3300275dabd2f663e39cc76cf7999f',
+    'sha256-ungz' => '54e4b86f2d3334a754be2d98ec565d0149be7ad3b1aed96e836eb285b56f2601',
+    'size' => 2525445
+  },
+  'DBD-SQLite-1.67_07.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4328284fc9f64a84dbd6721572b7dd17',
+    'md5-ungz' => '35648b9229b303b5a45701876f99a87c',
+    'mtime' => '2021-06-19',
+    'sha256' => '2e0f0467a5d40ac28be8d9bc4866743dbed639887d328027ccc743c24bce2ecd',
+    'sha256-ungz' => '757aaa93a65461b37998155d173b0430a69354cc77d6c8546737cfed69e9c555',
+    'size' => 2537464
+  },
+  'DBD-SQLite-1.68.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5844da3c9751555d2b5dbc930a263245',
+    'mtime' => '2021-07-22',
+    'sha256' => '2acda38deeb47e85bac03c21f5cbf23a730a1706fd8d5836df467dbddcde691d',
+    'size' => 1486
+  },
+  'DBD-SQLite-1.68.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4fc1cf01b3d42008d54aba8b4ac295c6',
+    'md5-ungz' => 'f078cc3272de0331468ab1d22624218c',
+    'mtime' => '2021-07-22',
+    'sha256' => '0e84e831a50d547d2e634b66650455f1791f223495c9138db82d42360c691e61',
+    'sha256-ungz' => '04a16d308a0eadee8841298a60985a74efd36ea6886568bc470e861a725bbe3c',
+    'size' => 2537419
+  },
+  'DBD-SQLite-1.69_01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9b23c1fd3bdf9d9d5c145b0d33e6fd74',
+    'md5-ungz' => '2219b8bc2fa8b6fea162fa315d3c7777',
+    'mtime' => '2021-07-29',
+    'sha256' => '16e4f174059b8e035e1e3ff6a3e5b6b37b770ef8c5981df2cd069b8ff74edd68',
+    'sha256-ungz' => '526aaaf84560e287b166ccd2529144239d1926584390ef5091794797d8ca1c3e',
+    'size' => 2537563
+  },
+  'DBD-SQLite-1.69_02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '27233c62f5c9d370a24735927fff8401',
+    'md5-ungz' => '4fa4ed81e3df28131087319bc079867f',
+    'mtime' => '2021-07-30',
+    'sha256' => 'd9d5ba371690a9df37bc90b8005396a96c61dc465e5ec9fb74c9d9b91096bf9b',
+    'sha256-ungz' => '377138e56fb0ab381a76291bff4b9615ebf4d5a56695e573ff9352fc4a5761a7',
+    'size' => 2537694
+  },
+  'DBD-SQLite-1.70.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '14b057bb644413b528ef8e8791470dff',
+    'mtime' => '2021-08-01',
+    'sha256' => 'd3e217ff68aa5d3e70993c28195d5d41f6a0faaf141673766fbe4701187e7fd3',
+    'size' => 1486
+  },
+  'DBD-SQLite-1.70.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'cc20dad09474da382488686ea07e8288',
+    'md5-ungz' => '5082b7772a1f7a7eb033246bfd14d4fe',
+    'mtime' => '2021-08-01',
+    'sha256' => '40fd8ddf539e0e773a7a4e6d376794c3301459f9ab0050978bdcf97113dafe3e',
+    'sha256-ungz' => '23ae2037c6bcb81d4e596e023d8ac62a15de831b24d48c0e36265c70aeaf70f2',
+    'size' => 2537672
+  },
+  'DBD-SQLite-1.71_01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'eba8df6654ccddfe912279a03c856eb7',
+    'md5-ungz' => 'e38be9edc778dfcade545c6bae05736b',
+    'mtime' => '2021-12-01',
+    'sha256' => 'b70aa378e212835257eeed0ceb9c716f9cb7435704a717636eb2b1f52f61dfa0',
+    'sha256-ungz' => '50700c51ebc4eb5593ca7a2df016b704733045bbf5c678f2a62bf370e51c7f0d',
+    'size' => 2557179
+  },
+  'DBD-SQLite-1.71_02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '05ef5d1f4c64d19228bb867308c611fc',
+    'md5-ungz' => 'bcbbb58888f9c9705f7dec4198870ce8',
+    'mtime' => '2022-01-06',
+    'sha256' => 'cc91c4fd61ddeb7740b819091f41e5f774ee158b9bb125094a0ab452ce7637e8',
+    'sha256-ungz' => '0547a2dc67fc01a1cebb6a9a6b1fb9f6ef452a38d041995c25e2c6d8983f0fd5',
+    'size' => 2557595
+  },
+  'DBD-SQLite-1.71_03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '3d6808a293ec3062113fa25196cbec89',
+    'md5-ungz' => 'e8f1471c157cfe1ddf55c5cf211a334f',
+    'mtime' => '2022-02-23',
+    'sha256' => '8c503ca2f13853c81644ea0907454eefe15c31d7db8f24804be598db2e71029c',
+    'sha256-ungz' => '87d1b16243e178cc89d1810c30dfc18dfbe63c8a77f224df9254af3762b4c39d',
+    'size' => 2581820
+  },
+  'DBD-SQLite-1.71_04.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c7c7b60817a253b5de2bba6a2ce0ebcb',
+    'md5-ungz' => '842bddfc785e8750634fb777d0fc32e9',
+    'mtime' => '2022-02-26',
+    'sha256' => '6425c97156a977cc8a86025067bcb6dbc4067f4b25685b2c7d28b3a03b607c8d',
+    'sha256-ungz' => 'fa009c766d5c1847e0fe901be965d01b8e3c4e5063ce43ee5f787176242a5e3f',
+    'size' => 2581832
+  },
+  'DBD-SQLite-1.71_05.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5fe3684c061ee9c25330ad732c64d3e9',
+    'md5-ungz' => '1c1107d62c5a5f1869e1068c253d065c',
+    'mtime' => '2022-02-26',
+    'sha256' => '5ca28913709015be31b42e378134332b1a83b4950b27698f474f3fb7ef348cd6',
+    'sha256-ungz' => '92a7408e26583b628e19795ca81d2b6d43f94381d428c03f2f2752ee0da72778',
+    'size' => 2581974
+  },
+  'DBD-SQLite-1.71_06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a9869d8c19f18ef66ed3860e73f63251',
+    'md5-ungz' => 'ad239d5b72f7df39d5ecd5bbfdca39a5',
+    'mtime' => '2022-03-12',
+    'sha256' => 'e91de09239fe38baf7292bbd659d0e85492ab13b4eeb13525a5468554c01ba72',
+    'sha256-ungz' => 'e9ecdcef942c6f86307d30245481dd699ec74df9264090c26588f027955ebee0',
+    'size' => 2581997
+  },
+  'DBD-SQLite-1.71_07.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'de251aabaa2ab6e9b34e8f229de67de1',
+    'md5-ungz' => '90cd24413bffdc2c4ea56bb3765937bf',
+    'mtime' => '2022-10-25',
+    'sha256' => 'fa0d38d376201c4d1712908e85588dc87173d3d2928836cc8d4ced09aed9a576',
+    'sha256-ungz' => '89f62803314ad8f6982d0e6b3046a454702315eb0c845f141db07e08ecc8e9b6',
+    'size' => 2604521
+  },
+  'DBD-SQLite-1.72.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '391241185719aa18ecb667151c965d92',
+    'mtime' => '2022-11-03',
+    'sha256' => 'ef83e4f2746cb22e560928a3f8b81307e4682e3d3c57d6f14c22bd4f31122228',
+    'size' => 1486
+  },
+  'DBD-SQLite-1.72.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '976df252ae0aceb7fb81587af425580b',
+    'md5-ungz' => '5e0534249527ee0a9fc8f8ec69494923',
+    'mtime' => '2022-11-03',
+    'sha256' => '5ca41e61eb52b52bd862a3088b912a75fe70910ac789b9a9983e0a449e94f551',
+    'sha256-ungz' => 'd82f0cc77fd0940bc8d136e7bfcc363c7e81de3ac8af7355513691c49b26155c',
+    'size' => 2604501
+  },
+  'DBD-SQLite-1.73_01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '363d2eaf14d56636b7f0b28d42394d7f',
+    'md5-ungz' => '101150100cc34a8f023ae163627d8475',
+    'mtime' => '2023-07-09',
+    'sha256' => '8a32a3a97ccdefd0f25c5fe17d0f942818f04ece78849cabcc2cd9743016c1ac',
+    'sha256-ungz' => '9df3272e17c584d830f19b1801f22aaa9dff3634e4012298d9320967d4b4c727',
+    'size' => 2656452
+  },
+  'DBD-SQLite-1.74.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'bd2ed90a1d81f9b1cec4d854e2e39a8e',
+    'mtime' => '2023-09-19',
+    'sha256' => '0a285602b9632d0ed80299d45c755b407a9b5aa1aef37f18c231c071ebf98bbb',
+    'size' => 1486
+  },
+  'DBD-SQLite-1.74.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9481bd8b644a2ef56ab01aead403649c',
+    'md5-ungz' => '7098f7f664cfd1f6d845a329449e3b9a',
+    'mtime' => '2023-09-19',
+    'sha256' => '8994997d84b9feb4547795f78746c661fb72e3cb6a25dbdd789b731f5688a4dd',
+    'sha256-ungz' => '3b223470b2da4cf0394b0b926a39d8767b3aed3932c51c49e7c24b4d45774bd7',
+    'size' => 2656440
+  },
+  'DBIx-QueryLog-0.40.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '43ab4115502dc4941bf78b8949cdcc81',
+    'mtime' => '2015-06-22',
+    'sha256' => '206486ea6fb46ee660905973ff3f2e9b9e567ac86b417969bd169274a6729db5',
+    'size' => 2582
+  },
+  'DBIx-QueryLog-0.40.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '39f77379ab1265b85651be3c9c7da901',
+    'md5-ungz' => 'd32c54dc58732bf3c73636dfe997f30e',
+    'mtime' => '2015-06-22',
+    'sha256' => 'd5a84ca4e6c46f45470f4d904621505e1c7407ec7c8620e8733b3eeaeb1cb68b',
+    'sha256-ungz' => '204124ddf6644bf94723c0297b106e39222b02d9a88112348e69b3301b9d2a77',
+    'size' => 24710
+  },
+  'Data-Clone-0.005.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '0ba7c48cbe7760a08d80964126895d00',
+    'mtime' => '2023-11-21',
+    'sha256' => 'c20b27db6a27c5b1d5f870ab3e05d7ea152bb14246d464415ddd72767e41e061',
+    'size' => 715
+  },
+  'Data-Clone-0.005.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8ec6052af2146cf89a06b995e60c2206',
+    'md5-ungz' => 'b2cb01929f2954c4615f64a0278dd451',
+    'mtime' => '2023-11-21',
+    'sha256' => 'e0aa49904f5b94e1817fb694888b5389412ca0cfe7987ccd5e79a5eee7dc373b',
+    'sha256-ungz' => 'aab908b0178cdebec90bc6d18a37089ad679c601cce11a34699856679544ff24',
+    'size' => 34570
+  },
+  'Data-Clone-0.006.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4a2c79511559d7d3bf6e028e2e7c55ee',
+    'mtime' => '2023-11-25',
+    'sha256' => '8c86a959c1907a4d3a61b0d8c2f4d3cd8af07bc9abbf5f5427b2890ff77a7e5d',
+    'size' => 2301
+  },
+  'Data-Clone-0.006.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '11eac001c14ff5eb0c0ed30f3f703d30',
+    'md5-ungz' => '89608f8332015bfc07166933ec171049',
+    'mtime' => '2023-11-25',
+    'sha256' => 'b8745954f0eff61efb25589cc13b4f2b1b26ce5ac3617d7e8aa3981626579629',
+    'sha256-ungz' => '4fa7ccb21109dce620f5ee57f8a117ecaeb4df6c6c81021fa28762cd13e8577c',
+    'size' => 19088
+  },
+  'Data-Dump-AutoEncode-0.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'acc5f2a081aaeaf18211597f24df67fb',
+    'mtime' => '2014-06-18',
+    'sha256' => 'd7a139f79f5d0c205ee7f19dec09a0f53b0ebd857bc4d27ce2a76bba812df403',
+    'size' => 1210
+  },
+  'Data-Dump-AutoEncode-0.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '60423adbb915103c8dbf15c9c3077997',
+    'md5-ungz' => '5930178021f45b6dc84391b8d9aec7be',
+    'mtime' => '2014-06-18',
+    'sha256' => '20a94241de3b7ade7a32ac016af453f5fa97cc8e22973a571a3466532f05a532',
+    'sha256-ungz' => '64ce27dac52d457de0deb049cecf44cff6934d75f23a5a93386e9518832167ab',
+    'size' => 9603
+  },
+  'DateTimeX-Web-0.09.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '6006a87db7a2f06c111d1707263e1aa5',
+    'mtime' => '2020-01-01',
+    'sha256' => '752241ea1d703ee8f99e2fe4a4ddf0230a6e6c2c188dbfdd0c00a04ff647448a',
+    'size' => 1469
+  },
+  'DateTimeX-Web-0.09.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9398f88f20fdf55cdf78f09e8887dab2',
+    'md5-ungz' => '9771c167ae231295640d7d46e62de11b',
+    'mtime' => '2020-01-01',
+    'sha256' => '44c18971bb8177d664f017770096a127a6e9c785f376c8c32302bedbff2f816a',
+    'sha256-ungz' => '38cb27c6993a4f422ab7bb955511ed21ae05741c5604431607185dbd81385c42',
+    'size' => 7646
+  },
+  'Email-MIME-Creator-ISO_2022_JP-0.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5705a43ae49b6af1a4c414f339fbb4c7',
+    'mtime' => '2009-11-06',
+    'sha256' => '305a70f6e8d5621c02e6bfc2c2f0898fdae7adbd749ae12173e1df5e92904423',
+    'size' => 774
+  },
+  'Email-MIME-Creator-ISO_2022_JP-0.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '07e8548095692a86d1612e2dc92d7dd2',
+    'md5-ungz' => 'a366ca6836a647a2bf8d029838071bd5',
+    'mtime' => '2009-11-06',
+    'sha256' => '6cb718d46d76391592daca789a298031b1229f5289240d0e6b9381cdcb190ba0',
+    'sha256-ungz' => '5502a2faa4d80319bef2690d7b54fd0fc026efef495aad93d5f33fa1deea347f',
+    'size' => 4632
+  },
+  'ExtUtils-MakeMaker-CPANfile-0.07.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '390886981fdcf0a78a9c715002ef0758',
+    'mtime' => '2015-12-09',
+    'sha256' => 'a091d80dc60c64585524c53181a3cd0429d1cd53e52c72afc43ce19da1336217',
+    'size' => 1197
+  },
+  'ExtUtils-MakeMaker-CPANfile-0.07.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '077a87d19042e9b1bdbcbc7959f48352',
+    'md5-ungz' => 'af34020e850fc00d2a4f2b74c071541c',
+    'mtime' => '2015-12-09',
+    'sha256' => 'cacb54c0c20e0468a773d92855387dc1dcd60a8d6e9a24fda73d4cbcd76b5ed1',
+    'sha256-ungz' => 'c67cead20c2e81faf84cc478a6c3524739f2081d68651a47d0280a59471a5317',
+    'size' => 11354
+  },
+  'ExtUtils-MakeMaker-CPANfile-0.08.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1b06f32bd2b3b4527a8346a46ba24378',
+    'mtime' => '2017-06-18',
+    'sha256' => '4a32af75a083ee22a6c11c34c4f601902a0f4f6128909da847a47abc985cdbbd',
+    'size' => 1245
+  },
+  'ExtUtils-MakeMaker-CPANfile-0.08.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9cacb292d1d2e1c43e09ee2bb0a4a6b7',
+    'md5-ungz' => 'd82d7040243cd49550f58e38d0fe594e',
+    'mtime' => '2017-06-18',
+    'sha256' => '14eb7ae3a2a6c1ba6d52100d05e23f720b430dd6cc228855a607a01e35f9e279',
+    'sha256-ungz' => '46ba4ffd1f5a8b7b589e6ee947694df62d18aad3e38b41f53733c3abb5ce3f4d',
+    'size' => 11645
+  },
+  'ExtUtils-MakeMaker-CPANfile-0.09.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '07792819e6145e7113cd499cf3d5168e',
+    'mtime' => '2018-12-28',
+    'sha256' => 'dae05a8e2c49032d75cb89c346acf09c137ee13aebaf49d403854ec5a285e4e3',
+    'size' => 1301
+  },
+  'ExtUtils-MakeMaker-CPANfile-0.09.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1d7fb1bf4e1578520899697db87d2d60',
+    'md5-ungz' => 'f3e822c8fb508142b8c1e1c0e6b75828',
+    'mtime' => '2018-12-28',
+    'sha256' => '2c077607d4b0a108569074dff76e8168659062ada3a6af78b30cca0d40f8e275',
+    'sha256-ungz' => 'ec8d53acf00315d562d89ab46cf54ede9f012f23c6237c41df17af85781056e2',
+    'size' => 11720
+  },
+  'Games-Nonogram-0.01.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '6961712da00f59c7dc02985c006fc307',
+    'mtime' => '2007-10-11',
+    'sha256' => '639dbd2f19e6fc6e36a0e10fe4d244a28665bd3f6f9be73a18dbd06fa846fef1',
+    'size' => 560
+  },
+  'Games-Nonogram-0.01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '024cc28c13d11c0d2a5cb0be80fe054c',
+    'md5-ungz' => '21d25ec945bd248ac6078d03b1617bed',
+    'mtime' => '2007-10-11',
+    'sha256' => 'badc32c1ffe81f7ae2889a01a36f0832bf60965f9a5134304fce88e54a7fac8a',
+    'sha256-ungz' => '1ecfec5bf3897fb94ba60da9bdde0d9430af6e377125c52926d2a8d1481f3d1f',
+    'size' => 12816
+  },
+  'Games-Sokoban-Controller-0.01.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '89f108043a28f90cd48b86041cd59c6a',
+    'mtime' => '2011-07-16',
+    'sha256' => '12208f6e9912a2d90f8620e36958d8902416736eaaa24962251712012ef25d7c',
+    'size' => 645
+  },
+  'Games-Sokoban-Controller-0.01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a6bfcc942f63ad184d9f8470f6ce73f2',
+    'md5-ungz' => 'ebe963968a96efd68dde0074e8457a67',
+    'mtime' => '2011-07-16',
+    'sha256' => 'f587384f9521593bdd5bc171c2eaaf10a04337517b00d5b5655504ae53aba7d8',
+    'sha256-ungz' => 'e95da12bc38eef5d617140994672a364b6243c5d5a5bccc94c83194d596ba771',
+    'size' => 3164
+  },
+  'Games-Sudoku-Component-0.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5e7128369cc621b9ff32287c1eaae4a9',
+    'mtime' => '2006-04-04',
+    'sha256' => 'affd55d020f1ed5cf3e80d6ec253bae9252ace0d8a2695e75e8d2e14b9a31bce',
+    'size' => 338
+  },
+  'Games-Sudoku-Component-0.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9a74fca5061e6d5cfff30cb1ed7924f6',
+    'md5-ungz' => 'fa1995b7c98d804542dcf0e1fe96d5f3',
+    'mtime' => '2006-04-04',
+    'sha256' => '95f8734e2071f4565de28ea57bde8cce22177aed125abaad30a23b7c994fc70e',
+    'sha256-ungz' => 'd986c85fb669fd839d946c45784a4dddae7c01bb51963adc3c544c5772008e50',
+    'size' => 32386
+  },
+  'Games-Sudoku-Component-TkPlayer-0.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '04e146131f051c82cf2a9c6faf9086ac',
+    'mtime' => '2007-05-27',
+    'sha256' => '50755ab3310ff5b2530ceeb8ea387612b6955771bb2e2787bcc92de72bb78375',
+    'size' => 644
+  },
+  'Games-Sudoku-Component-TkPlayer-0.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a36bf4ee9416957642c65d65d9c1223b',
+    'md5-ungz' => 'e7cb560384f9cd74475d6561125f6ab2',
+    'mtime' => '2007-05-27',
+    'sha256' => 'c7751c51b9c155a9db9a1a904dbd8b8d34c6c843fd3a0800f5b94d35d2dfc951',
+    'sha256-ungz' => '8277103f754ada5cca3807cc16c91b3cc6932e401173f5a3a071566c12ef7d26',
+    'size' => 6803
+  },
+  'Git-Class-0.15.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '964c45b9a09809f00f2a9df283567ad0',
+    'mtime' => '2014-08-05',
+    'sha256' => '1b8eea7d9f7e20657ecd7263a98db4cc8333e26ce4ed6c6bfa0fd21c7582925d',
+    'size' => 1388
+  },
+  'Git-Class-0.15.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '341fa92c8b4f21fd770645b05a80f34c',
+    'md5-ungz' => 'c46ecdb6d112944516469084d0398a75',
+    'mtime' => '2014-08-05',
+    'sha256' => '1bd20de1304cf26eb5b069cc0a2b3a2686ccf3ab96fad9d5d1483348e8a10823',
+    'sha256-ungz' => '84bcb74e464868a75ab6b677ff0b3fd3a27f1b8501a56a22977ee452738b883a',
+    'size' => 9735
+  },
+  'Groonga-API-0.03.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '892f4a3f39e361e785008e9f22756692',
+    'mtime' => '2014-02-23',
+    'sha256' => 'da711bfb10ab42a5a54b34a44fc3319731e9d0ca485a1dea060fe70118a09893',
+    'size' => 1204
+  },
+  'Groonga-API-0.03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '803e5c719e421dc854922ffde66ad947',
+    'md5-ungz' => 'd54277e1322f49e8f66a81f26604f44b',
+    'mtime' => '2014-02-23',
+    'sha256' => 'b0df7d137df8079c2a04c6e132562c9758f074f5680491fe7e689e222729bd72',
+    'sha256-ungz' => '07d645c18f1596cc6d378d35a0ffb68b895d0215960b76495c650903ef0f3970',
+    'size' => 69373
+  },
+  'HTML-Filter-Callbacks-0.05.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e6b34a8d276292c704c11e41202eccba',
+    'mtime' => '2011-01-18',
+    'sha256' => 'c7aae9fd4483cc7b39edbab22e8b54e1658c35ee134348bf6e4689d58c6ea191',
+    'size' => 650
+  },
+  'HTML-Filter-Callbacks-0.05.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '7073bcd697ae9250aed695fc2566c39d',
+    'md5-ungz' => 'e84482cb5db9a3a1cff8ae8b0c33fe12',
+    'mtime' => '2011-01-18',
+    'sha256' => 'de107d88c124681bafe381536486ed313dd1e397c79b76368714787350860807',
+    'sha256-ungz' => 'cbc2415d9121e68bdb3f25a45cbafa074a015e1879bf01cf0b1bee947ddf41f6',
+    'size' => 5659
+  },
+  'JSON-2.92.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '664e97e25470bf7710dd890ed94f164a',
+    'mtime' => '2017-05-15',
+    'sha256' => '88892727f0ed091d7f1c00791085f2cc02b09693dee335604ca33997d8eede1a',
+    'size' => 1088
+  },
+  'JSON-2.92.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c00a1212faed676d8df3bb8434ce6200',
+    'md5-ungz' => 'a841a1e63f4a773a5df3efcb2c07d242',
+    'mtime' => '2017-05-15',
+    'sha256' => '26995aba35a97379d700f29d92b41010e6446279ad5442fffd6efba4687446e8',
+    'sha256-ungz' => 'cc4b5744b4561ee9f775d275a486cc26e4b687cf8bed5ad54177100ca59b4d8e',
+    'size' => 85192
+  },
+  'JSON-2.94.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'd4b3716e1cb53282da797a3703a1d163',
+    'mtime' => '2017-05-29',
+    'sha256' => 'c95d49e6ef1be4d84b29f1fc048aa7a5c829463d4e3c1faf8bdae3523159f31b',
+    'size' => 1088
+  },
+  'JSON-2.94.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'b1ccf48f5cee67efe734d4c59f4ab0c0',
+    'md5-ungz' => '4f68cc10c3bc900c9350e4dc08e6560a',
+    'mtime' => '2017-05-29',
+    'sha256' => '12271b5cee49943bbdde430eef58f1fe64ba6561980b22c69585e08fc977dc6d',
+    'sha256-ungz' => 'ab46552bce41b51484c4fc36328d06468a53d0cc66b39f4f10b73e1e82548995',
+    'size' => 82629
+  },
+  'JSON-2.95.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '0629265d15451d26c248ce2624423a61',
+    'mtime' => '2017-11-19',
+    'sha256' => 'c873d7492e07e6c17387c0fbd028d94b1dea2611b738a88dd1eaf61762289f9f',
+    'size' => 1088
+  },
+  'JSON-2.95.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '85619f008903a5d117461edd317c75b7',
+    'md5-ungz' => 'df14c208ba7b9c5894736c4baae1358b',
+    'mtime' => '2017-11-19',
+    'sha256' => '8caa1dfa065dcb9abe1f82ae66128a417836b2c16ab6c0626ad6db3f9f416221',
+    'sha256-ungz' => '1d1c2c22822b4cb2d1e7efc8c9f50dd6005697281d8c5cfe0708df965a036ac9',
+    'size' => 82664
+  },
+  'JSON-2.96.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c49372c03e31d10ecea16f27b4e626b4',
+    'mtime' => '2017-11-19',
+    'sha256' => '0f377b326cb1ab1b367ada6423147c68322285c71a4ddf46691f4a676db04398',
+    'size' => 1088
+  },
+  'JSON-2.96.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '79205d52a829d02fac951f811e570378',
+    'md5-ungz' => '22c6488686fbb24da4361888339db00f',
+    'mtime' => '2017-11-19',
+    'sha256' => 'e4b1d7461e99ab26e548e6bf87e7a785b99d5ec6425b66b163fba34b7450526a',
+    'sha256-ungz' => '17188c2cc3d0404603e4d31c972156521c785f42e93a91b4c840e2d256fb7f0d',
+    'size' => 82714
+  },
+  'JSON-2.97000.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '32e077e416ec95b26d00b9793759aca0',
+    'mtime' => '2017-11-20',
+    'sha256' => '29691034edbb2da70cc76b90622aa655ef7cd854904c1efca39e74bdff2456ad',
+    'size' => 1091
+  },
+  'JSON-2.97000.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'd53d010f09e8c8cf546950f886d28f80',
+    'md5-ungz' => '3efc4231885d84509849c94fcb6eb557',
+    'mtime' => '2017-11-20',
+    'sha256' => '8aada69c2b2fc6b28419f69fdde1f26cb25ea8e55ac9b36e219a3e9dfb673f8c',
+    'sha256-ungz' => '1c8dcfcc4dfb1f7e6e27bede8770a531da514bf9d5b7b6e9bef6dd0bc0b9bbfc',
+    'size' => 82804
+  },
+  'JSON-2.97001.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '071ee5f28b30458f3e62fe28ef9247ec',
+    'mtime' => '2017-12-21',
+    'sha256' => '40ca0fd3b516c6a73d0d59459d2453d12bbb495dc48953f038d6369c1b92ec7b',
+    'size' => 1146
+  },
+  'JSON-2.97001.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '693d6ff167496362f8ec6c3c5b8ba5ee',
+    'md5-ungz' => 'ce2315d40ea8abc422692ec7e76b828b',
+    'mtime' => '2017-12-21',
+    'sha256' => 'e277d9385633574923f48c297e1b8acad3170c69fa590e31fa466040fc6f8f5a',
+    'sha256-ungz' => '9bb0caeb4ec3ceed8dfa916d91fae959beb8fc538f760cf91372bbe29509d12b',
+    'size' => 82790
+  },
+  'JSON-3.99_01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9e6f9189ca3f13d9575143a4188d1e34',
+    'md5-ungz' => '6f5478b2eaf61a3e50ef7d3b0f02fe4a',
+    'mtime' => '2018-12-03',
+    'sha256' => '8da6f8312845843bb1faabd2c58fa6132535c2da516bcb4062bf0ea7ecbf49c0',
+    'sha256-ungz' => '6c07f1b3af337951377f7d3d695615b7b80576fb90fc31526ccb60fd9afd820b',
+    'size' => 90066
+  },
+  'JSON-4.00.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ea67d8e6870e6ca5bb51069b1b1fe7bf',
+    'mtime' => '2018-12-06',
+    'sha256' => 'ea07db2103a18fbf6bc38806bc096e4f8b36a150ef74f468b764fc746ca87a5c',
+    'size' => 1231
+  },
+  'JSON-4.00.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2c0114c62a841159ffbe2d2b37f259ff',
+    'md5-ungz' => '7e6b159c3f92ebb6789458a72f3d2cd0',
+    'mtime' => '2018-12-06',
+    'sha256' => 'c4da1f1075878604b7b1f085ff3963e1073ed1c603c3bc9f0b0591e3831a1068',
+    'sha256-ungz' => 'dc65cb2d6fa20b2d2a33bbfa70e28b549cc8e258e6252f0cf6433002fb3d41a7',
+    'size' => 90081
+  },
+  'JSON-4.01.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c17ee4811a5540de493714fe83181603',
+    'mtime' => '2019-01-20',
+    'sha256' => '1de666d0e30aec9b0e946d3ef45fa8c537708bda524768d875a91b285b8677b6',
+    'size' => 1231
+  },
+  'JSON-4.01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '27a2d8d076bbe3c09b721a0cd702c6c4',
+    'md5-ungz' => '347c411151b70005f4151788d9643b30',
+    'mtime' => '2019-01-20',
+    'sha256' => '631593a939d4510e6ed76402556f38a34b20007237828670282e975712e0b1ed',
+    'sha256-ungz' => 'd40b607f1db9ed6cacdb1cd2e768b2fb091b30084f0946c8e5cfe0c7afc232ed',
+    'size' => 90306
+  },
+  'JSON-4.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '6112d1acba51d41ddc962f5eea5e6f21',
+    'mtime' => '2019-02-23',
+    'sha256' => '2c6e95d27d2fb346e750bbc38dc9d5230971dc02f764491b2330855f37b650f7',
+    'size' => 1231
+  },
+  'JSON-4.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '63a331b4630d48f8dbbe3758cc03bd21',
+    'md5-ungz' => '30ff34ece5cc0f76461ddb94cbe64f93',
+    'mtime' => '2019-02-23',
+    'sha256' => '444a88755a89ffa2a5424ab4ed1d11dca61808ebef57e81243424619a9e8627c',
+    'sha256-ungz' => 'a5a32ed77d1de209e3fe2e07c19077fce6515c0f8d1735afe68ce1d57d92d455',
+    'size' => 90374
+  },
+  'JSON-4.03.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9c0ab47c86da61b62a28997ca53b6395',
+    'mtime' => '2021-01-24',
+    'sha256' => 'd4e0bcf527cbc5a53029d40e6ad5dc05affd3792bf825fbb74c9daffb4ac8260',
+    'size' => 1231
+  },
+  'JSON-4.03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '7df49ff71d0cfdda4cf975a53d8167eb',
+    'md5-ungz' => '6cf6f6ff9fbff7128374c95a62497cf9',
+    'mtime' => '2021-01-24',
+    'sha256' => 'e41f8761a5e7b9b27af26fe5780d44550d7a6a66bf3078e337d676d07a699941',
+    'sha256-ungz' => 'c5edd9f67c04845d426eb3c25fbcbca80e4a91a88042089f4ac87e5f3de36f98',
+    'size' => 91373
+  },
+  'JSON-4.04.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e5afcad880be799b05ed50fa58ed1d20',
+    'mtime' => '2021-12-17',
+    'sha256' => '708e4b4dce0cf12c0f7c3704b9d7b01da7c68c95c451f9be1eae02950c5e568e',
+    'size' => 1231
+  },
+  'JSON-4.04.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4623b908d3dd5a190180def02a4b94b3',
+    'md5-ungz' => '914dd2899dd3a839eed9583b27496bc4',
+    'mtime' => '2021-12-17',
+    'sha256' => '66b6c6ea1ed6d609b0b70df29fdcbd281f3fe13c661e5b2847b4e4e8c12b5380',
+    'sha256-ungz' => '69e6f6c3cc913383eb93af8c35eb9354512a4021515d9acf43fafc19ceed5e02',
+    'size' => 91782
+  },
+  'JSON-4.05.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f40be0ba65c5cb562d93c09e3b52b194',
+    'mtime' => '2022-01-14',
+    'sha256' => 'adbb707b0efb8468461b4bdd3d39f420f4ab3210c67a5777b91655663e3b836e',
+    'size' => 1231
+  },
+  'JSON-4.05.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '23722d2a18a8ece3e07c1b58d2c14f1d',
+    'md5-ungz' => '8761ebac62dcefcf091ea96020bdcc29',
+    'mtime' => '2022-01-14',
+    'sha256' => '53839373210bebea0b24fe459d0a8232446b62015c8dc42dc36051da67336bf0',
+    'sha256-ungz' => 'e4052566c996ea1a568bc333b1617d307ee3738a7ee2b0b04a8fd579792b6bbd',
+    'size' => 91829
+  },
+  'JSON-4.06.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'd7d772023ad5b235d73a05f1ae35904e',
+    'mtime' => '2022-05-22',
+    'sha256' => 'a1f7800cc9af2ca09602af752c6b3339a1d9871f6c88f5d2ed5755ec310efa73',
+    'size' => 1231
+  },
+  'JSON-4.06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '265048a92f25d074e3096839f870b7b7',
+    'md5-ungz' => '040ff037ffe9558739a52ec9b118d77c',
+    'mtime' => '2022-05-22',
+    'sha256' => '1137e98a42208d802f3ad94a10855606c0455ddad167ba018557d751f6f7672e',
+    'sha256-ungz' => 'b01c531ca6346b8048045f2554b09e1c84ec1d6bbb1fe23d53b9bba89bf49529',
+    'size' => 93762
+  },
+  'JSON-4.07.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '0e11d41a7dcbbde95ad3152948fbc89c',
+    'mtime' => '2022-06-24',
+    'sha256' => '81646f1aca59b93b2a6f93b3bdba0255644a80d7ac92aad7271e7db1d222f9c9',
+    'size' => 1231
+  },
+  'JSON-4.07.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '0888ecf6f6a61037a04449e134f93fda',
+    'md5-ungz' => '0cf5e92e35b52d77d072523f8a772707',
+    'mtime' => '2022-06-24',
+    'sha256' => '4f78b929798992e06106cf2bbc20de2375f7b60c60b3aa3ace02aae1e38513bb',
+    'sha256-ungz' => '46d81955cc16e127c40e34914a58d3872bca837ba04db2710575b64d111701e9',
+    'size' => 93713
+  },
+  'JSON-4.08.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8ef15d71f51daf1b6d4bac830e6f5e25',
+    'mtime' => '2022-07-31',
+    'sha256' => '27c967d410b0c8e7dfa1e2f269ecbcc4908e0b30ecc0a0fe9c87974fa1e37547',
+    'size' => 1231
+  },
+  'JSON-4.08.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '17dea23937f5ed83862066611e7cf729',
+    'md5-ungz' => 'cabd10bc72a9f1fb724ed21d2ff6b624',
+    'mtime' => '2022-07-31',
+    'sha256' => '6b2a38eb6f92934840d142e31ce6683610b66477fad3ffab1111978ef26ca53f',
+    'sha256-ungz' => '97749f23c9318921810da0ef633219bae28453c82fd0f12dee8b67bbcbf9a405',
+    'size' => 94248
+  },
+  'JSON-4.09.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1e3c0392124ed4a828896e69c45df3cb',
+    'mtime' => '2022-08-01',
+    'sha256' => 'fa75adface8b8ed24cd8bf9fd2657411ee1549333b2848c835bbbe073a075499',
+    'size' => 1231
+  },
+  'JSON-4.09.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'bbd0239a830384a22295234b46b2fac8',
+    'md5-ungz' => '3db67ae4d6ebfedbc9b13f6c78c8d1ff',
+    'mtime' => '2022-08-01',
+    'sha256' => '6780a51f438c0932eec0534fc9cd2b1ad0d64817eda4add8ede5ec77d6d2c991',
+    'sha256-ungz' => 'e88f35ad0f0875740eb367b099f9129aeec500f9c891100a4e485ea402093533',
+    'size' => 94319
+  },
+  'JSON-4.10.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '013d32e454e4c806dc164babed25bd73',
+    'mtime' => '2022-10-09',
+    'sha256' => '3f80bdd84482f9ef5ca96ddb44aaa650d3cfe75913112cc4e686c83430180982',
+    'size' => 1231
+  },
+  'JSON-4.10.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a709b32e194d0eb38f788cb49f422c4e',
+    'md5-ungz' => 'f213a6bbc4b229946a6e571401c56ea6',
+    'mtime' => '2022-10-09',
+    'sha256' => 'df8b5143d9a7de99c47b55f1a170bd1f69f711935c186a6dc0ab56dd05758e35',
+    'sha256-ungz' => '731847e42c01c20f1b5a2031ec5450a191e6ab4050be8da1b0fd0367d6c06ec3',
+    'size' => 94342
+  },
+  'JSON-PP-2.92.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '885974978fa7daf40d2522859dc4c18a',
+    'mtime' => '2017-05-15',
+    'sha256' => 'ee1053c09a51740c0fae36559c38b42c369226e908e062ca412ff1ab6e5ce32e',
+    'size' => 1048
+  },
+  'JSON-PP-2.92.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '80619fb6a9fe167a47151b80174446a9',
+    'md5-ungz' => '785e6179c436c6bf29ce971bc495de77',
+    'mtime' => '2017-05-15',
+    'sha256' => '8ee5ae83d75876260a35cdd0f8795f0be04aaa70380f141d2375c02e93ead3fa',
+    'sha256-ungz' => '9028dbd9724f48120f55632255041194360d4a3560be6a12983b3cc612f8a948',
+    'size' => 46591
+  },
+  'JSON-PP-2.93.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a1a5373d44ade11a5aec458198dd56ff',
+    'mtime' => '2017-05-15',
+    'sha256' => '24ceabd2ecb1317b5b4aab37e71dd64b4ddc28d865371bae00c3b057eaec5d06',
+    'size' => 1048
+  },
+  'JSON-PP-2.93.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '93b8f6edc17cdacaadf2489c61379073',
+    'md5-ungz' => '38fcd01635f7f543fe6b48a79437cdd9',
+    'mtime' => '2017-05-15',
+    'sha256' => 'f47ad10bc34eb6d17d70f1c8e1785ab6389f8b985f33aa048d7db53f449aceae',
+    'sha256-ungz' => '3119954043ac282770813138f7dad87cc8dbc3f79912942aabc4ba42d756c8f2',
+    'size' => 46623
+  },
+  'JSON-PP-2.94.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ec943a51a012329ab5606ad6d62b92e3',
+    'mtime' => '2017-05-29',
+    'sha256' => '93b039cbad0c4c716ab6a0edfb20b0813e0334049fa92ea10539d8c2e1da7067',
+    'size' => 1048
+  },
+  'JSON-PP-2.94.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'd83f62bb6f059fc09ff084ece9dfc83a',
+    'md5-ungz' => '6be4a7656d97219d382b38c35f7ad72a',
+    'mtime' => '2017-05-29',
+    'sha256' => '0bb2449743a06100674426da81a3d8eeff36da812d020861c6202227300b1831',
+    'sha256-ungz' => 'fd415686c223049c64f3c576c34915a9aa1b9c71a34de3f41565856f678db705',
+    'size' => 46646
+  },
+  'JSON-PP-2.95.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'cf7d72c0e9626a0055782d2f3b00df21',
+    'mtime' => '2017-11-19',
+    'sha256' => '896aabdd639db8c118d58d3e7e5d2e0b38e3a989f2a7334eb77869f03c45abc8',
+    'size' => 1048
+  },
+  'JSON-PP-2.95.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2b624cc9c03e6ef39d225696af216b8d',
+    'md5-ungz' => '4f11ee339d303f05b08071ec027bf9fb',
+    'mtime' => '2017-11-19',
+    'sha256' => '9fe7f2c17c80868ec724c68cebb953970a4a322b1f197d4083d52a213c189f96',
+    'sha256-ungz' => 'a7eb1b514d64afad26b92e1ccad9caac2356f50500b258da946aeb753604eb2c',
+    'size' => 46735
+  },
+  'JSON-PP-2.96.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '244f887e9d8f8b8bfffdff7f8386c41d',
+    'mtime' => '2017-11-19',
+    'sha256' => 'cd2ca285f825b4c63a70414b8d3b612d1ceaceb0d064484c7e7683814b17d0e9',
+    'size' => 1048
+  },
+  'JSON-PP-2.96.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9abbb8885b201f43572cce46f269e955',
+    'md5-ungz' => 'bb2c2bb4fa5a3e6875d73540c08deaf0',
+    'mtime' => '2017-11-19',
+    'sha256' => 'c5b0844f327f4778c3f11c65040bde503315667e8a15ad6173ce4899d2472d65',
+    'sha256-ungz' => 'b0da89aa6e707ea90c573d8b5be87990192dfd8a99a75425256a53844f289b2b',
+    'size' => 46760
+  },
+  'JSON-PP-2.97000.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c9cce21fcd6bc55839f5a91d675d6e9a',
+    'mtime' => '2017-11-20',
+    'sha256' => '14ad51ad0f751bf2c6ca2e999ed56530e2a81d868f537e6fcf1370f2c474ad90',
+    'size' => 1051
+  },
+  'JSON-PP-2.97000.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'b37ce31d04c5df5675269dc1a3c5f0e9',
+    'md5-ungz' => '642441e2e9feb27caf137971b8f8d260',
+    'mtime' => '2017-11-20',
+    'sha256' => '1183231135ab6c5e2c2fcd24492c78b17adcf9a0012c3e3123004babc04eb46b',
+    'sha256-ungz' => '91a46e72231a94125a08e521f50e0e701263331735d05d3ed6adcd47950a44c9',
+    'size' => 46856
+  },
+  'JSON-PP-2.97001.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '591a989f84a0e448578f52cf3160b33a',
+    'mtime' => '2017-12-21',
+    'sha256' => '9393316cdfb4fd049fe5e096bc26d4f6b3b32df640da9e2b81b90b29473a9658',
+    'size' => 1110
+  },
+  'JSON-PP-2.97001.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2cb0866abed53bad69398b6260cb8a3a',
+    'md5-ungz' => 'be3ad0d2d235d1e2cd26c710aedc3a28',
+    'mtime' => '2017-12-21',
+    'sha256' => '67f54a37778babfe0c0ef21e34f04c152d49729220b38ed300fe8a8d7d1827b4',
+    'sha256-ungz' => '2b110785a289f5a9ba38dd77906b99bd65c08ebb1d82a19f5fdb74a3e801ddb6',
+    'size' => 47075
+  },
+  'JSON-PP-3.99_01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '34d177f1a4c1eb354b0609220e23e3db',
+    'md5-ungz' => 'c2740337961ae15c040141e716e18f7c',
+    'mtime' => '2018-12-03',
+    'sha256' => '9d87120402849cb03aef6fad2f820c9d17fece85b1a2f02cdc20aea735464bdb',
+    'sha256-ungz' => 'f7f1b7347c136cbe6434766e433a00f752a59beeb26c018960a5aded2ddeabff',
+    'size' => 51848
+  },
+  'JSON-PP-4.00.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ef12f56f6a2a4d14446bac5a3b7903ed',
+    'mtime' => '2018-12-06',
+    'sha256' => 'cab96b676883f74a669b12cfe7799b1370f590f1c762f0aba3ac26161f3821f5',
+    'size' => 1199
+  },
+  'JSON-PP-4.00.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '271901647304a8def6029dc1f0a97541',
+    'md5-ungz' => 'a58c99a6c7ee8627372f4ded8225aea3',
+    'mtime' => '2018-12-06',
+    'sha256' => 'bef48e49425398d4cfcef769dc3bfd780897b4c097b6502c19b7b0c83a360f3c',
+    'sha256-ungz' => 'e784cedcdce85f5ba0d904ff3ae1aa0caf5827d3a55eed0e2a6f20c56dda9ae8',
+    'size' => 51856
+  },
+  'JSON-PP-4.01.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '33f63af1efbe574a9c672bd053774377',
+    'mtime' => '2019-02-21',
+    'sha256' => '394a3718cff096d89a46d1cfed0583c5d1ae8a8c137071ab22099aae81c3bb7a',
+    'size' => 1199
+  },
+  'JSON-PP-4.01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '07ed5d2dca6be1291dd3e81944b56dac',
+    'md5-ungz' => '092af39bdd564c3b525ff069259644ec',
+    'mtime' => '2019-02-21',
+    'sha256' => '8bd71b30dc380c9290c17a34736e411877d87a0cb5f44e32d7bad88bce64b061',
+    'sha256-ungz' => 'ff9902a025c7f3a4d4dccd0d95eb41dddf8c8b07e3d2e984ba95cb44e420e5c5',
+    'size' => 51896
+  },
+  'JSON-PP-4.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e45d3d4f719b0c82c31083a28192ab12',
+    'mtime' => '2019-02-23',
+    'sha256' => 'a3022b1d6121ca165fdc9dc779c59fed0ea1ac50d4123fa740c0ea8d5405e0ad',
+    'size' => 1199
+  },
+  'JSON-PP-4.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ea1ad14474927cd305d0567b7d0bbb5c',
+    'md5-ungz' => 'bf495c17de5c5c7f80a72c0d315beb2e',
+    'mtime' => '2019-02-23',
+    'sha256' => 'acc67bf812211d6e8943b0b14b64009e26e886be370658556c8d014c19819487',
+    'sha256-ungz' => '54443b775c0021f32bdf243dc003ec1985269904d7875ef6d215cebf6babcda6',
+    'size' => 52007
+  },
+  'JSON-PP-4.03.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '92a8c27431d59a173221202c3d435731',
+    'mtime' => '2019-06-18',
+    'sha256' => 'd64f175cd30c08dc5c31c887cbd9ac2fa8e5e7b761aab159ddad5865145104c4',
+    'size' => 1199
+  },
+  'JSON-PP-4.03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '74d14dee38a9fd073fb6f373092d56fd',
+    'md5-ungz' => 'd526507273c1403c79e7888bf06e4187',
+    'mtime' => '2019-06-18',
+    'sha256' => 'b578cfe488a3a43e107366f6726bc4cd369a6f08ea7cd2c5d39e6994386a772f',
+    'sha256-ungz' => 'b87d3660b1ce997d354117432f37e7f42e2e3d47b82cf5b43df5708227198421',
+    'size' => 52146
+  },
+  'JSON-PP-4.04.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'bc0274fa144226f797d8b96396ec3ce1',
+    'mtime' => '2019-06-29',
+    'sha256' => 'cefcf58326d551b4ee6580ada9be7694a84f34d17330bdf188f269982d944b18',
+    'size' => 1199
+  },
+  'JSON-PP-4.04.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5268ef58fc8ed59a63e61bd36675b6ba',
+    'md5-ungz' => 'f51df71453e48e16b02933c0dda70ad2',
+    'mtime' => '2019-06-29',
+    'sha256' => '81311c56d7b94bbf8003cf421e87961efba576189198e516fd5426889650b66a',
+    'sha256-ungz' => 'a1bc605e2e1f3087d61e7ca18e01d4606cf54a664ac2c46c7a8fed8f84df013c',
+    'size' => 52165
+  },
+  'JSON-PP-4.05.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '38258f1d55c2727de459e4c464ca79b4',
+    'mtime' => '2020-07-08',
+    'sha256' => 'a9bf77e9eaff36a6c7f456003054024e6d51fd36826776d0f096f3421ba28886',
+    'size' => 1199
+  },
+  'JSON-PP-4.05.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f18bc982becd73144af34c05bce0cc9c',
+    'md5-ungz' => '77f5e31c0290c2e1976a841c7ca1a8e2',
+    'mtime' => '2020-07-08',
+    'sha256' => 'd5a2bca6bccf4d44f43aeaace0f45ae6541bb7f50db5a489b5d2ff5fbe8bf0ce',
+    'sha256-ungz' => 'd67e91ca2aa2ac243d272c79ab3ebf45c25592a58bc75603dd4fb369c68a0229',
+    'size' => 52193
+  },
+  'JSON-PP-4.06.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c6aab47f058e5c267ca7b4cecf1af9d7',
+    'mtime' => '2021-01-23',
+    'sha256' => '7a43d1fd0b7228321f28aac465324651c17d24929a535fc4eee10bf12fc7afc9',
+    'size' => 1199
+  },
+  'JSON-PP-4.06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '25deb82acccb6c3cbb3dd98122243022',
+    'md5-ungz' => 'b66234ec21576ff5945dd1b920989e55',
+    'mtime' => '2021-01-23',
+    'sha256' => '70c4ca2e05dc156de2303765174e45b91c637de6601a70db5eef45e30abad27a',
+    'sha256-ungz' => 'e32096c35c68c3938d578be23bebc5bf9721a2ddc116a4b7444ae735b07883e5',
+    'size' => 52067
+  },
+  'JSON-PP-4.07.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '34b8138f930bf25ac77d27163629178c',
+    'mtime' => '2021-12-17',
+    'sha256' => 'face68acadb5ddb242c1245a1de125975ca4c523d3031d4786f1d48c6319efba',
+    'size' => 1199
+  },
+  'JSON-PP-4.07.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4a577c0443da446b42f0f15e10027f94',
+    'md5-ungz' => 'a476166ba05c75c277025def7ff36995',
+    'mtime' => '2021-12-17',
+    'sha256' => '7badbf590a9b216615d6ef4879bcf9c6c272d604cdf9f75f0bd56a26b4252bd5',
+    'sha256-ungz' => 'e020f63a124952c3cd14191d74b42b78f06700233c234d96dbfc8aa58ea5b612',
+    'size' => 52139
+  },
+  'JSON-PP-4.08.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '3e7044a37fd52f10d8b8574c00b7aa3b',
+    'mtime' => '2022-04-10',
+    'sha256' => 'abd8806e8e9a20f84cafc2975b5beaf0e960fa3693a7d85b62f3d95a62e59a05',
+    'size' => 1199
+  },
+  'JSON-PP-4.08.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '491734d41b4ba2fcacfcc59e6eee48f4',
+    'md5-ungz' => '7d4a6686f345b645b968e2a19c19e449',
+    'mtime' => '2022-04-10',
+    'sha256' => '08e5bd969602505f47564708705c9e5b2e56bff279cc23f80e806c8a16467deb',
+    'sha256-ungz' => 'f5ee75f3c5a7d8f2b0db0ba7fd6eacab117b9bdcb1b8e5e36711532a1eff3013',
+    'size' => 54629
+  },
+  'JSON-PP-4.09.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c11248c8fa53fa1a4f874697010cf777',
+    'mtime' => '2022-05-22',
+    'sha256' => 'cffe408633c9770ba165e2047811b64cee9862929a8437fe2a06bf8b32a0e563',
+    'size' => 1199
+  },
+  'JSON-PP-4.09.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e4f49a0643c75f30cc49a24d8c67edc8',
+    'md5-ungz' => 'e9e8692863a333c8e312e347a3582ae6',
+    'mtime' => '2022-05-22',
+    'sha256' => '72d2fb4b9c823d13253940444584989820728bf44c5013c62faa2d1c1a2bcc65',
+    'sha256-ungz' => 'de34150789d60e9a9c3d9649fe4a2522f8a36b533c1c8f6874f7cfb7a6427e14',
+    'size' => 54525
+  },
+  'JSON-PP-4.10.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '152879b037d68fc83228532f6a72c0b2',
+    'mtime' => '2022-06-24',
+    'sha256' => 'cf8121840c92eac60e04e20495a6c396b87deb105ba5c52645a5cf6d8b400689',
+    'size' => 1199
+  },
+  'JSON-PP-4.10.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '946b361de3432f8851dfe5a0a28bcfdc',
+    'md5-ungz' => '189641eef75f7c0ebe8241c3e176f3dd',
+    'mtime' => '2022-06-24',
+    'sha256' => 'a1d07ac81bc0a9110812e0d9c2d8df206ee1cc4ae3a09cf8e52a08c051fb2c82',
+    'sha256-ungz' => '2f206b2434f77c6810a47a14691217429af646e9db62da4976ed89c9728008f3',
+    'size' => 54562
+  },
+  'JSON-PP-4.11.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5a079bfc21ca058513cec68ada5c0ae7',
+    'mtime' => '2022-07-31',
+    'sha256' => '63f4295b20fcbebbc8a0749d65e162cdb9e1da1f204f1c206537f63fb895ec08',
+    'size' => 1199
+  },
+  'JSON-PP-4.11.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c394969e3c7436e7bf17b39d9623f0d9',
+    'md5-ungz' => '2339c1327af83cca279e2f578bce66eb',
+    'mtime' => '2022-07-31',
+    'sha256' => '3ececec812b5fd45ae0db513072032b08af4319c242dc4e159ba36804670f169',
+    'sha256-ungz' => 'ae88d34813f4551231d7a60347a47914c175f4815c9ba476be7519a6a7d7212d',
+    'size' => 55116
+  },
+  'JSON-PP-4.12.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '428fec1c75c6786339c0c96e3c9be0bd',
+    'mtime' => '2022-10-08',
+    'sha256' => '17cb1b0d501a8f967d836cd5c962224a1bbdb0d61a92380ebcade9c011986025',
+    'size' => 1199
+  },
+  'JSON-PP-4.12.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1081c0b22a855e8e3af0688c07bbe2de',
+    'md5-ungz' => '736b23f99271d25246ec61abe00e800a',
+    'mtime' => '2022-10-08',
+    'sha256' => 'fb76b443f65820452732ba74647a459d61fb61ecce920b19d6f9b881948439de',
+    'sha256-ungz' => '01916d6648c118c579603c06f15ef11ca61c704a05666352f218f8eb42efe3a9',
+    'size' => 55176
+  },
+  'JSON-PP-4.13.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1403979cd654180f0e2a5f7e525e3462',
+    'mtime' => '2022-12-26',
+    'sha256' => 'deeec7dd8de79b69eb2cea38ec076b7bd0a9984fddced862e694fc17d38cd883',
+    'size' => 1199
+  },
+  'JSON-PP-4.13.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2d5c2141a5479ec97c3f653a72d8f790',
+    'md5-ungz' => 'e5ae5b77aaf1570e24ab1a1cca640155',
+    'mtime' => '2022-12-26',
+    'sha256' => 'dd7c9cd42b6fa9eef9d930bbe1ed2c3c582dcaacaa6d1a4b28c3c79317677f95',
+    'sha256-ungz' => '2682eb095645ca639414ed1ee83dd858a3e8a414c4fd7dcec52dce113cf242ea',
+    'size' => 56038
+  },
+  'JSON-PP-4.14.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '54fec06b753087a33023f42113ed5d7a',
+    'mtime' => '2022-12-26',
+    'sha256' => '9380bd122c8ce02d3e1101999024631b28df272fc9f2f1ab7156cc4e84f608c2',
+    'size' => 1199
+  },
+  'JSON-PP-4.14.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '184343dd578e91d9c84b201a6f253418',
+    'md5-ungz' => '619f53ebb4d0cc7be37bbb7edd5351e5',
+    'mtime' => '2022-12-26',
+    'sha256' => '79e11197bfc8b519ae380434cc7b3ae046ac7e8c41f9dd6f538e863107a056ae',
+    'sha256-ungz' => '62bc79508515836bad158d1f7bdec9866196c80e15958f24f79ce4f80caae9cc',
+    'size' => 56885
+  },
+  'JSON-PP-4.15.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f984de671e5f5deced17c8323251de90',
+    'mtime' => '2022-12-27',
+    'sha256' => '619f71b31e03c8b90893ab2cbc9b64dec5c214c8235e2cb90360837adfed3609',
+    'size' => 1199
+  },
+  'JSON-PP-4.15.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4415e173056ae0d224705b9a5d103913',
+    'md5-ungz' => '5f23ae0331d9981f1294453f1f195c90',
+    'mtime' => '2022-12-27',
+    'sha256' => '40f19b437a7a6d3f0419ff53d09bfa8386c2d792b34078ad433e928df2ef2361',
+    'sha256-ungz' => '0761b669a392a8ce1011b781f17998feb618d6fcdcb0774ca31cf0fb16ac991f',
+    'size' => 56911
+  },
+  'JSON-PP-4.16.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f20967087603ff2549e4a7b22d21271d',
+    'mtime' => '2022-12-30',
+    'sha256' => 'cfc50cc556d6d556cb3aae05d86ccd6400144f57e6a12c07165cc518a64a2945',
+    'size' => 1199
+  },
+  'JSON-PP-4.16.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4ec8d53913f529d3fe172559cb5a131e',
+    'md5-ungz' => '6b84c5f97292f0672d581b72230e511d',
+    'mtime' => '2022-12-30',
+    'sha256' => '8bc2f162bafc42645c489905ad72540f0d3c284b360c96299095183c30cc9789',
+    'sha256-ungz' => 'e22ac50cec28e265c9e330921621a84da2673c9bf58ed89cd7d5a64773870658',
+    'size' => 55556
+  },
+  'JSON-PP-4.17_01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ab09fcff7073cdad0c48fe9f64c5a1a0',
+    'md5-ungz' => '590dcccdab3730ddef87d422184c2a00',
+    'mtime' => '2023-07-29',
+    'sha256' => 'c2f5283085c6ed0a8ddf61bab8b46a03d4ff0d65fa224764c193e49642bcf1ca',
+    'sha256-ungz' => 'ff5981e76de856157b498acf563e7a4a1d6b72f5435dd38f7a735215e464d81f',
+    'size' => 55364
+  },
+  'Lingua-JA-Romaji-Valid-0.03.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '84a7d8f51b5ff6a1540e67ec400021df',
+    'mtime' => '2012-09-27',
+    'sha256' => 'f1aae52ba1700eac23e2d09a9eafe7e440b7a5901d571b884d16e74f8092c518',
+    'size' => 904
+  },
+  'Lingua-JA-Romaji-Valid-0.03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4c9638859ee60c9c984bf2b6d0ee8d11',
+    'md5-ungz' => 'f1dffe702ae56fe28d1dfbfddff0b746',
+    'mtime' => '2012-09-27',
+    'sha256' => 'b22915644a19d0a3515758c7c3aed2531cf69843ac511c28631a35f8dffef09f',
+    'sha256-ungz' => '999ce495fa6287ac1bc7b9ee82193a33ff3597f310c8da9cc85a383fcb384942',
+    'size' => 8745
+  },
+  'Log-Dump-0.14.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ddb6602b4139fbd73980e4bbad5cddf3',
+    'mtime' => '2014-08-16',
+    'sha256' => 'f636c0eaa04c5e070a353c23d2ef67e2dafcbfa430c42c4a7330ad58e9fcd8df',
+    'size' => 1183
+  },
+  'Log-Dump-0.14.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '34b88aa44b9af8ba0f12590adaa1b27a',
+    'md5-ungz' => '14a819c0b121839fe251a3b612474273',
+    'mtime' => '2014-08-16',
+    'sha256' => '6962b0a07c086acc4417750cd8f87f5ea44c534851f5589443da42e3af6f90cd',
+    'sha256-ungz' => '324e5c22a84f60b0ae70f48c83a7c388db40c79ba0d0202107e625b77f1f0026',
+    'size' => 8937
+  },
+  'Module-CPANTS-Analyse-1.00.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8ac2236d09619e8697cfd760fd3ef9fa',
+    'mtime' => '2019-02-03',
+    'sha256' => '18c3983c5ec1aa334e4c7beb8da753f828b0b8612d72b52508e7299a58f2f16a',
+    'size' => 2206
+  },
+  'Module-CPANTS-Analyse-1.00.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'fb0b56ce0c9a0a21f1019f213902da62',
+    'md5-ungz' => '87933141d2becf77185f0c99504a51ca',
+    'mtime' => '2019-02-03',
+    'sha256' => '429929cb56b2c5a50caa204ab736ffd09cb8272e9d24e1980ee88e06a078e764',
+    'sha256-ungz' => '9c09f30034d21de01ae4310a20fba402dd15c4bd560b17f7fca7f4dc253e0928',
+    'size' => 38350
+  },
+  'Module-CPANTS-Analyse-1.01.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e4441dd6b9d42414ce1ff2c21b4a3600',
+    'mtime' => '2019-08-08',
+    'sha256' => '23fc3a3aa08ae3af2f7f9b9131a6f024b4d1cff96f1e30577408c24d603250e2',
+    'size' => 2320
+  },
+  'Module-CPANTS-Analyse-1.01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8e111492657174bf0291d90ba5308cc0',
+    'md5-ungz' => '4b645f7e68cd9ec54acea5421b04c404',
+    'mtime' => '2019-08-08',
+    'sha256' => 'bd990ba4d0051b6db2284cab840699e33af542d88182fd454cfa70ead31ec849',
+    'sha256-ungz' => 'd70edbf0afdc9f46299a7853a4d896fd731dbfba1214c1327b49b4ec28605bec',
+    'size' => 38930
+  },
+  'Module-CPANTS-Analyse-1.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '3c1859ac6ddb9d54086f2f86aa123bd8',
+    'mtime' => '2023-09-10',
+    'sha256' => '4e4e5ec1166a2002a9d09d5fa2e43570bb820ea5eff1d159de36162dbe7db830',
+    'size' => 2314
+  },
+  'Module-CPANTS-Analyse-1.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8e3d13918736c8d1a56f8f8d7786e669',
+    'md5-ungz' => '3546febddf18f8d417eda7337349fb24',
+    'mtime' => '2023-09-10',
+    'sha256' => '9e11739b9cd08ba2d75a59737f1fb297f45803f289063c5c759bfc78fd516e7b',
+    'sha256-ungz' => '22ccad95735e61a2086fb0d22176b08088f506dc6b9b09a25509c4d6705568ae',
+    'size' => 39256
+  },
+  'Module-New-0.15.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5861e4330550b346d747e6310fd9fae2',
+    'mtime' => '2015-04-19',
+    'sha256' => '4a4db607f374e657584d6ae20b3cb1028af9d9f9cb9914d1500b7f480a6c931e',
+    'size' => 1629
+  },
+  'Module-New-0.15.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '176a7b9ba00e22bbf923fb4f45e7d0ad',
+    'md5-ungz' => '241b66ab42625201c28db3864d6aacad',
+    'mtime' => '2015-04-19',
+    'sha256' => 'b91e5a1691e3fd50f4c4d496e2b2b54cbac8eb62c6db841db9640dd4990eedaf',
+    'sha256-ungz' => 'dd51317f92d5c678ee1c788b96951d0a562047200fb479d20bdbb87aa55c5a21',
+    'size' => 29329
+  },
+  'PAR-WebStart-0.19.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'bd7fc24422cf2e558a06c5582904dd2c',
+    'mtime' => '2011-04-01',
+    'sha256' => '400722d409067445b9d0f2daf342b541066aaaad89047395e21ed1412cf60f7d',
+    'size' => 1119
+  },
+  'PAR-WebStart-0.19.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '7d70b4cdb37170989d88366511ab5a42',
+    'md5-ungz' => '73d95538afefabf1c0e5f7be5cafaef8',
+    'mtime' => '2011-04-01',
+    'sha256' => '2061779c2c33e742bbefc5f4ee88483be4b1f999c43df7e229ccc3f4b88ee3be',
+    'sha256-ungz' => '4a53167d27be20dfee73dd12e4c948358bac7847cc28e0d3550937111cf9bcc2',
+    'size' => 23865
+  },
+  'PAR-WebStart-0.20.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'bd7fc24422cf2e558a06c5582904dd2c',
+    'mtime' => '2011-04-01',
+    'sha256' => '400722d409067445b9d0f2daf342b541066aaaad89047395e21ed1412cf60f7d',
+    'size' => 1119
+  },
+  'PAR-WebStart-0.20.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4b9c25837e84d7e7512dc707bf8b6b2a',
+    'md5-ungz' => '99c25c026990a1a73590680418a8e777',
+    'mtime' => '2011-04-03',
+    'sha256' => 'd4c97b948b105afdbab7bd7a9e09e319ede0b23458dab7d3e2cbc2a475436b4c',
+    'sha256-ungz' => '1b0284c7165c0263e0fceb43321c1e3e651fb11796ee20d4707a98b8d925f225',
+    'size' => 24110
+  },
+  'PPM-Make-0.9904.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'bef1b8734c227a7c9685134bef72aca7',
+    'mtime' => '2017-04-05',
+    'sha256' => '24f38c208612b6509febfdc66b6e6d2eb5c7e7677720cf7add0edba56e2dd14b',
+    'size' => 2347
+  },
+  'PPM-Make-0.9904.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5adbeb9e7fb2ab2824fa273f6a19738a',
+    'md5-ungz' => 'f591c7f9ff3c0fe27706bcb2416369b1',
+    'mtime' => '2017-04-05',
+    'sha256' => '5f661be7f3e9473c55e4603bfc7b3c29d0163101900ef22f67baf64a305dc0f1',
+    'sha256-ungz' => '6896d00dc9b38c5ddf751d8f5ee1cac0f388ec600fd304cf44ed39b20ed1f000',
+    'size' => 100460
+  },
+  'Package-Abbreviate-0.01.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1dd0a3370a85f5d2ad41699115dcf361',
+    'mtime' => '2014-04-02',
+    'sha256' => 'a8c79795bbc5bb89f91fb10e5a1aa2a18e4289568bb54b2f39c77320254e28a2',
+    'size' => 998
+  },
+  'Package-Abbreviate-0.01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'de2c2daaeb53806850cf2f01e644b21b',
+    'md5-ungz' => 'e0a03dfcf8cd9031183303b5724dd069',
+    'mtime' => '2014-04-02',
+    'sha256' => '30105840db1f27e92206f8bb3f29383cee2eaf9d7f20ee0f1a6832cdd22e95d8',
+    'sha256-ungz' => 'f91eaaee60cf06e20bd35ea47cf3332476139c2fce519a8617626ea699f75ce5',
+    'size' => 3754
+  },
+  'Parse-Distname-0.05.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '80fa901e1bd384453b79d746a20d3f72',
+    'mtime' => '2019-09-29',
+    'sha256' => '4a1110079c5b645e3213cde85439778b14630111b24ed1a40594cb8292ebea9f',
+    'size' => 1374
+  },
+  'Parse-Distname-0.05.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ad672dbef9de3f93e1433771af690199',
+    'md5-ungz' => 'b66d8f79f02d0bc4b01f08a1b6ace234',
+    'mtime' => '2019-09-29',
+    'sha256' => 'a5fa93bec2dab76d883da12d4f344b73bf8beb0cc4b66c24376f3e0f387aef07',
+    'sha256-ungz' => '38a22fc4b980f01e8842e90fa49c6844da0a7ada6adf7955c45eb9359f4a1a62',
+    'size' => 34192
+  },
+  'Parse-LocalDistribution-0.18.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '42701f3aedb77dfa8e98e01f88effc28',
+    'mtime' => '2016-04-24',
+    'sha256' => 'bf401f5251be89a246b55a821d82fd6e0018502b2f833179fc3df9736963bcf6',
+    'size' => 1323
+  },
+  'Parse-LocalDistribution-0.18.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e5773dba6861501d6409f8dacdd4b0ef',
+    'md5-ungz' => '74cd8c6e0ad46e1ee3eda49d63a3a764',
+    'mtime' => '2016-04-24',
+    'sha256' => '87b0dffaece8e9e9d00f5046f7973347e0916a00f6222eb028ea7568377e331b',
+    'sha256-ungz' => 'f92d818b373018c69c0f056b15864db607860d3ee796fb576fcb8204e259cf10',
+    'size' => 8467
+  },
+  'Parse-LocalDistribution-0.19.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8153074437f1aee8f1d7d6c68fd2f7e5',
+    'mtime' => '2016-11-03',
+    'sha256' => 'b2c985d6d2c11b65986c182eb0fd0384064c19f64e203fa8a04517b33493f06a',
+    'size' => 1323
+  },
+  'Parse-LocalDistribution-0.19.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f3436bf0fc4568276acc783bde854db8',
+    'md5-ungz' => '86d00e8257cefe4dde00fbd6b24ee7fb',
+    'mtime' => '2016-11-03',
+    'sha256' => '6b0bc32c4e8d9e81f3f2acc1d2a74c2a2f887a91c1522b31ce4c8d49a415e99e',
+    'sha256-ungz' => 'd8fc0a0f42a2747d291c1c7e00f470792ae920abcb48fbc3aae18ce0500c7e22',
+    'size' => 8503
+  },
+  'Parse-PMFile-0.42.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f9770d58a758dc5a7f8701adaaabc0ed',
+    'mtime' => '2019-11-09',
+    'sha256' => 'd4661308dab4d859f502d3434199dc6cad74733ea5f34bf761d1e216e8316031',
+    'size' => 1316
+  },
+  'Parse-PMFile-0.42.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '96a8c458d12fc5d527b48b598e9bb267',
+    'md5-ungz' => '35a49478f2ecb65b3f14f5204d015667',
+    'mtime' => '2019-11-09',
+    'sha256' => 'e7f6c70932b86eb4a2426569e33d2b651b52a24e5d0c0dcb3849d045b52c736c',
+    'sha256-ungz' => 'b9cffde5070d8b334b0f24fe7998f02adb139a71e7f8b423046c450f0d12735b',
+    'size' => 15632
+  },
+  'Parse-PMFile-0.43.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2841687af9b79a3fa898d392c2987871',
+    'mtime' => '2020-12-11',
+    'sha256' => 'a6500926a49275cec78d320dbd67c5e293a4ec4f23ef17e6a642594bb3539732',
+    'size' => 1316
+  },
+  'Parse-PMFile-0.43.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '32f8cf17693771a8e0630738f27be912',
+    'md5-ungz' => '256fe2dc8b6317039ba124e05b354469',
+    'mtime' => '2020-12-11',
+    'sha256' => 'be61e807204738cf0c52ed321551992fdc7fa8faa43ed43ff489d0c269900623',
+    'sha256-ungz' => '7a44fae29d996793cdca95750266e1b34bc6ced2399ceadb822b667f3b2e3811',
+    'size' => 15744
+  },
+  'Parse-PMFile-0.44.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4e1b3d62a4c7710f40080ee569642267',
+    'mtime' => '2023-04-27',
+    'sha256' => 'eb142928789833f3ce69d67afe46fb7ef7a7901344c7d1e6a2a6055dc100b973',
+    'size' => 1316
+  },
+  'Parse-PMFile-0.44.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c79a4c0623c248b4edf38ec240438ea3',
+    'md5-ungz' => '8934c4ec31dc7cde744b6882ba7c20dc',
+    'mtime' => '2023-04-27',
+    'sha256' => 'e08f0f56455b3ac12dccd8c711650612b7d3cd150f8a6f8ae6b43b2da47df994',
+    'sha256-ungz' => '911b973fa17abc276d7e34d529526a686cbb0d43dd6429f824ab73c67d5fb05e',
+    'size' => 16141
+  },
+  'Path-Extended-0.23.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '39a70c9577e9fc33d2a5a6db19c90c80',
+    'mtime' => '2015-03-11',
+    'sha256' => 'ab78b353ff123b758c2a4a16cb6f8a9e1edd5fdb5f8719c25e639f11319fbcdb',
+    'size' => 1507
+  },
+  'Path-Extended-0.23.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '655e28f358c414567b59399949d8e8f4',
+    'md5-ungz' => 'd08f454e8a0651a6d59ba545d6b3af52',
+    'mtime' => '2015-03-11',
+    'sha256' => '2aa832b46ea8ad6d28210912925af14c4668bca2a2a4ab03a1f5badc41388ccc',
+    'sha256-ungz' => '85bc188efe0526d6e362f1178df94c75a493245d8559dda2a861c7378ac25927',
+    'size' => 24204
+  },
+  'Path-Extended-Tiny-0.08.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '118094f846c7641a95424f4b7a8b9149',
+    'mtime' => '2015-03-13',
+    'sha256' => '10102af70bc5175928454a353d7e6aa868f5415d13eb5d2df03694c8c7181b7e',
+    'size' => 1364
+  },
+  'Path-Extended-Tiny-0.08.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'cf78627ea3621c2982eaa329de40463d',
+    'md5-ungz' => '920cdb494a2e2626eda586c55e91d371',
+    'mtime' => '2015-03-13',
+    'sha256' => 'd428ae2c333f3d48e0e914bb898893e560fd70f9a882bfa0b60e77315eda5b5c',
+    'sha256-ungz' => 'a4d573d010b69a7469d1636eaf5ab91b07325dee5ced222254ff7ad937259aca',
+    'size' => 19082
+  },
+  'Perl-Lexer-0.32.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '90f54655f574cf9b59a373250f372a5c',
+    'mtime' => '2020-03-21',
+    'sha256' => 'ae9c975f0bcab43171078ac2a2a75df1f39affe2896d157c1ef6d7bb00f1c3f1',
+    'size' => 2042
+  },
+  'Perl-Lexer-0.32.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2329ce48c556f19db247e980ad2d2117',
+    'md5-ungz' => 'a2ec92ab8aeffea7ddca7715baa2a457',
+    'mtime' => '2020-03-21',
+    'sha256' => '5a249a3a1e3ec5d0c4c7e1be0a02a321d52cb3a86e3886d308b0607a6c69d922',
+    'sha256-ungz' => '86a2b5569cf903b4adacbc41e09de18fd4bd9b1c6d036744d4755a4ad7068c16',
+    'size' => 82061
+  },
+  'Perl-Lexer-0.33.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'b3004b1ec8f3dc0303e84410e842e553',
+    'mtime' => '2021-06-12',
+    'sha256' => 'cc420f4f5549ffcd3fe0aac68f0a52376fe94f82412690ce28ce59f3988bf6cd',
+    'size' => 2043
+  },
+  'Perl-Lexer-0.33.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '556fbbbc105bc57b18444d276739812e',
+    'md5-ungz' => '2da0d80340bdec65b03d7cf21c09d075',
+    'mtime' => '2021-06-12',
+    'sha256' => 'ba840bf1deefbce30bf075c67abd4fcd82eb11da60734aae561fb3fd36a1632e',
+    'sha256-ungz' => 'fcd01dd52aa1cc9e0e05817d228098e33d7c83b78c853e3d887acbebe0acb49b',
+    'size' => 84395
+  },
+  'Perl-Lexer-0.34.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'b12ec207c303e95a90d8b9068b6be2ac',
+    'mtime' => '2021-07-03',
+    'sha256' => '783011b9897657fbce11796f081e00d971756f6869c6af902447c2f4b8ec93c2',
+    'size' => 2043
+  },
+  'Perl-Lexer-0.34.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f9b8e241ff218f60805f376d49b8e297',
+    'md5-ungz' => 'add6d36ae09681c9d3fdec94bd9a2a80',
+    'mtime' => '2021-07-03',
+    'sha256' => '97e7c06132d6e95ea1fdfec41a42eae2213a0d0d5a134c1a4a3d416703345817',
+    'sha256-ungz' => '7051eb1fecd60f507440a1b0e63a3bf7cb6a66d0ea4830edd8a25ef0973ec390',
+    'size' => 84874
+  },
+  'Perl-Lexer-0.35.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '403f18486b0985b1a1b69ff10ea93ad6',
+    'mtime' => '2021-07-05',
+    'sha256' => '8f053f1c84b1fbb71b0e4be6927c1e80bd271db14de2fe0b7a8c3ced31162af3',
+    'size' => 2043
+  },
+  'Perl-Lexer-0.35.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '87e2f1f00c64a60ddcb02bb20f1e8c45',
+    'md5-ungz' => '76d244b99ec99f09e6a876fa1c32101e',
+    'mtime' => '2021-07-05',
+    'sha256' => '95e9bb3eade8b8c72b2e77d2585d72b7dc0745eb32af2e0602c7507ddbb40db5',
+    'sha256-ungz' => '782e7eb10bcbf95e931013a3355911828f71ae9cf14598b9729494593c5b0d1c',
+    'size' => 84916
+  },
+  'Perl-Lexer-0.36.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'd35af8e564dbc048a367ed58c1336738',
+    'mtime' => '2023-07-09',
+    'sha256' => '83ba50cf5b90e8b15cad6855aea7a44a6c1b7ea78bf1e4f0d6a01acfcb9240e0',
+    'size' => 2043
+  },
+  'Perl-Lexer-0.36.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8e185d77876be13d402256ccdbc1b3c4',
+    'md5-ungz' => 'c6d8f9807b16ad7b34182ed480bbe922',
+    'mtime' => '2023-07-09',
+    'sha256' => '7c06be4339542c9977b4080a02fbcd21bd0b7a527086a57f6c79242212ce9f9a',
+    'sha256-ungz' => 'fd7420aad9de22dfcd750d8f2362204742efe6970c24448a99357ce0c9fa8702',
+    'size' => 92174
+  },
+  'Perl-MinimumVersion-Fast-0.15.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c897268598d9e9ea2125d00005f43f7f',
+    'mtime' => '2014-10-29',
+    'sha256' => '7ed70a8f637f38cc347cbd126295ad0394bd29d282a62cd2464eedbc03fd66bd',
+    'size' => 1979
+  },
+  'Perl-MinimumVersion-Fast-0.15.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a9b38e1276be07ca0fd705c01252f25a',
+    'md5-ungz' => 'cfbfa4735c07aba47ffad67a8787c11f',
+    'mtime' => '2014-10-29',
+    'sha256' => '31450bee741d18b11e0df6ebecb4fcf83089d142b6a5c5dfee9149ff43a8c484',
+    'sha256-ungz' => '684ce0377efb5d6907e98a62e20cd96cfce741b6570420456e07716c94232ecb',
+    'size' => 15100
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9910.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '19b9a6069f2e9b257698d1ccc955886c',
+    'mtime' => '2020-05-10',
+    'sha256' => 'be0ef3be051e97a202fd8f128fff3625f699bfd9aacb72b2710717a0d42b7bd4',
+    'size' => 1899
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9910.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'bcd7139e0d1c7683ff96222159e55f10',
+    'md5-ungz' => '225c4ff447d49cc0e2b5f02b63c3236a',
+    'mtime' => '2020-05-10',
+    'sha256' => '9fc5f4c358ab3a8180a0f5da41d059275f9bf32d86fb1f859f9d22a4194da6e0',
+    'sha256-ungz' => '51bdf256118db3dd2807283a7681b6f7d769a244d0b867dbc90c3088c559795e',
+    'size' => 127370
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9911.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8128c3e8605f2d792966c5adb0e8f82b',
+    'mtime' => '2020-05-10',
+    'sha256' => 'e0c0f044d2645381db63db0fc7d5fd602afb1c949226a2369065808a1ae9fbb0',
+    'size' => 1899
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9911.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '30f1d4267c1ecb48933170d62c7d5683',
+    'md5-ungz' => '0ab365aaad66273d65d9d4427daf1e40',
+    'mtime' => '2020-05-10',
+    'sha256' => 'e07a061db5ee28bc97f133f2607cfa5853bcd984866ab54fd6669ce35ad91ac1',
+    'sha256-ungz' => '30d8097396927a2a21c025bcc567318faa41c7e67b5fb7de072fd96c09bb44c0',
+    'size' => 127434
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9912.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a7fd598315679821d4f499f2d1b33551',
+    'mtime' => '2020-09-06',
+    'sha256' => '938f14c6d78b49b9dc638149f4c1cbeb4cd38c1cb39438db48ac50f45f36a510',
+    'size' => 1899
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9912.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '95398516bd9cfdd0b0fcf1ea07c0adad',
+    'md5-ungz' => '0aefba2baf075e590c65cce2d2b3e447',
+    'mtime' => '2020-09-06',
+    'sha256' => 'cb482c7a4557492d5e152bd156f8ed9295f8e38045e6646adfe641eb81d035ab',
+    'sha256-ungz' => '8555ab12c13f47158cc8c8a60bf87143f441f7295fd8b2b0db49bfe3f158c9f9',
+    'size' => 127832
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9913.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '5ef0938620e8b4e8466f3466505243d7',
+    'mtime' => '2020-09-06',
+    'sha256' => 'be8dcf05a97b0f564911cb14503b7c287d9fa5460c7af34d181def374bbc18de',
+    'size' => 1930
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9913.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '6fd6e16c64317afae6df485621780aea',
+    'md5-ungz' => '9d4ffdc9515dba6015c8b8efd57f4659',
+    'mtime' => '2020-09-06',
+    'sha256' => '970d9fc5e14938c0f1740f8cfed094d5cfa4c4bd8d47fa80c59a9b0139cf548d',
+    'sha256-ungz' => '63a6b2e8b42d786492ca4ff1e70aa8015294df884f9837e95fa4e42b586b2141',
+    'size' => 127893
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9914.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '75e524bd353cecd493e93bfe468a27b6',
+    'mtime' => '2021-09-12',
+    'sha256' => '57ad0084a3538da500eabbea90a0ef4e4dfd3f5376d88925a534e98a9ab74ff4',
+    'size' => 1930
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9914.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'd91a40a81b779e3b3cad93964bad8da1',
+    'md5-ungz' => '965d51eee4f2c002c211d05c506dcb5b',
+    'mtime' => '2021-09-12',
+    'sha256' => '3d7bf14c983024b9d68387a7f2c2713927c86b62d4ed51e3070470177852fa7e',
+    'sha256-ungz' => 'da976b6945f23d3714fd8ad4a8bcbf8e48412f2fd8a2b502f17f4ac21e82422b',
+    'size' => 128803
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9915.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e2ca779e75215ed830ee2b5cab63ebd2',
+    'mtime' => '2022-04-01',
+    'sha256' => '76eba037ad3acd8adab1ca308db646f34d1a7a190d16b5c1ebf6eba666698dfd',
+    'size' => 1930
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9915.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2000d27f6f8a91bcf7f8c2c14b881fef',
+    'md5-ungz' => 'dad74c69e9a898b43a4c86e9173a363f',
+    'mtime' => '2022-04-01',
+    'sha256' => 'f7c5d949b5169bf5b3183f03da9122901a28eac3470c107d6321aab813d95670',
+    'sha256-ungz' => '98f0c55c2492ecd59c6b165eac6d4b5db034fa5e4189bc645f698cf5c32d05c8',
+    'size' => 129098
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9916.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '23b0bd66f32a5cab2fcd98915d69781b',
+    'mtime' => '2022-04-08',
+    'sha256' => '7e1f4f91a5c3f25a2d695874db1c8c40917a7e4a8b718b8c8e6fa0d85bd4a798',
+    'size' => 1936
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9916.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '134f57865a35c441c5c2a27a077e4a11',
+    'md5-ungz' => '9f6f33922e45baf97bca54df22a8c98d',
+    'mtime' => '2022-04-08',
+    'sha256' => '67a971060e12db0cd242a880ba8374b97060e3138a37f39a78e38c09dbee5549',
+    'sha256-ungz' => '006a05cda5ae96b171a4f91eb5128504ca66b4a3d74fb8107ca9c22af9d7298a',
+    'size' => 129255
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9917.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '36e20e082c5c31979c885a2e7eb9f8ea',
+    'mtime' => '2023-04-27',
+    'sha256' => '956e298f22de2255c3ba251cea5b9726ce3ce53b82e608784f42c25f918ed190',
+    'size' => 1936
+  },
+  'Perl-PrereqScanner-NotQuiteLite-0.9917.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e50bf6de778dee04f992734a649df556',
+    'md5-ungz' => '5320b08e14da44c0fbdaefe2c6fd1625',
+    'mtime' => '2023-04-27',
+    'sha256' => '3ba7ee17d95f0c9a8d92a2e4c1854b64a707d1c022846226dd0dfa42f7deb9dd',
+    'sha256-ungz' => 'fa928f8e6fe31cd93e5f7684556d921dcc92ad81590b9e9ff4420b0f0e6b6bc4',
+    'size' => 130177
+  },
+  'Pod-PerldocJp-0.18.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '91495fc04b296e0a91f0669be6ded924',
+    'mtime' => '2014-04-17',
+    'sha256' => 'd5622d0c42b942138ce6f5aa7d8a06997e924717ba3d8f8629d6aba112d06f75',
+    'size' => 1337
+  },
+  'Pod-PerldocJp-0.18.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '84fa428ad62b2c58ba0aed1f56deefcb',
+    'md5-ungz' => '2ebee858e91b8b2a6db2f95028ddfe06',
+    'mtime' => '2014-04-17',
+    'sha256' => '680898622393c952e6c3d9d0d30047161e98cd9f3963b1b619b62228a0e383e5',
+    'sha256-ungz' => 'fedc92def3e8a64c2035c5c1d616ca7203c1c7188d83f1e634fea8ff308383d7',
+    'size' => 10433
+  },
+  'Pod-PerldocJp-0.19.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '604d5062e35374607b77df2ef217169f',
+    'mtime' => '2017-02-06',
+    'sha256' => '25132308270545375652a09c1a62f5e03fc94bc7a73fb936ffbd4b668bd14d48',
+    'size' => 1335
+  },
+  'Pod-PerldocJp-0.19.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'fe79d8bbf351e1ac4440fa33d5e0cf2e',
+    'md5-ungz' => '1d6be45b41ce923912490a1e9c27511e',
+    'mtime' => '2017-02-06',
+    'sha256' => '4727358de39cc9fb34fece4555a360454e52ce7c75a963c24b1ae444737d6391',
+    'sha256-ungz' => 'b54e584f52936c4d14e59ecc4db845f41f6d5719da130c796eae366fe3439464',
+    'size' => 10486
+  },
+  'Pod-PerldocJp-0.20.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c47ca1051ee9a0db03525eb0b07ab3d6',
+    'mtime' => '2019-08-25',
+    'sha256' => '49f84412221f275f83e521c543de97540ff4d062811c957f8dd34813799e6528',
+    'size' => 1428
+  },
+  'Pod-PerldocJp-0.20.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8d787cd953aa8a20e7d4c75322166bf8',
+    'md5-ungz' => '5c0f1ffbc091f532d4c58c0fee454f33',
+    'mtime' => '2019-08-25',
+    'sha256' => 'b9c22f65cf33f36fea1e5eab8371221992b02b2ca8ef3ed1fadb7b8aa3061a5a',
+    'sha256-ungz' => '4d055be96510650ec75c08d3a84b83cd2c6f65fda45d5eec379b44338584d4b0',
+    'size' => 10741
+  },
+  'Pod-Perldocs-0.17.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '7f86be148c66b17c3fcc6b8a7d8e72df',
+    'mtime' => '2010-12-03',
+    'sha256' => '1437307881842f29bff5b70ed97a13f47cf7a025554ce622124b2638c8c646fd',
+    'size' => 1169
+  },
+  'Pod-Perldocs-0.17.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'd8a1f196aa2b0f45cc982d5a85af5354',
+    'md5-ungz' => 'df36e916ebe06203f719ee462ac2d0c6',
+    'mtime' => '2011-01-06',
+    'sha256' => '0ec4477ebbe55dba9cba7442a78e88a7f3bc2be644027d85e72f68da0fe0fb7a',
+    'sha256-ungz' => 'f844888b10bdfbf594eb463c6d1b5d6096e79163fd134cc9b25a6e9eb3ec2d86',
+    'size' => 3591
+  },
+  'Template-Plugin-Dump-0.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'cd05b4b7bd39aeb2d0523786aae6fb39',
+    'mtime' => '2007-05-27',
+    'sha256' => '6ecff58533047755b7d50e52d0bad28f9a69cab1714b51f7751a097a58ffe035',
+    'size' => 543
+  },
+  'Template-Plugin-Dump-0.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '488d89a68146f7aef30f4fdcacddb5bb',
+    'md5-ungz' => '85640f08a1a81dfc71dad1704cee5542',
+    'mtime' => '2007-05-27',
+    'sha256' => 'dea83b8d702361c9c5e057144db8178a466467a295c0f922378a150806d5936e',
+    'sha256-ungz' => '17543c16d80a54b8bfad50df23be6aee06e1db0e378c610114799d28c8088fc6',
+    'size' => 2021
+  },
+  'Test-CPANfile-0.01.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '68eec04e414f067f1fe1d4ff158bd2ef',
+    'mtime' => '2017-11-25',
+    'sha256' => 'e3478540efea224d3955d8f9d2d1c24eabc115e9a84b671070d3c76d45eeeda6',
+    'size' => 1418
+  },
+  'Test-CPANfile-0.01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '58ebbd13fdfc844bc071b22d36cbdcbc',
+    'md5-ungz' => '8d3e987b8b3873c737c993082256a52c',
+    'mtime' => '2017-11-25',
+    'sha256' => 'd37997b50dc427a2c5693c9e67f3c668adc14a7ae038e9d623bcd66e0e28dfe9',
+    'sha256-ungz' => 'd03ef0a2e57d0358ac87b64c89ad681eb392bd20e97814ee351108c7a7f570bb',
+    'size' => 9640
+  },
+  'Test-CPANfile-0.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '6d8457686dd6543224d3b99931108e9e',
+    'mtime' => '2018-09-30',
+    'sha256' => '8b40338987ac73ee03be4dceb6f10e36ba3d49b027df9eaf6035c33db9654f0b',
+    'size' => 1399
+  },
+  'Test-CPANfile-0.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'fd316d066ad67e511b3e251ed2582c2d',
+    'md5-ungz' => '652e93f68775e5a25d8672fe519b18ec',
+    'mtime' => '2018-09-30',
+    'sha256' => 'b9e3e5a13c17ec78dc53892c1a4b0ac71718670897f1a901ac86cb26b760ed58',
+    'sha256-ungz' => 'd4e12bfec399f7f026d0b182fe83289459d133aa29c16f0dfed92ec1f27cdc56',
+    'size' => 10194
+  },
+  'Test-CPANfile-0.03.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9e0a0f175fc490dd1ef9d4b01a5f710b',
+    'mtime' => '2018-12-05',
+    'sha256' => '82af73985c39c2e63cb192fd7f0f24681d410791dbc94cfcc9e4ac7e83c388b6',
+    'size' => 1638
+  },
+  'Test-CPANfile-0.03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1d1bbe27d5779ebbb6e260f47009dfa5',
+    'md5-ungz' => '2c69bc512e192d63788c5bc1f8ac9d8f',
+    'mtime' => '2018-12-05',
+    'sha256' => '4322e6bb37a1b676b0579b41edaf5166c3cebc5a9caaae7a017a66b0548fa2c4',
+    'sha256-ungz' => '14bcc3904f914138c77d5589da5da3732b17ee4120cd0a154db3948b7755f1bd',
+    'size' => 10788
+  },
+  'Test-CPANfile-0.04.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'aaf40ba2a00955c5b71d22ed23ef6e36',
+    'mtime' => '2018-12-05',
+    'sha256' => '87cf84bd814d061bf73d2827c800a5f8848d39da51ad742496a2e40f243162c2',
+    'size' => 1638
+  },
+  'Test-CPANfile-0.04.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f71ca5fb86a85ab43713f8f111049f57',
+    'md5-ungz' => 'c979c033ad32b605691fab0ae602902d',
+    'mtime' => '2018-12-05',
+    'sha256' => '0d93573f95263d3f0abf5f7ae7ea1ffc0983cc10e3ff12eaa2b967a8308494c8',
+    'sha256-ungz' => '9216535e4aa799896887daa35c5ac35ff0fdfbd9421ee9daec2d0109f82b455b',
+    'size' => 11016
+  },
+  'Test-CPANfile-0.05.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '73f91f71a05448b85c757dbbd3703830',
+    'mtime' => '2019-01-15',
+    'sha256' => 'fae114727224a5020311b514d770860e04f5d392b976caf363ae8ff454ef1840',
+    'size' => 1638
+  },
+  'Test-CPANfile-0.05.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '48b4934467cbae39d8a0e61f1b5fe9e8',
+    'md5-ungz' => '2c31e983addcbb62678679a13c4f59ab',
+    'mtime' => '2019-01-15',
+    'sha256' => '1709b2f1e54454881010c04d9a8cc4c4f1434734ce469c7a428b01aadb907545',
+    'sha256-ungz' => '898b05dbc7326bcc47823c58724103627494f47bd1f5e7242df5150c830417d3',
+    'size' => 11048
+  },
+  'Test-CPANfile-0.06.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c34740db49d6570427f1e0ed12e71b91',
+    'mtime' => '2019-01-15',
+    'sha256' => 'a4b4edaf3b0fb9e1184082b2ee6feac74baa654e181279d4a7ad170f50126cc5',
+    'size' => 1638
+  },
+  'Test-CPANfile-0.06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ac54eaeb9487aa073c22e0ce25c4f1ce',
+    'md5-ungz' => 'a9cf5e8cf9e175bbaccf0497d89d2672',
+    'mtime' => '2019-01-15',
+    'sha256' => '40659ceb9ef530f6579ae90b81f078b4cdf6775e5aa38301e07409f1d5b3813d',
+    'sha256-ungz' => '88565049dba3c6c677dcc53a9ed693def29c77ae6f84966c6a0debec1bfb01df',
+    'size' => 11056
+  },
+  'Test-CPANfile-0.07.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '46966bd0e9c95a1e8b96def6eb802349',
+    'mtime' => '2019-08-22',
+    'sha256' => '0c6c16123bbd737ad6265c9ae37114f3184ea7253a00f40bf2838e3e6fc6f6d0',
+    'size' => 1643
+  },
+  'Test-CPANfile-0.07.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'aaa578b884d2d920aa7cb06834ff9eeb',
+    'md5-ungz' => 'f62b4f696df3feafa06ea8c0dced4158',
+    'mtime' => '2019-08-22',
+    'sha256' => 'dce135a81929b6f73b5cbf74d28ed55aa332e392f5f52010cfce7a183fe2f1e9',
+    'sha256-ungz' => '79bf91a681db3e655d7cd5e5014a053923ef38facd6ae84cd655481f243b3e39',
+    'size' => 11126
+  },
+  'Test-CPANfile-0.08.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'fbf4890843f5f7f85c692ff231a1f914',
+    'mtime' => '2020-10-24',
+    'sha256' => '7051c16b8ad85bc35a0602aaf3f3cd3257b7d7e4125ab4494ff3290fc32ab4ae',
+    'size' => 1643
+  },
+  'Test-CPANfile-0.08.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '86567e645a9bdf0f41c4bc17b412ca32',
+    'md5-ungz' => 'aea16718114d8d01e8fb9bde18283034',
+    'mtime' => '2020-10-24',
+    'sha256' => '48edb5c93fce52239207f36ca6216473e4177fbc6ef0ae443c1c4728e1ffc882',
+    'sha256-ungz' => '026422822bc6ba6bfec9a1ad7b1207f7016da068b6fd91a3d5ea8473e9e250f2',
+    'size' => 11159
+  },
+  'Test-Classy-0.10.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8c71cbc62a55bd3f57aa66c3c7936284',
+    'mtime' => '2014-11-07',
+    'sha256' => 'f75ab4ad2ee075402333a7a9037a7249716e6afa4fb05be40ff79deabcf30c77',
+    'size' => 1193
+  },
+  'Test-Classy-0.10.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '0c0bed16d4b973a79b9dd4ca6fa0b193',
+    'md5-ungz' => 'f29163cef907c1f8da22f02035205937',
+    'mtime' => '2014-11-07',
+    'sha256' => '55dc2a7451195566ebc598dd81cda92a3db52abbc3c89b2c1de564a44456dfe3',
+    'sha256-ungz' => 'b232e8a27b1db86dde113a3219e6e7c49cdbc2dc692e9615311c8c4cb3611030',
+    'size' => 10163
+  },
+  'Test-LatestPrereqs-0.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'd3e0cc6c33c815cc270f17585175ae16',
+    'mtime' => '2009-07-10',
+    'sha256' => '49f699fa43556c12da8e97ca47aa24a2f1b1861ebce06764580a1cce34beb86f',
+    'size' => 759
+  },
+  'Test-LatestPrereqs-0.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4f7547adcbf18469e3a803b28d490d20',
+    'md5-ungz' => '348e6a5b5efb75e2ecd7108c69346d92',
+    'mtime' => '2009-07-10',
+    'sha256' => '42e53349a804ed12cf259eaf3e816062567f997718fdd922be51c17cf90a6325',
+    'sha256-ungz' => '6e33b0c36c9281b8c8938ddae1a34560e1fa156cf72ce57e7293147c21a3be0e',
+    'size' => 5771
+  },
+  'Test-MobileAgent-0.06.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '768ba8d8dbfb958e57345f4cf9f309e5',
+    'mtime' => '2012-02-16',
+    'sha256' => 'e25857e3c3e8811afd044bb211ad9271ead74dcd80259b6558f595042764875e',
+    'size' => 619
+  },
+  'Test-MobileAgent-0.06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '0f3d32bf56164de6188463cf06947c00',
+    'md5-ungz' => '83c30296370e82ae98f402b945c7c150',
+    'mtime' => '2012-02-16',
+    'sha256' => '682db1032dc32b6b4f7d41ec01db667a7a4a4ab285da3a8d687cefa2b9ed3199',
+    'sha256-ungz' => 'bc2f6b30b3d8c108e1d7cdea65d151b86c01e573c29a5722e28a914498ce7d97',
+    'size' => 15214
+  },
+  'Test-PAUSE-Permissions-0.06.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'd081475f681d9e27be2febbd40491c5c',
+    'mtime' => '2016-04-22',
+    'sha256' => 'b37da31e61786a8528262c945702f1107f2feebf170eaf45f4f0a3d2da453fd7',
+    'size' => 1358
+  },
+  'Test-PAUSE-Permissions-0.06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '09595be62fdbc27b79051a770d3cbe5e',
+    'md5-ungz' => 'b07faca63c1f671972dac72d8da15d42',
+    'mtime' => '2016-04-22',
+    'sha256' => '08512fa2f9fa05ef1100ef540db88ff5e2804bd38a34cd6e96bd86ec786f57e7',
+    'sha256-ungz' => 'a822b0f7b6ee447dd74415f84787852ed2997a9a8ff15a107b58ec7968636b9d',
+    'size' => 5919
+  },
+  'Test-UseAllModules-0.17.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9f2d6bf856ec131787b82148437ad5a0',
+    'mtime' => '2014-11-13',
+    'sha256' => 'eeeadf8909dc01c8bfcebe148546a93f9f8290711673dc4304737f0b27beb74e',
+    'size' => 1133
+  },
+  'Test-UseAllModules-0.17.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'aa7168526e2b3ec54fc705c6e260fbf6',
+    'md5-ungz' => '54cb542c6433785cdb10a7daa7a367a9',
+    'mtime' => '2014-11-13',
+    'sha256' => 'a71f2fe8b96ab8bfc2760aa1d3135ea049a5b20dcb105457b769a1195c7a2509',
+    'sha256-ungz' => 'ac9d92490b0032c2f3ddd9f51964ee774ffa026f9fcf5ebc44089f744965599d',
+    'size' => 5014
+  },
+  'Text-CSV-1.90_01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'd1d59d927804aab17cb152a2e45d96a8',
+    'md5-ungz' => '1efe573d341586fe63593b951eff28e9',
+    'mtime' => '2017-01-20',
+    'sha256' => 'f35ec8411368dcc89da4991ace070b4656e20dd8a9d7a22218685afbbc1813a3',
+    'sha256-ungz' => 'f9c2d127bc52e6a7e16ed49767e3b8b1a326dea6f7fe09af38d596f3ae7d0dbd',
+    'size' => 113021
+  },
+  'Text-CSV-1.91.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'abdb0623563bcf120b19f9aa9c871fa7',
+    'mtime' => '2017-01-28',
+    'sha256' => '073f2f2ceee3d26a0d1c0449055c78d647a7e69745b93ba99ab3ca9f4e5b886e',
+    'size' => 1174
+  },
+  'Text-CSV-1.91.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2b8758372573c5488afa0f44bd584cc6',
+    'md5-ungz' => '89b30054141b1aa0a862553f034f402e',
+    'mtime' => '2017-01-28',
+    'sha256' => 'b16c36cc1705f9f5c5c0c190e9bf5b1dd9cb36980a6da342c8d5860f264b441f',
+    'sha256-ungz' => 'b7a579d34a70d128adc7506c41b3c7162e7c0babf4ee2ffa445c04b87ee1185e',
+    'size' => 113028
+  },
+  'Text-CSV-1.92.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '7617a9fcaaa563a5377b6a65c9a0e8ac',
+    'mtime' => '2017-04-01',
+    'sha256' => 'eeabed1b6f4a2f8f60ac50c495035e42a015983dbf8b7e5acd86db5938ac608d',
+    'size' => 1174
+  },
+  'Text-CSV-1.92.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '48522ead8a64a6745d8c8557cc3c1205',
+    'md5-ungz' => '0ac7cdab9047c645de0a47c4af7b0f61',
+    'mtime' => '2017-04-01',
+    'sha256' => 'c705804519ab5ed9bfad7767704ec7725d8eb57f7c67af855353b7708ade6585',
+    'sha256-ungz' => 'f6a6fd1c7483fee2b558d53b5905c1b431b1a7c68c29331438818793bc489874',
+    'size' => 113608
+  },
+  'Text-CSV-1.93.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '616ae7961bf3bf9d824d95aabf412bee',
+    'mtime' => '2017-04-04',
+    'sha256' => '18cb2db9230ff0679c07ecb6ef03e7c223c383f7a45c32f19dad1b635368bb81',
+    'size' => 1174
+  },
+  'Text-CSV-1.93.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2d6761f7889cb1f3e04652eb40b061dc',
+    'md5-ungz' => '26226ddc17d15a2efc637d5f97fa8f6b',
+    'mtime' => '2017-04-04',
+    'sha256' => '8972a467136a328660dba8cc5150e9cf2aff344304903feec27fb877482b81a2',
+    'sha256-ungz' => '89683626e5473617d9502a96b61e02193ad6f07c48953232e9af8d2e33879921',
+    'size' => 113632
+  },
+  'Text-CSV-1.94.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '09c114678c24036149aa381ae7ceb7ac',
+    'mtime' => '2017-04-11',
+    'sha256' => 'b2c82b883fa2bf2d9dae30536926cd590a255cc3f4adb9d7a6e0e526a325ab84',
+    'size' => 1177
+  },
+  'Text-CSV-1.94.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'fc85833d1d165c24c0fec83ab90f3d17',
+    'md5-ungz' => '8678693ccd42f956c21a1d4b06523602',
+    'mtime' => '2017-04-11',
+    'sha256' => 'e932a0f15bf4cf7cb1d5c5c55fb020d7cface59aa1a8142cb7bfa58fdd3d8a54',
+    'sha256-ungz' => '33d5a3e2eaa05e6547928d0caa43f4ddd5a7f6333ebe31fb2afe462927d9af2f',
+    'size' => 113691
+  },
+  'Text-CSV-1.95.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '8beb183e02acbfb4b56e891e79d674dd',
+    'mtime' => '2017-04-26',
+    'sha256' => '3ad4d8cebf6ab74bd65600f2f3a02c8390893ce201016b86e2ce967491571de6',
+    'size' => 1177
+  },
+  'Text-CSV-1.95.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1e076b4b1f8ba6a5003bf93f3c437a9e',
+    'md5-ungz' => '1a5e5896898a94b7192fcfa2f5b87ecf',
+    'mtime' => '2017-04-26',
+    'sha256' => '7e0a11d9c1129a55b68a26aa4b37c894279df255aa63ec8341d514ab848dbf61',
+    'sha256-ungz' => 'c6af6b824a6c2b879aa7ee9773619d383bdc9394a8bac6f56bf41d63e020f0b9',
+    'size' => 114054
+  },
+  'Text-CSV-1.96.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '959f6f6b4e582e2dc505d156eaa6459b',
+    'mtime' => '2018-08-14',
+    'sha256' => 'f51d646690e23dba1a5917d6faebbdfb4c78b5f45d271ff2e6fe354e2054df52',
+    'size' => 1400
+  },
+  'Text-CSV-1.96.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1dbd31c0f94e4c339a29da2cf86035f6',
+    'md5-ungz' => '2c3674f447d22dcb05f83f9583e3c563',
+    'mtime' => '2018-08-14',
+    'sha256' => '6957c9175cc8b80e36255e154831ad5c77b7b0b3a606dd554fcf2cb2caf1a52b',
+    'sha256-ungz' => 'e7c68608a16357b6cd4d33699e64ebaa5410f1ce70dae51ad8d586b041154d06',
+    'size' => 123391
+  },
+  'Text-CSV-1.97.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f1327f7e34e1158d85e30d7b53eb9465',
+    'mtime' => '2018-08-17',
+    'sha256' => '7ef359945a3c7c3c5abca908702c0f067f03e7bc75e31735c5db52ff855dfdf3',
+    'size' => 1433
+  },
+  'Text-CSV-1.97.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '06e9ff3c867fa5ba7f8793ae06ea73ac',
+    'md5-ungz' => '6e3dfa5d9ec23115808e7fc6c0a88850',
+    'mtime' => '2018-08-17',
+    'sha256' => 'cc350462efa8d39d5c8a1da5f205bc31620cd52d9865a769c8e3ed1b41640fd5',
+    'sha256-ungz' => 'a3918c218642c8f193e7d1e3a417a1ad6d6822d00f292e6d2e715f241e04f13a',
+    'size' => 124625
+  },
+  'Text-CSV-1.98.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '96ba8c17bea190464f8b564c6f123b6d',
+    'mtime' => '2019-01-01',
+    'sha256' => '53c2740667535de6fa1ad7bb06814a8fc0a70fa4575d035fe64cc128f8b7c7a0',
+    'size' => 1433
+  },
+  'Text-CSV-1.98.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'b8b762baf2d23b0bc76942faa7c4a082',
+    'md5-ungz' => 'b52a5901da6e0e465aebaee6b2c51645',
+    'mtime' => '2019-01-01',
+    'sha256' => 'dafc7d0ab30776224ac69d5d41680f1296b936116909c5e4de9a5d2973746402',
+    'sha256-ungz' => '48ee1e502623984ddd8615a5a8aec8c8257e910afbe9413acd5cc01b6b257072',
+    'size' => 126196
+  },
+  'Text-CSV-1.99.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '163de1ab9289e21fdd12c7205e896f41',
+    'mtime' => '2019-01-02',
+    'sha256' => 'd0425e452b2e6bfaab579fb8bf67a36e49f9bf4a4766791f58000ce93fc6810f',
+    'size' => 1433
+  },
+  'Text-CSV-1.99.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f2d01a8a9d217dcc9dbe17be195898e3',
+    'md5-ungz' => '2bf508e7d7ec51e45a5444ff2b8e2168',
+    'mtime' => '2019-01-02',
+    'sha256' => 'e74ec039b12cc51d346bf1d814af7db8a05cb0a98340e7547a21646da8668cd2',
+    'sha256-ungz' => '320c1ba116109fe8253bb0ff6b41a77ee2c8d954c6f30140f257622650bc1ed7',
+    'size' => 126231
+  },
+  'Text-CSV-2.00.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'abf1a9874c72529aa4924bd7a7b16945',
+    'mtime' => '2019-05-11',
+    'sha256' => '91b3beb834f0c4d30aa8c7a739a4374cc3dad3e08751f39f8f1411c39d2332c0',
+    'size' => 1433
+  },
+  'Text-CSV-2.00.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '435951d381e814b5ce51f570a6a1dc24',
+    'md5-ungz' => '7dd01c8930259dee81940ebd513acf1d',
+    'mtime' => '2019-05-11',
+    'sha256' => '8ccbd9195805222d995844114d0e595bb24ce188f85284dbf256080311cbb2c2',
+    'sha256-ungz' => '26d72c4178dfac6b6acb796e42282a1ab192c3d1cbe7ea71afa4423c23d670f8',
+    'size' => 126921
+  },
+  'Text-CSV-2.01.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '36310699b24aea75e748063fc72ac51c',
+    'mtime' => '2021-06-19',
+    'sha256' => 'f64f7426aa7d41e686a1644c4ca71877ea7ba62b67912f5798e5abcef9b8002a',
+    'size' => 1432
+  },
+  'Text-CSV-2.01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c8fe8236ab3115fe8d82bdb6545e0770',
+    'md5-ungz' => '522f50fd4097353cacf800d2277b1189',
+    'mtime' => '2021-06-19',
+    'sha256' => '2a90a5eea3f22c40b87932a929621680609ab5f6b874a77c4134c8a04eb8e74b',
+    'sha256-ungz' => '7e4b4d103018010fa2a86b5a8bfab0d459eb52bbc02c45929d09b6e99591d57b',
+    'size' => 134279
+  },
+  'Text-CSV-2.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '1e0715c1f8a0203ea83ca15a952356b2',
+    'mtime' => '2022-08-07',
+    'sha256' => '95b0c665b4e0a0fe35b2feeb75d03a6b7be9f05dc4428077f7381535f8d23d65',
+    'size' => 1432
+  },
+  'Text-CSV-2.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'b25b9c6bb45c128484393efe082a8791',
+    'md5-ungz' => 'aeeff9aaac0bad5be2d38f2e4455a660',
+    'mtime' => '2022-08-07',
+    'sha256' => '84120de3e10489ea8fbbb96411a340c32cafbe5cdff7dd9576b207081baa9d24',
+    'sha256-ungz' => '2f4bf47e63ac143a4de26e992507c012a9f86bd0630e5e78a5dd12daa48ff772',
+    'size' => 136346
+  },
+  'Text-CSV-2.03.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a2d9c922a7343b020e995ea3d8f46c40',
+    'mtime' => '2023-08-11',
+    'sha256' => 'd15699b8d75e4ec9b33e837a48661010de29d8d100bfd6629b63125cf0de01cb',
+    'size' => 1469
+  },
+  'Text-CSV-2.03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4ee40e2404a1cf1099f5e7d94badfbea',
+    'md5-ungz' => '10509693c1441fc24c926f1d78945d11',
+    'mtime' => '2023-08-11',
+    'sha256' => '48bbce9f234935a88595618e04dd141628246d650f2a726024df1c137e0b65fb',
+    'sha256-ungz' => '781b934577150a3f38f5c33ba901fb7baaacb2f28ea7c8eeca93078da27b08b7',
+    'size' => 140735
+  },
+  'Text-CSV-2.04.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e02cca94cbf06cbb1721a82976af94f4',
+    'mtime' => '2023-12-02',
+    'sha256' => 'a3a22653e6905a8fb90e3638bc61a50bce86ac691a7943a49d65c38309bf5d76',
+    'size' => 1432
+  },
+  'Text-CSV-2.04.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '500b1cd1349e2186877c39aa404230dc',
+    'md5-ungz' => '7ba3f62d7cfa083d5488b07803e78762',
+    'mtime' => '2023-12-02',
+    'sha256' => '4f80122e4ea0b05079cad493e386564030f18c8d7b1f9af561df86985a653fe3',
+    'sha256-ungz' => 'fb59bfb524276483d0a52094cf347d4da290bfeb8e4a679239878a06d89b68d4',
+    'size' => 141037
+  },
+  'WWW-Lengthen-0.08.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ea2d2c1db9477224f16a185a399a2921',
+    'mtime' => '2012-02-18',
+    'sha256' => '5a356bf4f72faeccff0417999bb19dc2c7efaab9d7e2abe2cfd0bb12ed47e74d',
+    'size' => 644
+  },
+  'WWW-Lengthen-0.08.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'bb637f353d4061bfcd5c000221d7d57a',
+    'md5-ungz' => '37a6a9d8db12f820d577ac7359385dfe',
+    'mtime' => '2012-02-18',
+    'sha256' => '4c91110d7751b9c404bef3f8fe1796d85d6d752a6ea80f16de7be46e63711fc2',
+    'sha256-ungz' => 'b112f1199dd48359a0ea43ba077e06c4acecaf719d060fb12001c0f9e4db1761',
+    'size' => 5557
+  },
+  'WWW-Lengthen-0.09.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '59b08e5747794466ed0269090c2eff9c',
+    'mtime' => '2016-10-04',
+    'sha256' => 'ebde5b8f7c4c5cdb8e56b4e9b8578f4cf5bc97611afd9a1a4522446173aa66e0',
+    'size' => 986
+  },
+  'WWW-Lengthen-0.09.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '3f93adaf8398da4547d82b250a1da084',
+    'md5-ungz' => 'e8a030ba52b8fef0a4e01d34aba028a2',
+    'mtime' => '2016-10-04',
+    'sha256' => '14d852745de4d812107b5c580e4e7e72bd5ba556b0d81eb7ddfbdb97acd401d8',
+    'sha256-ungz' => '189a4223d1f5d690fc4726ebcc0110a7900169a710a477520895f1240759fa01',
+    'size' => 5906
+  },
+  'WWW-Mixi-Scraper-0.34.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '6419a8b8670c5df1bf34d5999e474c37',
+    'mtime' => '2011-10-28',
+    'sha256' => '1d0276b9ab862d2dfa200ea104b56edce11f88d415b0761d03183ec59de35ee6',
+    'size' => 765
+  },
+  'WWW-Mixi-Scraper-0.34.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '6f3cbd9c53d6e449389e4f00c279435b',
+    'md5-ungz' => '0e48c4b61d12b03da2cc2c7a462f0756',
+    'mtime' => '2011-10-28',
+    'sha256' => '65ba212e405e8b96d058235444dcfa7a266b81b90ec309ca6dcb1bbd4175f7e0',
+    'sha256-ungz' => '872adb6df34619231b90e41b49e439c477951e4d8b6007dd8c4d918a97b51c77',
+    'size' => 19392
+  },
+  'Win32-IE-SlideShow-0.03.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '04cac4ff18009ae92394598465da7d03',
+    'mtime' => '2008-05-21',
+    'sha256' => '09e34f7c1a0c86011962951329b0e10e4496f68d895e540c2cd8a1a5ab7251fb',
+    'size' => 633
+  },
+  'Win32-IE-SlideShow-0.03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c5caea2b7399a966de224dcd269aa892',
+    'md5-ungz' => 'c02eaf53cffc78cd3412c1e3cab60b2d',
+    'mtime' => '2008-05-21',
+    'sha256' => '4d94c0e9405d52e3aaeaf31226e3c6f9869606476912e9e2089254c2ccb5dfba',
+    'sha256-ungz' => '61e2daaf0256db7ffb4d9cf972be8e21ee421b85d7787d52d23f64dd817f8e16',
+    'size' => 4158
+  },
+  'Win32-IEFavorites-0.06.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e1e490b04524d99e93edbf0d28add2c2',
+    'mtime' => '2012-04-21',
+    'sha256' => 'b81cf55a5cb020c8f73d193f4d81dbfb528d0ad45edfc5c545a0ef56ab9a3d9a',
+    'size' => 1061
+  },
+  'Win32-IEFavorites-0.06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '41b1e693e59e1d4b7168e694434cc84c',
+    'md5-ungz' => '1b6f9e4ecdd40f9462a87e844c09206a',
+    'mtime' => '2012-04-21',
+    'sha256' => 'da942af6bbd9d1a500cb4721d9a9fb1caeaeff6abc631c4784590505fec9bdf8',
+    'sha256-ungz' => '46ca4b3a6a2ac376428fffcefbae1dc2fe8e02b0e0eef497b8e60a4341d030bc',
+    'size' => 4010
+  },
+  'Win32-InternetShortcut-0.04.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ae9fd46b7a0ce5747fb6119d35a690be',
+    'mtime' => '2008-04-05',
+    'sha256' => '68eddd2e864fe01bfebb580672556cb361212f65dfaf165ff971240916079cd0',
+    'size' => 486
+  },
+  'Win32-InternetShortcut-0.04.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '3a0daa5e5a0df7e025b0f99c82f0c947',
+    'md5-ungz' => 'd2cb204bc6c38827df54b151b19472f3',
+    'mtime' => '2008-04-05',
+    'sha256' => 'df200567b3de60ed884ffe707cdbbdebecce91f6b7b786b677af6bd64364a42d',
+    'sha256-ungz' => '6488f25487e539520255f6729599bae43de7ddaf718b14e503bd92904497c51c',
+    'size' => 7895
+  },
+  'Win32-PowerPoint-0.09.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'c4ad6e79edc6a57405922ff04f581388',
+    'mtime' => '2008-10-30',
+    'sha256' => '23596fc23142fe817141e69551b16a503b930223322d87eb588ae34c164925f5',
+    'size' => 695
+  },
+  'Win32-PowerPoint-0.09.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '9b8422f5ce23cdb97e3f9e822a590324',
+    'md5-ungz' => '87a50daf24984a1b174b0996817e8180',
+    'mtime' => '2008-10-31',
+    'sha256' => 'f6fc3f17a4c9eb3e8b84695011bc590a057ca15fa14dcd9fe5659087106d4d28',
+    'sha256-ungz' => '93a0b49a772237e652922d7a069a542117b3d96f007ad9e0150e0a5c0f36177b',
+    'size' => 8982
+  },
+  'Win32-PowerPoint-0.10.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'ccb9c5012f8243ac7ab6df66d623e12a',
+    'mtime' => '2014-11-24',
+    'sha256' => '7707531d827483768c78fdfe1dda62c0a81086409454e63329aede172a9711d1',
+    'size' => 1155
+  },
+  'Win32-PowerPoint-0.10.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '3257d26ca7bf710b46f3b38aeac47ebb',
+    'md5-ungz' => 'feb1f9bd8fba0046355898707d1084d1',
+    'mtime' => '2014-11-24',
+    'sha256' => '6ad5b8cfeebdafa560c2389017a3dfc81122cae9fded2cc154dc2d625838ef81',
+    'sha256-ungz' => '66d74829aaac83ff3c44f51e7b6e4d400b7b39912a3d0462b27dca2f95640927',
+    'size' => 9872
+  },
+  'Win32-TestServerManager-0.04.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '15ebb832c3f1612899e140701ebeaae3',
+    'mtime' => '2008-10-18',
+    'sha256' => '2291db74b86daa7164d90a03306c15a3af1eede6d19f47f54edf66e95e4564c6',
+    'size' => 725
+  },
+  'Win32-TestServerManager-0.04.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'e4b5113e9f07315fcc63cc1782215971',
+    'md5-ungz' => 'd450df0127acfff8d12f709a1cb6f012',
+    'mtime' => '2008-10-18',
+    'sha256' => 'f5d047c9cf02f1c00b222c0f75ad38de2eb05d136890088887c5c90dc8f268f3',
+    'sha256-ungz' => '34c6425ac1216ace3c7fb9daf1f60dd591be893d61339579febe4db7ffa38d08',
+    'size' => 5356
+  },
+  'Win32-TestServerManager-0.05.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '6d6769e084220c9f4be5ba8c376dc495',
+    'mtime' => '2020-02-29',
+    'sha256' => '7e1c3f377f6bd629a2e247080b2f1f755591675cc118a0fd6c71d0c88eab6ee8',
+    'size' => 1420
+  },
+  'Win32-TestServerManager-0.05.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '4ab7bdef4c511dfe5f8d4bae5a173cc9',
+    'md5-ungz' => '49087ba6d9d081948920792ba2dbfe7e',
+    'mtime' => '2020-02-29',
+    'sha256' => 'c2d0c26c7c7e9fbe9f70cbb45539e40f65e093f3a108dbe8f9416e4520a4f9cf',
+    'sha256-ungz' => '50b959981eb9e42cd519bac177cc84c1792403642d4dbc675eeebed7cb05393d',
+    'size' => 5800
+  },
+  'Win32-TestServerManager-0.06.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '6927d7662de93103113065cf87424647',
+    'mtime' => '2020-07-22',
+    'sha256' => '32b3e60e76f693f0bd935a21da80537df23bb70e32b59ac48be5a60f05a172dd',
+    'size' => 1420
+  },
+  'Win32-TestServerManager-0.06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '051703c078d00111ba2f6eb05a0c45ed',
+    'md5-ungz' => '5214ef10247a181de00e050c0388e024',
+    'mtime' => '2020-07-22',
+    'sha256' => '340cfa58bd138403b0b034138a99a03b33a73d2aa5e2e82ea586980e3e583d0a',
+    'sha256-ungz' => '252a5747b8cad67a618711e7482a65ad570567c4ef10f4bcc7f1a6a93906ce52',
+    'size' => 5929
+  },
+  'Win32-UrlCache-0.06.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '68b70f277f9816d728d03955d1894ecf',
+    'mtime' => '2008-04-05',
+    'sha256' => 'ddb41ba391cf3a4e0aabce50e040a416ff038c04b47191df6b4fdff5699569bd',
+    'size' => 674
+  },
+  'Win32-UrlCache-0.06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'fb0dc6042f1193fd0ea2691f248bb975',
+    'md5-ungz' => 'b7b25a61eb0a8d54239a6c1a0fe84885',
+    'mtime' => '2008-04-05',
+    'sha256' => 'f75be9768dc6936d19cd5c35369ddfbb12b15d38a4768260ae8df23e09374b0b',
+    'sha256-ungz' => 'be9cf3aa171c4743b2ddd7adb8c99ff96fbfa0a0df172aae3ffb0aa42a9db4c3',
+    'size' => 7366
+  },
+  'WorePAN-0.15.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a1e75b9deb8599101e5b65bc97274c01',
+    'mtime' => '2015-03-11',
+    'sha256' => 'a390a819c65d2dd98de125fceea8de16b26743a71b8f0de6c71488d327e030bf',
+    'size' => 1598
+  },
+  'WorePAN-0.15.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'cbda983b47c98b7b661584dad795fb9c',
+    'md5-ungz' => 'cc316d9bfcb2d13b3804114c571f0562',
+    'mtime' => '2015-03-11',
+    'sha256' => 'fb81a7ff8d479a3ab8f9f6b25f38a334354c87c658df53f56ab8ee7c4c697999',
+    'sha256-ungz' => '6753d6e772416627f3275d7bcabfd1f04e389b633a06b48580cede783a77f265',
+    'size' => 11684
+  },
+  'WorePAN-0.16.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '58d22d393379d49c50d35873c16acd1a',
+    'mtime' => '2017-01-15',
+    'sha256' => 'c5ab7b6e577f164eae14beb7ce7d3ac95749d8af399aeb67d6a868dade5e3595',
+    'size' => 1656
+  },
+  'WorePAN-0.16.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '2a41d87f2b61f196aa3f7452a4118962',
+    'md5-ungz' => '060033a19817d40361ca273cf8b3de03',
+    'mtime' => '2017-01-15',
+    'sha256' => '2cf347debe81b8b32cf4edda9e32f2c11eae74ec915509d67caf709000c5de0b',
+    'sha256-ungz' => '59a1dcab74fefa31407dfedecf2bc0ad8d946f68d796b2aebaea8a57f5ea7604',
+    'size' => 11753
+  },
+  'WorePAN-0.17.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '7e15aae87fe589109f9fccfae3b81cf7',
+    'mtime' => '2017-04-22',
+    'sha256' => 'd32b56647bf48f2c0549d9a3c85245120cdfaabd2eb69fd9ad89d79d888464ae',
+    'size' => 1689
+  },
+  'WorePAN-0.17.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '122df1effcaf5fc7550739d19a7da62b',
+    'md5-ungz' => 'ff54f68762feb2f2b8f9cecd93899fc2',
+    'mtime' => '2017-04-22',
+    'sha256' => '4ad487a0fc3c5f9bd9853413176f07ec5d0936f921128640bfcf35829618186b',
+    'sha256-ungz' => '85c35cd03605217d34c6947e1e398d4e16392bdac2e4dfabb25d9bd71dc3d568',
+    'size' => 11848
+  },
+  'XML-FeedWriter-0.06.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '16a9ca48f8f4cb2495f3623066f4c905',
+    'mtime' => '2008-08-17',
+    'sha256' => 'fcc32a2cfd7bad5207b121ea92506cce39148d5bb7a60969e93dcb34959ae92b',
+    'size' => 767
+  },
+  'XML-FeedWriter-0.06.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '029e645cdf15429213cb159e09a71258',
+    'md5-ungz' => 'ed991968e199201ab37ca9d9d36bb2c9',
+    'mtime' => '2008-08-17',
+    'sha256' => '0f30eee415c15f7061a5abaf7bc83acf7a77f530c0388a865a27395d7151623c',
+    'sha256-ungz' => '806554bf6cdf6ad51569db218299ea46945a45c73408d22f9f2a403f56c93520',
+    'size' => 7793
+  },
+  'XML-SAX-SVGTransformer-0.01.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '50082c6cf72817afa88389129e237fe1',
+    'mtime' => '2021-12-05',
+    'sha256' => '1deb0b96376952f0e2ebb85138c225b027d02e0e7f9763ac82c1b15dbd17f176',
+    'size' => 1347
+  },
+  'XML-SAX-SVGTransformer-0.01.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'a348b966ebadae083e45e0e59d4e1dc9',
+    'md5-ungz' => '103d46d64f8dbd2fd773102811f60e27',
+    'mtime' => '2021-12-05',
+    'sha256' => '057d3217e700d49acc789f11572546c24c30d692669528844b77621d66c0777f',
+    'sha256-ungz' => '9257598e016a134fb8b26daae543312b4f2a4675ecbae85bf184b0e009d8ab9b',
+    'size' => 12243
+  },
+  'XML-SAX-SVGTransformer-0.02.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'acb79e5f4d8ddf62ab1990a9f86c9ffc',
+    'mtime' => '2021-12-06',
+    'sha256' => 'e91561eca7e18788f35313b124fb88a60178ad5b33cbd70ff4b9a4ade4baaece',
+    'size' => 1350
+  },
+  'XML-SAX-SVGTransformer-0.02.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '13367714abb2f114ddeb34355c911580',
+    'md5-ungz' => 'e45f9a263d2ffab58d6b3f5ac18a53cb',
+    'mtime' => '2021-12-06',
+    'sha256' => 'e74e4fa3ccaa621140e6c05a8edbbd7a7c70b231ce8efd169c900b861571a3d3',
+    'sha256-ungz' => '68bc2265879420640e5c4197bff073be75da9b2d1da72b4cf7ebaacd9f0f840b',
+    'size' => 12293
+  },
+  'XML-SAX-SVGTransformer-0.03.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '45df8057a107be4082d0455727d40674',
+    'mtime' => '2021-12-12',
+    'sha256' => '961d2f2761442dc3e638c0d18a8224adac784d893a9c99015009760abe8a1475',
+    'size' => 1350
+  },
+  'XML-SAX-SVGTransformer-0.03.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '68f3e5d60f677eaa49e796350e0deae7',
+    'md5-ungz' => '0c0213bf2358ac83aeb5e8f8b24eaa17',
+    'mtime' => '2021-12-12',
+    'sha256' => 'a8c519e4b74988154eadf799089311ab48fd0369cd488346eb7440a00f550327',
+    'sha256-ungz' => '7f39ae26ab1eace9f1cb4448a08ed5dcd685d4ad831084ef2201825e71d6b3de',
+    'size' => 12414
+  },
+  'XML-SAX-SVGTransformer-0.04.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '50beda1c51e0c8fe0bfb40671ab3acd1',
+    'mtime' => '2021-12-18',
+    'sha256' => '332b64fb7cae33bfe727c02f7277839038cce292400363c455c65b845c8ef204',
+    'size' => 1350
+  },
+  'XML-SAX-SVGTransformer-0.04.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '22b2e975e74938b2de31827eb9448766',
+    'md5-ungz' => 'fa2183b73bb8e8d5d8be4a3944795f4e',
+    'mtime' => '2021-12-18',
+    'sha256' => 'c528567ed3a79167dba9b06a08e708a60d4b0d81be1653ab4f7aa57fa560a991',
+    'sha256-ungz' => '4ceac0f981d89df84d6d7cf616ddc4c71452a7b85c13c1ff8a5241ab0d504908',
+    'size' => 13545
+  },
+  'XML-SAX-SVGTransformer-0.05.meta' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => '511f73c753d112fb8acc5d18e05db2a9',
+    'mtime' => '2022-02-27',
+    'sha256' => '2c6d24c2fefadd0623a6f664cec6a739f7d28b54315c297d9122d35b0ea73e45',
+    'size' => 1350
+  },
+  'XML-SAX-SVGTransformer-0.05.tar.gz' => {
+    'cpan_path' => 'I/IS/ISHIGAKI',
+    'md5' => 'f84c8b2820269169ac80599f12d54be2',
+    'md5-ungz' => '8fa1ff6ed500fa3d975a3b7852a2e127',
+    'mtime' => '2022-02-27',
+    'sha256' => '3f8f28df4278dda98287bc2254d2d8ec1c061ebaad984a14ee2780d7d8d4b888',
+    'sha256-ungz' => '125cdd065ce709b672583631997413cbb0feed937f7ea84e47dfa59220e2ae36',
+    'size' => 13684
+  }
+};
+__END__
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.14 (GNU/Linux)
+
+iQIcBAEBAgAGBQJlayioAAoJEHdXYSWpBfG6B14P/0rKKJ3doHrnJ0NYTmgAs9/+
+VPV+uTUpVK8KgoN+fCBn1NB5k88TbaMwriige6PaILcsFgDslARPxy9jAnYFUhqC
+S3N3XDmOmGAYNPqEHdr3prcqUebK70W8qbtazJPhmo+ogrMFi3myW1OgiGM9FJjM
+PsaPzt4tcqm46ypQCjDlvQt5/9mpjyd2xe4Uk5ER9ncVbTUMNSP8UW939j0Y4mEk
+0II04Fz7UHusx3LQhK+1z7hvbvlKiGenIScdhsdMEZKA8pgS+lzHg2RvkSL45NAD
+/IdN9k0DYKk+Idxzz2bNL3K2GUGhwMUrKAgke14z8SjlgpTva2CZu64LzTe/jXVx
+x7rqrIHlCn03YhFGR2pBPWP0VR5uGMFox1XPpET7mu397PKQbMRwGBigDBrZZA5V
+RiIWEa9h9+NO2T5kz6VuDY5W/N6px1X2UIRtYdMkSRRo0BBp3MuJNom6Dh1/l3nk
+DcsCGUCb+ycfFXhBIBpjzB1rQvSHqd7zz/E4iyZVcoWSDutEHI0HS3DgaycZmfGT
+CypBaBR0xsj5HbVs0730xSQW944rF4dF3SB6/OKNy9tgvCJe15atJmEaZam6cwjN
+OYs/JY93uG4i2txK9iyqmqyTmORykisCXjkGnby5JasFIkPQflrPaZqehf8705rL
+QPhFBzDojZLxa/bNUn9V
+=t7Vl
+-----END PGP SIGNATURE-----
