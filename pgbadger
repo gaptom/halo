@@ -43,3 +43,16 @@ sed -i "/log_duration/c\log_duration = on" $PGDATA/postgresql.conf
 sed -i "/log_lock_waits/c\log_lock_waits = on" $PGDATA/postgresql.conf
 sed -i "/log_destination/c\log_destination =csvlog" $PGDATA/postgresql.conf
 sed -i "/log_line_prefix/c\log_line_prefix = '%t [%p]: [%l-1] user=%u,db=%d,app=%a,client=%h '" $PGDATA/postgresql.conf
+
+sed -i "/logging_collector/c\logging_collector = on" $PGDATA/postgresql.conf
+sed -i "/log_filename/c\log_filename = 'postgresql-%Y-%m-%d_%H%M%S.log'" $PGDATA/postgresql.conf
+sed -i "/log_truncate_on_rotation/c\log_truncate_on_rotation = off" $PGDATA/postgresql.conf
+sed -i "/log_truncate_on_rotation/c\log_rotation_age = 1d" $PGDATA/postgresql.conf
+sed -i "/log_min_duration_statement/c\log_min_duration_statement = 1000" $PGDATA/postgresql.conf
+sed -i "/log_checkpoints/c\log_checkpoints = off" $PGDATA/postgresql.conf
+sed -i "/log_connections/c\log_connections = off" $PGDATA/postgresql.conf
+sed -i "/log_disconnections/c\log_disconnections = off" $PGDATA/postgresql.conf
+sed -i "/log_duration/c\log_duration = off" $PGDATA/postgresql.conf
+sed -i "/log_lock_waits/c\log_lock_waits = off" $PGDATA/postgresql.conf
+sed -i "/log_destination/c\log_destination =csvlog" $PGDATA/postgresql.conf
+sed -i "/log_line_prefix/c\log_line_prefix = '%t [%p]: [%l-1] user=%u,db=%d,app=%a,client=%h '" $PGDATA/postgresql.conf
