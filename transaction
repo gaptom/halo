@@ -16,7 +16,7 @@ select userid::regrole,dbid,query from pg_stat_statements order by mean_time des
 select userid::regrole,dbid,query from pg_stat_statements order by total_time desc limit 5;
 
 响应时间抖动最严重SQL
-select userid::regrole,dbid,query from pg_stat_statements order by stddev_time desc limit 5;
+select userid::regrole,dbid,query from pg_stat_statements order by stddev_exec_time desc limit 5;
 
 最耗共享内存SQL
 select userid::regrole,dbid,query from pg_stat_statements order by (shared_blks_hit+shared_blks_dirtied) desc limit 5;
