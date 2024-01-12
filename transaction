@@ -25,4 +25,4 @@ select userid::regrole,dbid,query from pg_stat_statements order by (shared_blks_
 select userid::regrole,dbid,query from pg_stat_statements order by temp_blks_written desc limit 5;
 
 查看调用频率
-SELECT query, calls, total_time, rows, shared_blks_hit, shared_blks_read FROM pg_stat_statements ORDER BY calls DESC;
+SELECT query, calls, tatal_exec_time, rows, shared_blks_hit, shared_blks_read FROM pg_stat_statements ORDER BY calls DESC;
