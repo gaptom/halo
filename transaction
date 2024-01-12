@@ -2,3 +2,24 @@ SELECT pid, now() - pg_stat_activity.query_start AS duration, query, state
 FROM pg_stat_activity 
 WHERE (now() - pg_stat_activity.query_start) > interval '5 minutes' 
 AND state = 'active';
+
+最耗IOSQL，单次调用最耗IO SQL TOP5
+select userid::regrole,dbid,query from pg_stat_statements order by (blk_read_time+blk_write_time)/calls desc limit 5;
+
+总最耗IO SQL TOP5
+select userid::regrole,dbid,query from pg_stat_statements order by (blk_read_time+blk_write_time) desc limit 5;
+
+最耗时SQL，单次调用最耗时 SQL TOP-5
+select userid::regrole,dbid,query from pg_stat_statements order by mean_time desc limit 5;
+
+总最耗时 SQL TOP5
+select userid::regrole,dbid,query from pg_stat_statements order by total_time desc limit 5;
+
+响应时间抖动最严重SQL
+select userid::regrole,dbid,query from pg_stat_statements order by stddev_time desc limit 5;
+
+最耗共享内存SQL
+select userid::regrole,dbid,query from pg_stat_statements order by (shared_blks_hit+shared_blks_dirtied) desc limit 5;
+
+最耗临时空间SQL
+select userid::regrole,dbid,query from pg_stat_statements order by temp_blks_written desc limit 5;
