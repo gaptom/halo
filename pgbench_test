@@ -1,0 +1,18 @@
+pgbench -i -s 20 -d postgres
+pgbench -M prepared -r -c 50  -j 50 -n -T 180 -h 10.28.154.81 -p 5432 -U postgres postgres -f 123.sql@100 -f 1234.sql@1
+pgbench -M prepared -r -c 10  -j 10 -n -T 180 -h 10.28.154.81 -p 5432 -U postgres postgres -f 123.sql@100 -f 1234.sql@1
+pgbench -M prepared -r -c 200  -j 200 -n -T 180 -h 10.28.154.81 -p 5432 -U postgres postgres -f 123.sql@100 -f 1234.sql@1
+pgbench -M prepared -r -c 100  -j 100 -n -T 180 -h 10.28.154.81 -p 5432 -U postgres postgres -f 123.sql@100 -f 1234.sql@1
+pgbench -M prepared -r -c 20  -j 20 -n -T 180 -h 10.28.154.81 -p 5432 -U postgres postgres -f 123.sql@100 -f 1234.sql@1
+
+\set aid random(1, 100000 * :scale)
+\set bid random(1, 1 * :scale)
+\set tid random(1, 10 * :scale)
+\set delta random(-5000, 5000)
+BEGIN;
+UPDATE pgbench_accounts SET abalance = abalance + :delta WHERE aid = :aid;
+SELECT abalance FROM pgbench_accounts WHERE aid = :aid;
+UPDATE pgbench_tellers SET tbalance = tbalance + :delta WHERE tid = :tid;
+UPDATE pgbench_branches SET bbalance = bbalance + :delta WHERE bid = :bid;
+INSERT INTO pgbench_history (tid, bid, aid, delta, mtime) VALUES (:tid, :bid, :aid, :delta, CURRENT_TIMESTAMP);
+END;
