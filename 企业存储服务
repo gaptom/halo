@@ -1,0 +1,32 @@
+存储信息
+APPID:com.huawei.ipd.plm.mpmuat 
+AK:6R3nz5Tspz5xFJoeTbSoTBCnlrrAqqoY
+SK:Y8CZxHvhWAPjSPgtbbXAN3CglXYsERYy
+域名 s3-beta-hc-kwe.hics.huawei.com  10.129.54.131
+
+使用永久AK、SK进行初始化配置
+obsutil config -i=6R3nz5Tspz5xFJoeTbSoTBCnlrrAqqoY -k=Y8CZxHvhWAPjSPgtbbXAN3CglXYsERYy -e=10.116.202.189
+注意使用IP，不用域名
+
+查看桶的信息
+obsutil ls 
+
+查看mpmtogdpbopdocuat桶的文件及文件夹信息
+obsutil ls -d obs://mpmtogdpbopdocuat
+
+在mpmtogdpbopdocuat桶内创建文件夹backup
+obsutil mkdir obs://mpmtogdpbopdocuat/backup
+
+查看mpmtogdpbopdocuat桶的backup文件夹信息
+obsutil ls -d obs://mpmtogdpbopdocuat/backup
+
+上传文件到obs://mpmtogdpbopdocuat/backup
+obsutil cp /data_bak/backup/2023-12-20.tar.zst  obs://mpmtogdpbopdocuat/backup/2023-12-20.tar.zst -vlength
+
+555G文件上传时间25m。分片20
+
+桶的计划任务(策略定时删除，文件前缀)
+在存储服务器上做策略
+
+断点续传
+obsutil cp -u /data_bak/backup/2023-12-20.tar.zst  obs://mpmtogdpbopdocuat/backup/2023-12-20.tar.zst -vlength
