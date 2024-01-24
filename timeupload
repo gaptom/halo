@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# 指定源文件夹路径
+source_folder="/path/to/source/folder"
+
+# 指定目标文件夹路径
+destination_folder="/path/to/destination/folder"
+
+# 计算当前时间、20分钟前和10分钟后的时间戳
+current_time=$(date +%s)
+twenty_minutes_ago=$((current_time - 20*60))
+ten_minutes_later=$((current_time + 10*60))
+
+# 遍历符合条件的文件并复制到目标文件夹
+for file in "$source_folder"/*.zst; do
+  file_timestamp=$(stat -c %Y "$file")
+
+  if [ "$file_timestamp" -ge "$twenty_minutes_ago" ] && [ "$file_timestamp" -le "$ten_minutes_later" ]; then
+    cp "$file" "$destination_folder"
+  fi
+done
