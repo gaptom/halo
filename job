@@ -1,0 +1,54 @@
+-- 创建一个计划任务，每天凌晨执行外部脚本
+SELECT cron.schedule('0 0 * * *', '/path/to/your/script.sh');
+
+SELECT cron.schedule('deletefile', '0 0 * * *', $$ SELECT cron_delete_file() $$);
+
+
+查看作业运行详情
+select * from cron.job_run_details;
+
+删除作业任务
+SELECT cron.unschedule(id);
+SELECT cron.unschedule('deletefile');
+
+显示所有作业任务
+SELECT * FROM cron.job;
+
+DO E'#!/usr/bin/rm -rf /home/postgres/a.txt' LANGUAGE plsh;
+
+create or replace FUNCTION cron_delete_file () RETURNS text
+LANGUAGE plsh
+AS $$
+#!/bin/sh
+find $PGDATA/log -type f -mtime +30  -name '*' -exec rm -rf {} \;
+find $PGDATA/archivedir -type f -mtime +60  -name '*' -exec rm -rf {} \;
+$$;
+------------------------------------------------------------------------------------
+
+UPDATE cron.job
+SET schedule = '0 16 * * *'
+WHERE jobid = 5;
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CREATE OR REPLACE FUNCTION trigger_delete_old_records()
+RETURNS TRIGGER AS $$
+decale
+    count1 int default 0;
+BEGIN
+   -- 在每次插入新记录时，触发计划任务删除30天前的记录
+   delete  from cron.job_run_details  where start_time < CURRENT_TIMESTAMP - INTERVAL '30 days';
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_delete_old_records
+AFTER INSERT ON cron.job_run_details  
+FOR EACH ROW
+EXECUTE FUNCTION trigger_delete_old_records();
+
+
+显示30天以前的记录
+-- DELETE FROM your_table WHERE your_timestamp_column < CURRENT_TIMESTAMP - INTERVAL '30 days';
+
+select * from cron.job_run_details  where start_time < CURRENT_TIMESTAMP - INTERVAL '30 minutes';
