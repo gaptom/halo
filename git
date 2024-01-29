@@ -1,0 +1,16 @@
+查看本地分支：git branch
+查看所有分支：git branch -a
+切换到本地分支：git checkout 分支名
+切换到远程分支：git checkout -t origin/分支名
+指定远程分支为基础新建一个本地分支并切换到该分支：git checkout -b 本地分支名 origin/远程分支名（git checkout -b KD_ZYN_1226 origin/dev）
+删除本地分支：git branch -d 分支名(git branch -d KD_ZYN_1122)
+删除远程分支：git push origin -d 分支名(git push origin -d KD_ZYN_1122)
+本地分支与远程分支创建关联：git push --set-upstream origin KD_ZYN_1226
+
+代码提交前拉去主分支最新代码到子分支
+1.本地代码更新为最新，并且切换好
+2.在子分支上运行 git merge 主分支（git merge origin/cleancode_2022Q3）（git merge origin/SIT）
+3.在子分支查看当前的代码状态 git status
+4.git add .        将代码添加到子分支
+5.git commit -m '主分支SIT同步到子分支'
+6.git push
