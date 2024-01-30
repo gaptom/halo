@@ -1,0 +1,12 @@
+5	Oracle统计信息执行
+使用oradb账号进入机器dgg-dggm8rds02-or，执行以下命令：
+sqlplus / as sysdba
+show pdbs
+alter session set container=TCMPLUS;
+show pdbs
+set time on timing on
+SET LONG 1048576 LONGCHUNKSIZE 400 LINESIZE 5120 PAGESIZE 1000
+select distinct sid from v$mystat;
+alter session set NLS_DATE_FORMAT='YYYY-MM-DD HH24:MI:SS';
+EXEC dbms_stats.gather_schema_stats(ownname => 'infodba', METHOD_OPT=>'FOR ALL COLUMNS SIZE 1',CASCADE =>true,degree=>12);
+（需隔2小时48分观察一次，如断开连接，需要再执行）
