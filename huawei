@@ -1,0 +1,46 @@
+
+10.28.160.242       (正在测试的) 
+root：Aj96pTQfSI!b
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+uat 环境 
+主：10.28.152.60	root：rGc6R_PD4Bcu
+    port:5432  infodba/infodba
+slave：10.28.154.81 	root：s^41g^uNusIS
+
+https://console-kwe.his-beta.huawei.com/rmv3/#/hisec2/VmList?app_id=com.huawei.ipd.plm.bop 云主机
+Drill3_PG_RM
+
+
+uat迁移数据源 ：
+(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=mespmmsitoracle01.beta.hic.cloud)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=mespmmsit_srv)))
+
+infodba/infodba
+-- 100.80.34.19 1521
+取TC日志
+infodba infodba@tcm
+
+10.243.180.183
+10.243.247.73
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+预生产主机信息
+jdbc:postgresql://7.185.175.65:5432
+TCMplus：(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=dgrdsscan1.huawei.com)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=dgrdsscan3.huawei.com)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=TCMplus_srv)))
+7.185.175.65(主)  7.185.175.27（备）
+
+http://7.185.175.58:8083/mgmt/console/
+admin/infodba
+
+pool  7.185.175.58  7.185.175.86   /data01/tmp/vcserver..
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+企业存储
+
+李大旋 WX1028017
+https://support.huaweicloud.com/utiltg-obs/obs_11_0013.html
+https://console.his-beta.huawei.com/storage/#/hiss3/BucketList?accountId=test_it&app_id=com.huawei.ipd.plm.mpmuat
+
+++++++++++++++++++++++++++++++++++
+svn
+http://szxsvn03-nrd:6801/svn/MF_MES_SVN/技术实验室/工艺设计MPM/MPM Project/2023数据库切换/数据迁移
