@@ -2,86 +2,6 @@
 use strict;
 use warnings;
 use Time::Local;
-# 指定目录路径
-my $dir = '/home/postgres/test';
-my $destion_dir = '/home/postgres/'
-my $match ='^a'
-
-
-# 指定的时间点，例如 2023年3月15日
-my $year = 2024; # Perl中的年份是从1900开始计算的
-my $month = 2; # 月份从0开始计算
-my $day = 14;
-
-# 将指定的时间点转换为UNIX时间戳
-my $specified_timestamp = timelocal(0, 0, 0, $day, $month, $year);
-
-# 打开目录
-opendir(my $dh, $dir) or die "Cannot open directory: $!";
-
-# 读取目录内的所有文件和目录，排除'.'和'..'
-my @files = grep { !/^\.{1,2}$/ } readdir($dh);
-
-# 关闭目录句柄
-closedir($dh);
-
-# 过滤出修改时间大于指定时间点的文件
-@files = grep {
-    my $file_path = "$dir/$_"; # 获取完整的文件路径
-    my $mod_time = (stat($file_path))[9]; # 获取文件的最后修改时间（UNIX时间戳）
-    $mod_time > $specified_timestamp
-} @files;
-
-@files = grep { /${match}/ } @files;
-
-##################################
-#输出1S，2S，3S，10S以上的SQL语句
-##################################
-my $pattern_one = qr/1[0-9]{3}\.\d{0,3}/; # 设置搜索模式
-my $pattern_two = qr/2[0-9]{3}\.\d{0,3}/; # 设置搜索模式
-my $pattern_three = qr/3[0-9]{3}\.\d{0,3}/; # 设置搜索模式
-my $pattern_ten = qr/10[0-9]{3}\.\d{0,3}|\d{5,}\.\d{0,3}/; # 设置搜索模式
-my $outfile_one = '$one.txt'; # 输出文件
-my $outfile_two = 'two.txt'; # 输出文件
-my $outfile_three = 'three.txt'; # 输出文件
-my $outfile_ten = 'ten.txt'; # 输出文件
-
-open(my $out_one, '>', ${destion_dir}.$outfile_one) or die "无法打开文件 'outfile_one' $!";
-open(my $out_two, '>', ${destion_dir}.$outfile_two) or die "无法打开文件 'outfile_two' $!";
-open(my $out_three, '>', ${destion_dir}.$outfile_three) or die "无法打开文件 'outfile_three' $!";
-open(my $out_ten, '>', ${destion_dir}.$outfile_ten) or die "无法打开文件 'outfile_ten' $!";
-
-foreach my $file (@files) {
-    # 尝试打开文件
-    open my $fh, '<', $file or do {
-        warn "无法打开文件 '$file': $!";
-        next; # 如果文件无法打开，则跳过这个文件，继续处理下一个
-    };
-    
-    # 逐行读取文件内容
-     while (my $line = <$fh>) {
-        if ($line =~ /$pattern_one/) {
-            print $out_one $line; # 如果匹配，就将行写入输出文件
-        } elseif ($line =~ /$pattern_two/) {
-			print $out_two $line; # 如果匹配，就将行写入输出文件
-		} elseif ($line =~ /$pattern_three/) {
-			print $out_three $line; # 如果匹配，就将行写入输出文件
-		} elseif ($line =~ /$pattern_ten/) {
-			print $out_ten $line; # 如果匹配，就将行写入输出文件
-			
-		}
-    }
-    
-    # 完成文件处理后关闭文件句柄
-    close $fh;
-}
-=========================================
-
-
-#!/usr/bin/perl
-use strict;
-use warnings;
-use Time::Local;
 use POSIX qw(strftime);
 use File::Copy "move";
 # 指定目录路径
@@ -125,13 +45,7 @@ my $outfile_one = 'one.txt'; # 输出文件
 my $outfile_two = 'two.txt'; # 输出文件
 my $outfile_three = 'three.txt'; # 输出文件
 my $outfile_ten = 'ten.txt'; # 输出文件
-
-my $tmp_one = 'tmp_one.txt';
-my $tmp_one = 'tmp_two.txt';
-my $tmp_one = 'tmp_three.txt';
-my $tmp_one = 'tmp_ten.txt';
-
-my $new_destion_dir = '/home/postgres/perl_sql_unique';
+my $new_destion_dir = '/home/postgres/perl_sql';
 
 my $time_string = strftime "%Y%m%d%H%M%S" , gmtime;
 my $save_destion_dir = ${new_destion_dir}.$time_string;
@@ -144,6 +58,66 @@ open(my $out_one, '>', ${new_destion_dir}.'/'.$outfile_one) or die "无法打开
 open(my $out_two, '>', ${new_destion_dir}.'/'.$outfile_two) or die "无法打开文件 'outfile_two' $!";
 open(my $out_three, '>', ${new_destion_dir}.'/'.$outfile_three) or die "无法打开文件 'outfile_three' $!";
 open(my $out_ten, '>', ${new_destion_dir}.'/'.$outfile_ten) or die "无法打开文件 'outfile_ten' $!";
+
+foreach my $file (@files) {
+    # 尝试打开文件
+    open my $fh, '<', ${dir}.'/'.$file or do {
+        warn "无法打开文件 '$file': $!";
+        next; # 如果文件无法打开，则跳过这个文件，继续处理下一个
+    };
+    
+    # 逐行读取文件内容
+     while (my $line = <$fh>) {
+         $line = $file.$line;
+        if ($line =~ /$pattern_one/) {
+            print $out_one $line; # 如果匹配，就将行写入输出文件
+        } elsif ($line =~ /$pattern_two/) {
+			print $out_two $line; # 如果匹配，就将行写入输出文件
+		} elsif ($line =~ /$pattern_three/) {
+			print $out_three $line; # 如果匹配，就将行写入输出文件
+		} elsif ($line =~ /$pattern_ten/) {
+			print $out_ten $line; # 如果匹配，就将行写入输出文件
+			
+		}
+    }
+    
+    # 完成文件处理后关闭文件句柄
+    close $fh;
+}
+close($outfile_one);
+close($outfile_two);
+close($outfile_three);
+close($outfile_ten);
+#####################################################
+#去重
+#####################################################
+
+##################################
+#输出1S，2S，3S，10S以上的SQL语句
+##################################
+##################################
+#输出1S，2S，3S，10S以上的SQL语句
+##################################
+my $infile_one = 'tmp_one.txt'; # 输出文件
+my $infile_two = 'tmp_two.txt'; # 输出文件
+my $infile_three = 'tmp_three.txt'; # 输出文件
+my $infile_ten = 'tmp_ten.txt'; # 输出文件
+
+my $tmp_one = 'tmp_one.txt';
+my $tmp_two = 'tmp_two.txt';
+my $tmp_three = 'tmp_three.txt';
+my $tmp_ten = 'tmp_ten.txt';
+
+$new_destion_dir = '/home/postgres/perl_sql_unique';
+my $old_destion_dir = '/home/postgres/perl_sql';
+
+$time_string = strftime "%Y%m%d%H%M%S" , gmtime;
+$save_destion_dir = ${new_destion_dir}.$time_string;
+if ( -d $new_destion_dir ) {
+  move($new_destion_dir , $save_destion_dir);
+}
+
+mkdir "$new_destion_dir" || die "no $!"; 
 
 open(my $tmp_out_one, '>', ${new_destion_dir}.'/'.$tmp_one) or die "无法打开文件 'outfile_one' $!";
 open(my $tmp_out_two, '>', ${new_destion_dir}.'/'.$tmp_two) or die "无法打开文件 'outfile_two' $!";
@@ -164,50 +138,50 @@ foreach my $file (@files) {
     # 逐行读取文件内容
      while (my $line = <$fh>) {
          $line = $file.$line;
-         $sql_query=$line;
-         $sql_query =~ /execute .*?: (SELECT .*?)"/;
-         $sql_query = $1;
- open(my $tmp_in_one, '<', ${new_destion_dir}.'/'.$tmp_one) or die "无法打开文件 'outfile_one' $!";
- open(my $tmp_in_two, '<', ${new_destion_dir}.'/'.$tmp_two) or die "无法打开文件 'outfile_two' $!";
- open(my $tmp_in_three, '<', ${new_destion_dir}.'/'.$tmp_three) or die "无法打开文件 'outfile_three' $!";
- open(my $tmp_in_ten, '<', ${new_destion_dir}.'/'.$tmp_ten) or die "无法打开文件 'outfile_ten' $!";
+         if ($line =~ /execute .*?: (SELECT .*?)"/){
+          $sql_query = $1;
+          } else {
+            next;
+          } 
+     open(my $in_file_one, '<', ${new_destion_dir}.'/'.$infile_one) or die "无法打开文件 'outfile_one' $!";
+     open(my $in_file_two, '<', ${new_destion_dir}.'/'.$infile_two) or die "无法打开文件 'outfile_two' $!";
+     open(my $in_file_three, '<', ${new_destion_dir}.'/'.$infile_three) or die "无法打开文件 'outfile_three' $!";
+     open(my $in_file_ten, '<', ${new_destion_dir}.'/'.$infile_ten) or die "无法打开文件 'outfile_ten' $!";
  
         if ($line =~ /$pattern_one/) {
          #######################################
           $is_patter = 0;
-          print "$is_patter\n";
-          while( my $line_one = <$tmp_in_one> ){
-              if ($line_one =~ $sql_query ) {
+         # print "1";
+          while( my $line_one = <$in_file_one> ){
+              if ($line_one =~ /\Q$sql_query\E/ ) {
                 $is_patter=1;
-                print "$is_patter\n";
-              }         
-           
+                          
+               }         
+                    
              }
            
             if( ! $is_patter){
               print $tmp_out_one $line;
              
              } 
-          print $out_one $line; # 如果匹配，就将行写入输出文件
          ###########################################################
             } elsif ($line =~ /$pattern_two/) {
                ########################################
                    $is_patter=0;
-                   while( my $line_two = <$tmp_in_two> ){
-                     if ($line_two =~ $sql_query ) {
+                   while( my $line_two = <$in_file_two> ){
+                     if ($line_two =~ /\Q$sql_query\E/ ) {
                      $is_patter=1;
                       }
                    }
                 if( ! $is_patter){
                   print $tmp_out_two $line;
                 }
-			print $out_two $line; # 如果匹配，就将行写入输出文件
 	###########################################################################	
              } elsif ($line =~ /$pattern_three/) {
 		  ################################################
                    $is_patter=0;
-                   while( my $line_three = <$tmp_in_three> ){
-                    if ($line_three =~ $sql_query ) {
+                   while( my $line_three = <$in_file_three> ){
+                    if ($line_three =~ /\Q$sql_query\E/ ) {
                        $is_patter=1;
                      }
                     }
@@ -216,41 +190,37 @@ foreach my $file (@files) {
 
                      }
 
-                     print $out_three $line; # 如果匹配，就将行写入输出文件
 	##############################################################################	
                  } elsif ($line =~ /$pattern_ten/) {
                     $is_patter=0;
-                   while( my $line_ten = <$tmp_in_ten> ){
-                    if ($line_ten =~ $sql_query ) {
-                  $is_patter=1;
-                 }
-               }
+                   while( my $line_ten = <$in_file_ten> ){
+                    if ($line_ten =~ /\Q$sql_query\E/) {
+                     $is_patter=1;
+                     }
+                   }
               if( ! $is_patter){
                 print $tmp_out_ten $line;
 
                }
 	 
-      	print $out_ten $line; # 如果匹配，就将行写入输出文件
 			
 	}
      ####################################################################  
-    close $tmp_in_one;
-    close $tmp_in_two;
-    close $tmp_in_three;
-   close $tmp_in_ten;
+         close $in_file_one;
+	 close $in_file_two;
+	 close $in_file_three;
+	 close $in_file_ten;
  
  }
     
     # 完成文件处理后关闭文件句柄
     close $fh;
 }
-close($out_one);
-close($out_two);
-close($out_three);
-close($out_ten);
 
 close $tmp_out_one;
 close $tmp_out_two;
 close $tmp_out_three;
 close $tmp_out_ten;
+
+
 
