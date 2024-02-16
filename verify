@@ -1,0 +1,75 @@
+#!/bin/bash
+
+# 主数据库连接信息
+PRIMARY_DB="host=10.28.152.60 dbname=tc user=infodba password=infodba"
+
+# 备数据库连接信息
+STANDBY_DB="host=10.28.154.81 dbname=tc user=infodba password=infodba"
+
+
+total_tables=0
+passed_checks=0
+failed_checks=0
+TABLE=acct_table
+# 函数：确定用于校验的列
+get_verification_column() {
+    local table=$1
+    local column=$(psql "$PRIMARY_DB" -t -c "SELECT column_name FROM information_schema.key_column_usage WHERE table_name = '$table' AND constraint_name = (SELECT constraint_name FROM information_schema.table_constraints WHERE table_name = '$table' AND constraint_type = 'PRIMARY KEY');")
+    if [[ -z "$column" ]]; then
+        column="ctid"  # 使用ctid作为后备
+    fi
+    echo $column
+}
+
+# 函数：对单个表进行分批校验
+verify_table() {
+    local table=$1
+  #  local column=$2
+    local batch_size=800000  # 定义每个批次的大小
+   # echo "Verifying table: $table using column: $column"
+    
+    local total_count=$(psql "$PRIMARY_DB" -t -c "SELECT count(*) FROM $table;")
+    local batches=$((total_count / batch_size + (total_count % batch_size > 0 ? 1 : 0)))
+
+    total_tables=$((total_tables+1))  # 更新总表计数
+
+    for (( batch=1; batch<=batches; batch++ ))
+    do
+        local batch_start=$(( (batch - 1) * batch_size ))
+        local batch_end=$(( batch * batch_size ))
+
+        # 在主库上执行的查询
+        PRIMARY_CHECKSUM=$(psql "$PRIMARY_DB" -t -c "SELECT md5(string_agg(record::text, '' )) FROM (SELECT * FROM $table  LIMIT $batch_size OFFSET $batch_start) as record;")
+        
+        # 在备库上执行的查询
+        STANDBY_CHECKSUM=$(psql "$STANDBY_DB" -t -c "SELECT md5(string_agg(record::text, '' )) FROM (SELECT * FROM $table  LIMIT $batch_size OFFSET $batch_start) as record;")
+        # 比较结果
+        if [[ "$PRIMARY_CHECKSUM" != "$STANDBY_CHECKSUM" ]]; then
+            echo "Checksum discrepancy found in table $table for batch $batch_start to $batch_end"
+            failed_checks=$((failed_checks+1))
+        else
+            echo "Checksum for table $table batch $batch_start to $batch_end is consistent."
+            passed_checks=$((passed_checks+1))
+        fi
+    done
+}
+
+# 主执行逻辑
+verify_tables() {
+    # 获取所有公共模式下的表
+    TABLES=$(psql "$PRIMARY_DB" -t -c "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_type = 'BASE TABLE' and table_name = 'acct_table'")
+
+    for table in $TABLES; do
+        table=$(echo $table | xargs)  # 去除前后空白
+      #  local column=$(get_verification_column $table)
+        verify_table $table 
+    done
+
+    # 显示总结统计
+    echo "Total tables checked: $total_tables"
+    echo "Passed checks: $passed_checks"
+    echo "Failed checks: $failed_checks"
+}
+
+# 开始校验
+verify_tables
