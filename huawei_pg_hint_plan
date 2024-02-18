@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use Time::Local;
+use DateTime;
 use POSIX qw(strftime);
 use File::Copy "move";
 # 指定目录路径
@@ -11,12 +11,19 @@ my $match ='^postgresql';
 
 
 # 指定的时间点，例如 2023年3月15日
-my $year = 2024; # Perl中的年份是从1900开始计算的
-my $month = 1; # 月份从0开始计算
-my $day = 1;
+use DateTime;
 
-# 将指定的时间点转换为UNIX时间戳
-my $specified_timestamp = timelocal(0, 0, 0, $day, $month, $year);
+my $dt = DateTime->new(
+    year   => 2024,
+    month  => 2, # 月份直接从1开始计数，2代表二月
+    day    => 8,
+    hour   => 0,
+    minute => 0,
+    second => 0,
+);
+
+# DateTime对象可以直接用于获取UNIX时间戳
+my $specified_timestamp = $dt->epoch;
 
 # 打开目录
 opendir(my $dh, $dir) or die "Cannot open directory: $!";
