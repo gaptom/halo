@@ -276,7 +276,7 @@ open(my $tmp_out_two, '>', ${new_destion_dir}.'/'.$tmp_two) or die "无法打开
 open(my $tmp_out_three, '>', ${new_destion_dir}.'/'.$tmp_three) or die "无法打开文件 'outfile_three' $!";
 open(my $tmp_out_ten, '>', ${new_destion_dir}.'/'.$tmp_ten) or die "无法打开文件 'outfile_ten' $!";
 
-@files = ('where_one.txt','where_two.txt','where_three.txt','where_ten.txt');
+@files = ('tmp_one.txt','tmp_two.txt','tmp_three.txt','tmp_ten.txt');
 my $is_patter = 0;
 $sql_query="";
 foreach my $file (@files) {
@@ -372,7 +372,4 @@ foreach my $file (@files) {
 close $tmp_out_one;
 close $tmp_out_two;
 close $tmp_out_three;
-close $tmp_out_ten;
-
-
-
+close $tmp_out_ten
