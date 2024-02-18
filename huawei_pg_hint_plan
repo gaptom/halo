@@ -234,7 +234,7 @@ use warnings;
 ################################
 use File::Copy;
 
-$new_destion_dir = '/home/logger/perl_sql_unique';
+my $new_destion_dir = '/home/logger/perl_sql_unique';
 # 定义原文件和目标文件的映射
 my %files_to_copy = (
     'tmp_one.txt' => 'where_one.txt',
@@ -276,9 +276,9 @@ open(my $tmp_out_two, '>', ${new_destion_dir}.'/'.$tmp_two) or die "无法打开
 open(my $tmp_out_three, '>', ${new_destion_dir}.'/'.$tmp_three) or die "无法打开文件 'outfile_three' $!";
 open(my $tmp_out_ten, '>', ${new_destion_dir}.'/'.$tmp_ten) or die "无法打开文件 'outfile_ten' $!";
 
-@files = ('tmp_one.txt','tmp_two.txt','tmp_three.txt','tmp_ten.txt');
+my @files = ('tmp_one.txt','tmp_two.txt','tmp_three.txt','tmp_ten.txt');
 my $is_patter = 0;
-$sql_query="";
+my $sql_query="";
 foreach my $file (@files) {
     # 尝试打开文件
     open my $fh, '<', ${new_destion_dir}.'/'.$file or do {
@@ -290,7 +290,7 @@ foreach my $file (@files) {
     # 逐行读取文件内容
      while (my $line = <$fh>) {
          $line = $file.$line;
-         if ($line =~ /(SELECT.*?)(?= WHERE).*?"/){
+         if ($line =~ /execute .*?: (SELECT.*?)(?= WHERE).*?"/){
           $sql_query = $1;
           } else {
             next;
@@ -372,4 +372,6 @@ foreach my $file (@files) {
 close $tmp_out_one;
 close $tmp_out_two;
 close $tmp_out_three;
-close $tmp_out_ten
+close $tmp_out_ten;
+
+
