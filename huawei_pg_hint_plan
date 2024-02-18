@@ -257,6 +257,10 @@ foreach my $source (keys %files_to_copy) {
 ##################################
 #输出1S，2S，3S，10S以上的SQL语句
 ##################################
+my $pattern_one = qr/\bduration: 1[0-9]{3}\.\d{0,3} ms\b/; # 设置搜索模式
+my $pattern_two = qr/\bduration: 2[0-9]{3}\.\d{0,3} ms\b/; # 设置搜索模式
+my $pattern_three = qr/\bduration: 3[0-9]{3}\.\d{0,3} ms\b/; # 设置搜索模式
+my $pattern_ten = qr/\bduration: 10[0-9]{3}\.\d{0,3}|\d{5,}\.\d{0,3} ms\b/; # 设置搜索模式
 my $infile_one = 'where_one.txt'; # 输出文件
 my $infile_two = 'where_two.txt'; # 输出文件
 my $infile_three = 'where_three.txt'; # 输出文件
