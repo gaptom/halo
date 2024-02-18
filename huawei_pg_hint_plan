@@ -224,5 +224,151 @@ close $tmp_out_two;
 close $tmp_out_three;
 close $tmp_out_ten;
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#!/usr/bin/perl
+use strict;
+use warnings;
+#################################
+#########去重2####################
+################################
+use File::Copy;
+
+$new_destion_dir = '/home/logger/perl_sql_unique';
+# 定义原文件和目标文件的映射
+my %files_to_copy = (
+    'tmp_one.txt' => 'where_one.txt',
+    'tmp_two.txt' => 'where_two.txt',
+    'tmp_three.txt' => 'where_three.txt',
+    'tmp_ten.txt' => 'where_ten.txt',
+);
+
+# 遍历每个文件并进行复制
+foreach my $source (keys %files_to_copy) {
+    my $destination = $files_to_copy{$source};
+
+    # 执行复制操作
+    if (copy($new_destion_dir.'/'.$source,$new_destion_dir.'/'.$destination)) {
+        print "复制成功: $source -> $destination\n";
+    } else {
+        print "复制失败: $source -> $destination\n";
+    }
+}
+##################################
+#输出1S，2S，3S，10S以上的SQL语句
+##################################
+my $infile_one = 'where_one.txt'; # 输出文件
+my $infile_two = 'where_two.txt'; # 输出文件
+my $infile_three = 'where_three.txt'; # 输出文件
+my $infile_ten = 'where_ten.txt'; # 输出文件
+
+my $tmp_one = 'where_one.txt';
+my $tmp_two = 'where_two.txt';
+my $tmp_three = 'where_three.txt';
+my $tmp_ten = 'where_ten.txt';
+
+open(my $tmp_out_one, '>', ${new_destion_dir}.'/'.$tmp_one) or die "无法打开文件 'outfile_one' $!";
+open(my $tmp_out_two, '>', ${new_destion_dir}.'/'.$tmp_two) or die "无法打开文件 'outfile_two' $!";
+open(my $tmp_out_three, '>', ${new_destion_dir}.'/'.$tmp_three) or die "无法打开文件 'outfile_three' $!";
+open(my $tmp_out_ten, '>', ${new_destion_dir}.'/'.$tmp_ten) or die "无法打开文件 'outfile_ten' $!";
+
+@files = ('where_one.txt','where_two.txt','where_three.txt','where_ten.txt');
+my $is_patter = 0;
+$sql_query="";
+foreach my $file (@files) {
+    # 尝试打开文件
+    open my $fh, '<', ${new_destion_dir}.'/'.$file or do {
+        warn "无法打开文件 '$file': $!";
+        next; # 如果文件无法打开，则跳过这个文件，继续处理下一个
+    };
+ 
+    
+    # 逐行读取文件内容
+     while (my $line = <$fh>) {
+         $line = $file.$line;
+         if ($line =~ /(SELECT.*?)(?= WHERE).*?"/){
+          $sql_query = $1;
+          } else {
+            next;
+          } 
+     open(my $in_file_one, '<', ${new_destion_dir}.'/'.$infile_one) or die "无法打开文件 'outfile_one' $!";
+     open(my $in_file_two, '<', ${new_destion_dir}.'/'.$infile_two) or die "无法打开文件 'outfile_two' $!";
+     open(my $in_file_three, '<', ${new_destion_dir}.'/'.$infile_three) or die "无法打开文件 'outfile_three' $!";
+     open(my $in_file_ten, '<', ${new_destion_dir}.'/'.$infile_ten) or die "无法打开文件 'outfile_ten' $!";
+ 
+        if ($line =~ /$pattern_one/) {
+         #######################################
+          $is_patter = 0;
+         # print "1";
+          while( my $line_one = <$in_file_one> ){
+              if ($line_one =~ /\Q$sql_query\E/ ) {
+                $is_patter=1;
+                          
+               }         
+                    
+             }
+           
+            if( ! $is_patter){
+              print $tmp_out_one $line;
+             
+             } 
+         ###########################################################
+            } elsif ($line =~ /$pattern_two/) {
+               ########################################
+                   $is_patter=0;
+                   while( my $line_two = <$in_file_two> ){
+                     if ($line_two =~ /\Q$sql_query\E/ ) {
+                     $is_patter=1;
+                      }
+                   }
+                if( ! $is_patter){
+                  print $tmp_out_two $line;
+                }
+	###########################################################################	
+             } elsif ($line =~ /$pattern_three/) {
+		  ################################################
+                   $is_patter=0;
+                   while( my $line_three = <$in_file_three> ){
+                    if ($line_three =~ /\Q$sql_query\E/ ) {
+                       $is_patter=1;
+                     }
+                    }
+                    if( ! $is_patter){
+                      print $tmp_out_three $line;
+
+                     }
+
+##############################################################################	
+                 } elsif ($line =~ /$pattern_ten/) {
+                    $is_patter=0;
+                   while( my $line_ten = <$in_file_ten> ){
+                    if ($line_ten =~ /\Q$sql_query\E/) {
+                     $is_patter=1;
+                     }
+                   }
+              if( ! $is_patter){
+                print $tmp_out_ten $line;
+
+               }
+	 
+			
+	}
+     ####################################################################  
+         close $in_file_one;
+	 close $in_file_two;
+	 close $in_file_three;
+	 close $in_file_ten;
+ 
+ }
+    
+    # 完成文件处理后关闭文件句柄
+    close $fh;
+}
+
+close $tmp_out_one;
+close $tmp_out_two;
+close $tmp_out_three;
+close $tmp_out_ten;
+
 
 
