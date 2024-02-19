@@ -396,5 +396,49 @@ close $tmp_out_one;
 close $tmp_out_two;
 close $tmp_out_three;
 close $tmp_out_ten;
+---------------------------------------------------------------------------------------------------
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+# Open the log file
+sub sum1 {
+   my ($filename,$patter) = @_;
+open(my $fh, '<', $filename) or die "Could not open file '$filename' $!";
+
+# Initialize total duration
+my $total = 0;
+
+# Iterate over each line of the file
+while (my $row = <$fh>) {
+  chomp $row;
+  
+  # Match the duration pattern and extract the number of seconds
+  if ($row =~ /$patter/) {
+    # Add the duration to the total
+    $total += $1;
+  }
+}
+
+# Close the file handle
+close($fh);
+ return $total;
+}
+my  $total_duration = 0;
+my $file = '';
+my $dir = '/data01/tmp/tcserver';
+if (@ARGV) {
+    $file = $ARGV[0];  # 打印第一个命令行参数
+} else {
+    print "No arguments provided.\n";
+}
+my $dirfile = $dir.$file.'syslog';
+my $patter = '(\d+\.\d+)\s+secs';
+$total_duration += sum1($dir,$patter);
+
+$patter = '(\d+\.\d+)\s+seconds';
+$total_duration += sum1($dir,$patter);
+print "\n.$total_duration.\n";
+
 
 
