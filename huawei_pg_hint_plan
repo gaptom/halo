@@ -389,14 +389,17 @@ close $tmp_out_two;
 close $tmp_out_three;
 close $tmp_out_ten;
 ---------------------------------------------------------------------------------------------------
+
 #!/usr/bin/perl
 use strict;
 use warnings;
+use Fcntl ':flock', 'O_RDONLY', 'O_WRONLY', 'O_CREAT'; # Example for importing multiple constants
 
 # Open the log file
 sub sum1 {
-   my ($filename,$patter) = @_;
-open(my $fh, '<', $filename) or die "Could not open file '$filename' $!";
+my ($filename,$patter) = @_;
+#open(my $fh, '<', $filename) or die "Could not open file '$filename' $!";
+sysopen(my $fh, $filename, O_RDONLY) or die "Could not open file '$filename' $!";
 
 # Initialize total duration
 my $total = 0;
@@ -409,6 +412,7 @@ while (my $row = <$fh>) {
   if ($row =~ /$patter/) {
     # Add the duration to the total
     $total += $1;
+    #print "$total"."\n";
   }
 }
 
@@ -418,19 +422,17 @@ close($fh);
 }
 my  $total_duration = 0;
 my $file = '';
-my $dir = '/data01/tmp/tcserver';
+my $dir = '/home/postgres/test/';
 if (@ARGV) {
     $file = $ARGV[0];  # 打印第一个命令行参数
 } else {
     print "No arguments provided.\n";
 }
-my $dirfile = $dir.$file.'syslog';
-my $patter = '(\d+\.\d+)\s+secs';
-$total_duration += sum1($dir,$patter);
 
-$patter = '(\d+\.\d+)\s+seconds';
-$total_duration += sum1($dir,$patter);
-print "\n.$total_duration.\n";
+my $dirfile = $dir.$file.'.txt';
+my $patter = '(\d*\.?\d*|^\d*|\s\d*) (seconds)?(secs)?';
+$total_duration += sum1($dirfile,$patter);
 
+print "\n$total_duration\n";
 
 
