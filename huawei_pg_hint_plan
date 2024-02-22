@@ -430,7 +430,7 @@ if (@ARGV) {
 }
 
 my $dirfile = $dir.$file.'.txt';
-my $patter = '(\d*\.?\d*|^\d*|\s\d*) (seconds)?(secs)?';
+my $patter = qr/\b(\d+(?:\.\d+)?)\s*(seconds|secs)\b/;
 $total_duration += sum1($dirfile,$patter);
 
 print "\n$total_duration\n";
