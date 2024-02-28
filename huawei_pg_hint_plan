@@ -542,3 +542,90 @@ my $match = qr/(\d*\.\d*|^\d*|\s\d*)/;
 print "sql语句执行记录数:$rows"."\n";
 print "执行此场景的总时间:$total_duration"."\n";
 
+===========================================================
+#!/usr/bin/perl
+use strict;
+use warnings;
+use Time::Local;
+# 打开文件
+sub sorttime{
+	my ($filesource,$sortfile) = @_;
+	my @lines;
+	open(my $in, '<', $filesource) or die "无法打开文件 '$filename' $!";
+    open(my $out,'>',$sortfile) or die "无法打开文件 '$filename' $!";
+    while (my $line = <$in>) {
+      chomp($line);
+	  push @lines,$line;	  
+	}
+	my @sorted_data = sort {
+		my $last_field_b = (split ' ', $b)[-1];
+		my $last_field_a = (split ' ', $a)[-1];        
+        $last_field_a <=> $last_field_b
+	} @lines;
+	$" = "\n";
+	print $out "@lines";
+}	
+sub capture {
+	#抓取start和end中间一段
+my ($filesource,$filedestion,%start) = @_;
+#print "$start"."\n"."$end";
+open(my $fh, '<', $filesource) or die "无法打开文件 '$filename' $!";
+open(my $out,'>',$filedestion) or die "无法打开文件 '$filename' $!";
+
+# 读取文件并捕获特定的文本块
+my $capture = 0;
+my time_start = 0;
+my time_end =0;
+
+while (my $line = <$fh>) {
+  foreach(my $patter (keys %start)){
+    if ($line =~ /$patter/) {
+        $capture = 1;
+		#捕获开始时间
+		my $year=$1;
+		my $month = $2 -1;
+		my $day = $3;
+		my $hour = $4;		
+        my $min = $5;            # 分
+        my $sec = $6;            # 秒
+        
+        $time_start = timelocal($sec, $min, $hour, $day, $month, $year); 
+		print $out "$time_start  ";
+       }
+    if ($capture && $line =~ /$start{$patter}/ ) {
+    	#捕获结束时间
+		$capture = 0;
+		my $year=$1;
+		my $month = $2 -1;
+		my $day = $3;
+		my $hour = $4;		
+        my $min = $5;            # 分
+        my $sec = $6;            # 秒
+
+        $time_end = timelocal($sec, $min, $hour, $day, $month, $year);
+		my time = ($time_end - $time_start) / 60;
+		print $out "$time_end  "."$time"."\n";
+    }
+  }
+}
+
+close $fh;
+close $out;
+my $dir = '/root/';
+my $sortfile = $dir.'sortfile.txt';
+sorttime($filedestion,$sortfile);
+return 0;
+}
+
+my %start=(qr/startTime==(\d{4})\/(\d{2})\/(\d{2})-(\d{2}):(\d{2}):(\d{2})/=>qr/endTime==(\d{4})\/(\d{2})\/(\d{2})-(\d{2}):(\d{2}):(\d{2})/,
+            qr/\[(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d*.?\d*)\]\s.*?\sStart/=>qr/\[(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d*.?\d*)\]\s.*?\sEnd/);
+
+my $dir = '/root/';
+my $filename = 'test.txt';
+my $suorce_file = $dir.$filename;
+my $destion_file = $destion_dir.$destion_name
+capture($suorce_file,$destion_file,%start);
+
+print "捕获的文本块sql:\n";
+
+
