@@ -455,3 +455,90 @@ http://7.185.175.58:8083/mgmt/console/
 5.再找用户重新执行一次
 这样子的日志才是详细日志，才能分析出问题   
 
+#!/usr/bin/perl
+use strict;
+use warnings;
+use Fcntl ':flock', 'O_RDONLY', 'O_WRONLY', 'O_CREAT'; # Example for importing multiple constants
+
+# Open the log file
+sub remove_duplicate_sql {
+    my ($input_file, $output_file,$patter) = @_;
+
+    # 打开输入文件进行读取，打开输出文件进行写入
+    open my $in, '<', $input_file or die "无法打开输入文件: $!";
+    open my $out, '>', $output_file or die "无法打开输出文件: $!";
+
+    # 用于跟踪已见过的SQL语句
+    my %seen;
+
+    while (my $line = <$in>) {
+        # 正则表达式匹配 SELECT 到 WHERE 之间的语句
+        if ($line =~ /${patter}/) {
+            my $sql = $1;
+            # 去除末尾的 WHERE 以匹配题目要求
+            $sql =~ s/ WHERE$//;
+            
+            # 检查是否已经处理过这个SQL语句
+            unless ($seen{$sql}++) ;
+        }
+    }
+	my @unique = keys %seen;
+	my @sorted = sort @unique;
+	$" = "\n";
+    print $out "@sorted";
+    # 关闭文件句柄
+    close $in;
+    close $out;
+    
+}
+sub sum {
+my ($filename,$patter,$destion_file) = @_;
+#open(my $fh, '<', $filename) or die "Could not open file '$filename' $!";
+sysopen(my $fh, $filename, O_RDONLY) or die "Could not open file '$filename' $!";
+open my $out, '>', $destion_file or die "无法打开输出文件: $!";
+# Initialize total duration
+my $total = 0; #统计汇总时间
+my $rows = 0;  #统计执行的行数
+my $start_capture = 0; #开始捕获
+# Iterate over each line of the file
+while (my $row = <$fh>) {
+  chomp $row;
+  #start capture
+  if( $row =~ /debug on/i){
+	$start_capture = 1;
+  }
+  # Match the duration pattern and extract the number of seconds
+  if ($row =~ /$patter/ && $start_capture) {
+    # Add the duration to the total
+    $total += $1;
+	$rows++;
+    print $out "$1\n";
+  }
+}
+
+# Close the file handle
+close($fh);
+ return ($total,$rows);
+}
+my  $total_duration = 0;
+my $file = '';
+my $source_dir = '/root/';
+if (@ARGV) {
+    $file = $ARGV[0];  # 打印第一个命令行参数
+} else {
+    print "No arguments provided.\n";
+}
+my $destion_dir= '/root/'
+my $destion_file= "$destion_dir.time\.txt"  #sql语句执行时间
+my $distinct_destion_file="$destion_dir.distinct_time\.txt"
+my $source_file = $dir.$file;
+my $patter = qr/(\d*\.\d*|^\d*|\s\d*) secs/;
+my $match = qr/(\d*\.\d*|^\d*|\s\d*)/;
+#sql语句执行时间文件名为：$destion_dir.time.txt
+($total_duration,$rows) = sum($source_file,$patter,$destion_file);
+#sql语句去重，并且排序
+ remove_duplicate_sql($destion_file, $distinct_destion_file, $match);
+
+print "sql语句执行记录数:$rows"."\n";
+print "执行此场景的总时间:$total_duration"."\n";
+
