@@ -399,29 +399,33 @@ use warnings;
 use Fcntl ':flock', 'O_RDONLY', 'O_WRONLY', 'O_CREAT'; # Example for importing multiple constants
 
 # Open the log file
-sub sum1 {
+sub sum {
 my ($filename,$patter) = @_;
 #open(my $fh, '<', $filename) or die "Could not open file '$filename' $!";
 sysopen(my $fh, $filename, O_RDONLY) or die "Could not open file '$filename' $!";
-
 # Initialize total duration
-my $total = 0;
-
+my $total = 0; #统计汇总时间
+my $rows = 0;  #统计执行的行数
+my $start_capture = 0; #开始捕获
 # Iterate over each line of the file
 while (my $row = <$fh>) {
   chomp $row;
-  
+  #start capture
+  if( $row =~ /debug on/i){
+	$start_capture = 1;
+  }
   # Match the duration pattern and extract the number of seconds
-  if ($row =~ /$patter/) {
+  if ($row =~ /$patter/ && $start_capture) {
     # Add the duration to the total
     $total += $1;
+	$rows++;
     #print "$total"."\n";
   }
 }
 
 # Close the file handle
 close($fh);
- return $total;
+ return ($total,$rows);
 }
 my  $total_duration = 0;
 my $file = '';
@@ -433,10 +437,12 @@ if (@ARGV) {
 }
 
 my $dirfile = $dir.$file.'.txt';
-my $patter = qr/\b(\d+(?:\.\d+)?)\s*(seconds|secs)\b/;
-$total_duration += sum1($dirfile,$patter);
+my $patter = 'qr/(\d*\.\d*|^\d*|\s\d*) secs/';
+($total_duration,$rows) += sum($dirfile,$patter);
+print "sql语句执行记录数:$rows"."\n";
+print "执行此场景的总时间:$total_duration"."\n";
 
-print "\n$total_duration\n";
+
 
 
 日志抓取
