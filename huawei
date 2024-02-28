@@ -48,3 +48,15 @@ https://console.his-beta.huawei.com/storage/#/hiss3/BucketList?accountId=test_it
 ++++++++++++++++++++++++++++++++++
 svn
 http://szxsvn03-nrd:6801/svn/MF_MES_SVN/技术实验室/工艺设计MPM/MPM Project/2023数据库切换/数据迁移
+
+日志抓取
+
+http://7.185.175.58:8083/mgmt/console/
+1.登陆http://7.185.175.58:8083/mgmt/console/ 
+2.点击左侧TC Server，Assigned User输入用户账号，点击Search
+3.会搜索出这个用户下所有的日志号，对比用户提供的日志号
+4.找到对应的PID，选中，将下面的4个框选中
+5.再找用户重新执行一次
+这样子的日志才是详细日志，才能分析出问题     @所有人 
+cp rizhi  /sharemes
+https://devmak.huawei.com/SHAREMES/
