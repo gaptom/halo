@@ -547,85 +547,113 @@ print "执行此场景的总时间:$total_duration"."\n";
 use strict;
 use warnings;
 use Time::Local;
+use POSIX qw(strftime);
+use File::Basename;
+
 # 打开文件
 sub sorttime{
 	my ($filesource,$sortfile) = @_;
 	my @lines;
-	open(my $in, '<', $filesource) or die "无法打开文件 '$filename' $!";
-    open(my $out,'>',$sortfile) or die "无法打开文件 '$filename' $!";
+	open(my $in, '<', $filesource) or die "无法打开文件 '$filesource' $!";
+    open(my $out,'>',$sortfile) or die "无法打开文件 '$sortfile' $!";
     while (my $line = <$in>) {
       chomp($line);
 	  push @lines,$line;	  
 	}
 	my @sorted_data = sort {
+		my $last_field_a = (split ' ', $a)[-1];
 		my $last_field_b = (split ' ', $b)[-1];
-		my $last_field_a = (split ' ', $a)[-1];        
-        $last_field_a <=> $last_field_b
+        $last_field_b <=> $last_field_a
 	} @lines;
 	$" = "\n";
-	print $out "@lines";
+	print $out "@sorted_data"."\n";
 }	
+
+sub parse_time {
+    my ($year, $month, $day, $hour, $min, $sec) =@_ ;
+    $month -= 1; # 月份从0开始计数
+    my $time = timelocal($sec, $min, $hour, $day, $month, $year);
+    #print "$year $month $day $hour $min $sec"."\n";
+    return $time;
+}
 sub capture {
 	#抓取start和end中间一段
-my ($filesource,$filedestion,%start) = @_;
+my ($filesource,$filedestion,$start1,$start2,$end1,$end2) = @_;
 #print "$start"."\n"."$end";
-open(my $fh, '<', $filesource) or die "无法打开文件 '$filename' $!";
-open(my $out,'>',$filedestion) or die "无法打开文件 '$filename' $!";
+open(my $in, '<', $filesource) or die "无法打开文件 '$filesource' $!";
+open(my $out,'>',$filedestion) or die "无法打开文件 '$filedestion' $!";
 
 # 读取文件并捕获特定的文本块
-my $capture = 0;
-my time_start = 0;
-my time_end =0;
+my $capture = 0; #表示进入开始捕获状态
+my $time_start = 0;
+my $time_end =0;
+my $status = 0; #0未开始状态 1第一种start1 2第二种状态start2
+my $rows;
+while (my $line = <$in>) {
 
-while (my $line = <$fh>) {
-  foreach(my $patter (keys %start)){
-    if ($line =~ /$patter/) {
+    if ($line =~ /$start1/i or $line =~ /$start2/i) {
         $capture = 1;
 		#捕获开始时间
-		my $year=$1;
-		my $month = $2 -1;
-		my $day = $3;
-		my $hour = $4;		
-        my $min = $5;            # 分
-        my $sec = $6;            # 秒
-        
-        $time_start = timelocal($sec, $min, $hour, $day, $month, $year); 
-		print $out "$time_start  ";
-       }
-    if ($capture && $line =~ /$start{$patter}/ ) {
-    	#捕获结束时间
-		$capture = 0;
-		my $year=$1;
-		my $month = $2 -1;
-		my $day = $3;
-		my $hour = $4;		
-        my $min = $5;            # 分
-        my $sec = $6;            # 秒
-
-        $time_end = timelocal($sec, $min, $hour, $day, $month, $year);
-		my time = ($time_end - $time_start) / 60;
-		print $out "$time_end  "."$time"."\n";
+		if($line =~ /$start1/i ){
+		  $status = 1;
+		  my ($year,$month,$day,$hour,$min,$sec) = ($1,$2,$3,$4,$5,$6);
+          $time_start = parse_time($year,$month,$day,$hour,$min,$sec); 
+          my $date_time= strftime "%Y-%m-%d %H:%M:%S",localtime($time_start);
+          $rows = "$date_time  ";
+        }elsif($line =~ /$start2/i){
+		  $status = 2;
+		  my ($year,$month,$day,$hour,$min,$sec) = ($1,$2,$3,$4,$5,$6);
+          $time_start = parse_time($year,$month,$day,$hour,$min,$sec); 
+          my $date_time= strftime "%Y-%m-%d %H:%M:%S",localtime($time_start);
+          $rows = "$date_time  ";
+          #print $line;
+		}
+		
     }
+    if ($capture && $status == 1  ) {
+    	#捕获结束时间
+    	if($line =~ /$end1/i){
+		my ($year,$month,$day,$hour,$min,$sec) = ($1,$2,$3,$4,$5,$6);
+		$time_end = parse_time($year,$month,$day,$hour,$min,$sec);
+        my $date_time=strftime "%Y-%m-%d %H:%M:%S",localtime($time_end);
+		my $time = $time_end - $time_start;
+		print $out "$rows"."$date_time  "."$time"."\n";
+		$time_start = 0;
+	    $time_end =0;
+	    $capture = 0;
+	    $status = 0;
+       }
+    }elsif($capture && $status == 2){
+    	if($line =~ /$end2/i){
+		my ($year,$month,$day,$hour,$min,$sec) = ($1,$2,$3,$4,$5,$6);
+		$time_end = parse_time($year,$month,$day,$hour,$min,$sec);
+        my $date_time=strftime "%Y-%m-%d %H:%M:%S",localtime($time_end);
+		my $time = $time_end - $time_start;
+		print $out "$rows"."$date_time  "."$time"."\n";
+		#print $line;
+		$time_start = 0;
+	    $time_end =0;
+	    $capture = 0;
+	    $status = 0;
+	   }
+	}
   }
-}
 
-close $fh;
+close $in;
 close $out;
-my $dir = '/root/';
-my $sortfile = $dir.'sortfile.txt';
+my $dir = dirname($filedestion);
+my $sortfile = $dir.'/sortinterval.txt';
 sorttime($filedestion,$sortfile);
 return 0;
 }
 
-my %start=(qr/startTime==(\d{4})\/(\d{2})\/(\d{2})-(\d{2}):(\d{2}):(\d{2})/=>qr/endTime==(\d{4})\/(\d{2})\/(\d{2})-(\d{2}):(\d{2}):(\d{2})/,
-            qr/\[(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d*.?\d*)\]\s.*?\sStart/=>qr/\[(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d*.?\d*)\]\s.*?\sEnd/);
+my $start1=qr/startTime==(\d{4})\/(\d{2})\/(\d{2})-(\d{2}):(\d{2}):(\d{2})/;
+my $end1=qr/endTime==(\d{4})\/(\d{2})\/(\d{2})-(\d{2}):(\d{2}):(\d{2})/;
+my $start2=qr/\[(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d{2})+\.(\d+)\]\s.*?\s[Ss]tart/;
+my $end2=qr/\[(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d{2})+\.(\d+)\]\s.*?\s[Ee]nd/;
 
 my $dir = '/root/';
-my $filename = 'test.txt';
+my $filename = 'log.txt';
 my $suorce_file = $dir.$filename;
-my $destion_file = $destion_dir.$destion_name
-capture($suorce_file,$destion_file,%start);
-
-print "捕获的文本块sql:\n";
-
-
+my $destion_file = $dir.'timeinterval.txt';
+capture($suorce_file,$destion_file,$start1,$start2,$end1,$end2);
